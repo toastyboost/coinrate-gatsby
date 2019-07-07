@@ -1,0 +1,122 @@
+.Footer
+	background-color $block-bg--ivert
+	min-height 300px
+	padding $pad * 3 0 $pad * 2
+	box-shadow 0 -10px 125px rgba(0,0,0,0.1), inset 0 4px 0 transparent
+	border-top 1px solid rgba(0,0,0,1)
+	
+	.wrap
+
+		+from-width($mob)
+			padding 0
+
+		+from-width($desktop)
+			padding 0 $pad * 2 
+
+	&__header
+		flx(center,center)
+
+		.Logo
+			border 15px solid $block-bg--ivert
+			border-radius 50%
+			
+			&__title
+				display none
+			
+			&__svg
+				display inherit 
+				width 35px
+				height 35px
+
+		&:before
+			content ''
+			border-top 1px solid rgba(255,255,255,0.1)
+			display block
+			width 100%
+			max-width 820px
+			position absolute
+
+	&__list
+		f()
+		width 100%
+		max-width 820px
+
+		+from-width($mob)
+			margin -37px auto 0 auto
+			
+		+from-width($desktop)
+			margin 0 auto
+			justify-content space-between
+
+		.list
+
+			+from-width($mob)
+				c(12)
+				text-align center
+				display flex
+				flex-wrap wrap
+				justify-content center
+				padding-bottom $pad * 1.5
+				padding-top 6px
+				border-top 1px solid rgba(255,255,255,0.1)
+
+			+from-width($desktop)
+				c(2)
+				text-align left
+				display block
+				padding-bottom 0
+				padding-top 0
+				border-top 0
+
+			&__title
+				font-family $title-font
+				color $text-secondary
+				font-weight 800
+				text-transform uppercase
+				margin-top $pad
+				position relative
+				width 100%
+
+				+from-width($mob)
+					margin-bottom 8px
+
+				+from-width($desktop)
+					margin-bottom $pad
+
+			a
+				color $text-main--inverted
+				display inline-block
+
+				+from-width($mob)
+					margin 0 $pad 6px $pad
+
+				+from-width($desktop)
+					margin 0 0 6px 0
+					
+				&:hover 
+					color $text-secondary
+
+	&__copyrights
+		flx(center, center)
+		max-width 820px
+		margin 0 auto $pad auto
+		color $text-secondary
+		font-size 1rem
+		text-align center
+		text-transform uppercase
+
+		+from-width($mob)
+			padding-bottom 100px
+
+		+from-width($desktop)
+			padding-bottom 0
+
+		.text
+			display block
+
+		.date
+			font-size 1rem
+
+		.emoji
+			display block
+			margin-top 10px
