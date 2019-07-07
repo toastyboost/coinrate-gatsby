@@ -1,19 +1,19 @@
-const path = require('path');
-const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
+const axios = require('axios');
 
-exports.onCreateWebpackConfig = ({
-  stage,
-  getConfig,
-  rules,
-  loaders,
-  actions,
-}) => {
-  actions.setWebpackConfig({
-    resolve: {
-      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
-      plugins: [new DirectoryNamedWebpackPlugin({
-        exclude: /node_modules/
-      })],
-    },
+const getData = () =>
+  axios.get(
+    'https://external-apis.iqoption.com/cryptoinfo/v1/symbol/infos?start=0&limit=30'
+  );
+
+exports.createPages = async ({ actions: { createPage } }) => {
+  const allCrypto = await getData();
+  const crptoNames = allCrypto.data.result.map(item => item.ID);
+
+  crptoNames.forEach(id => {
+    createPage({
+      path: `/crypto/${id}`,
+      component: require.resolve('./src/pages/crypto.js'),
+      context: { id },
+    });
   });
 };
