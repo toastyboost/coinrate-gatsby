@@ -1,13 +1,34 @@
-import axios from './axios';
+import axios from 'axios';
 
-const fetchGlobalStats = () => axios.get('global');
+const baseURL = 'https://external-apis.iqoption.com/cryptoinfo/v1';
 
-const fetchSymbol = symbol => axios.get(`symbol/infos?syms=${symbol}`);
+const fetchGlobalStats = () => axios.get(`${baseURL}/global`);
+
+const fetchSymbol = symbol =>
+  axios.get(`${baseURL}/symbol/infos?syms=${symbol}`);
 
 const fetchSymbolChart = (symbols, chartRange) =>
-  axios.get(`symbol/charts?syms=${symbols}&range=${chartRange}`);
+  axios.get(`${baseURL}/symbol/charts?syms=${symbols}&range=${chartRange}`);
 
 const fetchMarketData = (start = 0, limit = 0) =>
-  axios.get(`symbol/infos?start=${start}&limit=${limit}`);
+  axios.get(`${baseURL}/symbol/infos?start=${start}&limit=${limit}`);
 
-export { fetchGlobalStats, fetchSymbol, fetchSymbolChart, fetchMarketData };
+const fetchSymbolMarket = (symbols = null, start = 0, limit = 0) =>
+  axios.get(
+    `${baseURL}/market/infos?fsyms=${symbols}&start=${start}&limit=${limit}`
+  );
+
+const fetchExchanges = () => axios.get(`${baseURL}/exchange/infos`);
+
+const fetchExchangeMarkets = name =>
+  axios.get(`${baseURL}/market/infos?&e=${name}&limit=0`);
+
+export {
+  fetchGlobalStats,
+  fetchSymbol,
+  fetchSymbolChart,
+  fetchMarketData,
+  fetchSymbolMarket,
+  fetchExchanges,
+  fetchExchangeMarkets,
+};

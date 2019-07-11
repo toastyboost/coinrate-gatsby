@@ -18,8 +18,8 @@ const Value = ({ value, type, suffix, prefix }) => {
     <ValueCounter
       className="value"
       direction={setDirection(value)}
-      start={formatedValue}
-      end={formatedValue - (formatedValue / 100) * 10}
+      start={formatedValue - (formatedValue / 100) * 10}
+      end={formatedValue}
       duration={0.5}
       separator=","
       useEasing={true}

@@ -31,18 +31,28 @@ const BlockDescription = ({ GlobalStats, type }) => {
     </span>
   );
 
-  return type == 'market' ? (
+  const SymbolMarketsData = () => (
+    <span>
+      We are tracking <b>{MARKETS}</b> markets in <b>{EXCHANGES}</b> exchanges
+    </span>
+  );
+
+  return type === 'market' ? (
     <MarketData />
-  ) : type == 'currency' ? (
+  ) : type === 'currency' ? (
     <CurrencyData />
+  ) : type === 'symbol-markets' || type === 'exchanges' ? (
+    <SymbolMarketsData />
   ) : null;
 };
 
 const Description = withGlobalStats(BlockDescription);
 
-const PageHeader = ({ title, type }) => (
+const PageHeader = ({ title, sub = '', type, tag }) => (
   <PageHeaderWrap>
-    <PageTitle>{title}</PageTitle>
+    <PageTitle as={tag === 'h1' ? 'h1' : 'div'}>
+      {title} {sub ? <em>{sub}</em> : ''}
+    </PageTitle>
     <PageDescription>
       <Description type={type} />
     </PageDescription>

@@ -22,7 +22,7 @@ export default handleActions(
 
       return {
         ...state,
-        data: result,
+        ...result,
       };
     },
   },

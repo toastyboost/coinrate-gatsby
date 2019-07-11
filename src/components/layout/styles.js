@@ -1,14 +1,16 @@
 import styled from 'styled-components';
+import { Wrap, MEDIA } from 'styles/common';
 
-const Wrap = styled.div`
-  max-width: 1210px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
+const LayoutWrap = styled(Wrap)`
+  max-width: ${({ page }) => (page === 'crypto' ? '100%' : '1210px')};
+
+  ${MEDIA.PHONE`
+    padding: ${({ page }) => (page === 'crypto' ? '0' : 'padding: 0 24px')};;
+  `}
 `;
 
-const Main = styled.div`
+const Main = styled.main`
   padding: 0 0 40px 0;
 `;
 
-export { Main, Wrap };
+export { Main, LayoutWrap };

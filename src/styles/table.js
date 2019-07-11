@@ -1,29 +1,41 @@
-import { createGlobalStyle } from 'styled-components';
+import { css } from 'styled-components';
 
-const TableStyles = createGlobalStyle`
-
+const TableStyles = css`
   .ReactTable {
+    position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     width: 100%;
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 15px rgba(0,0,0,.05), inset 0 4px 0 transparent;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05), inset 0 4px 0 transparent;
     border-radius: 3px;
     margin: 24px 0;
+
+    .rt-table {
+      overflow: scroll;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      border-collapse: collapse;
+    }
 
     .rt-td {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      height: 70px;
+      height: 63px;
       padding-left: 18px;
       padding-right: 18px;
       text-transform: uppercase;
       border-right: 1px solid var(--border-color);
+      position: relative;
+      z-index: 100;
 
       &-body {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         align-content: center;
         width: 100%;
@@ -36,43 +48,49 @@ const TableStyles = createGlobalStyle`
         color: var(--secondary-text);
       }
 
+      .exchange,
       .crypto {
         display: flex;
 
         &__img {
           float: left;
-          border: 0;
           background-repeat: no-repeat;
           background-position: 50%;
           background-size: contain;
           position: relative;
           width: 28px;
+          min-width: 28px;
           height: 28px;
           margin-right: 16px;
+          border: 1px solid var(--border-color-light);
+          border-radius: 50%;
         }
 
         &__name {
           display: flex;
           flex-wrap: wrap;
           line-height: 1em;
+          position: relative;
+          bottom: -1px;
 
           .name {
             width: 100%;
           }
-
         }
 
         &__price {
           margin-left: auto;
           display: flex;
+          position: relative;
+          bottom: -1px;
         }
-
       }
 
       .name {
         font-size: 1rem;
         color: var(--secondary-text);
         line-height: 1em;
+        width: 100%;
       }
 
       .ticker {
@@ -92,13 +110,37 @@ const TableStyles = createGlobalStyle`
         margin-top: auto;
         margin-bottom: auto;
         position: relative;
-        top: -2px
+        top: -2px;
       }
+    }
 
+    .rt-tbody {
+      .rt-tr {
+        position: relative;
+
+        .rt-td:first-child {
+          padding: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: calc(100% - 1px);
+          width: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0);
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          transition: 0.3s;
+        }
+      }
     }
 
     .-even {
-      background-color: var(--panel-bg);
+      background-color: rgba(0, 0, 0, 0.03);
     }
 
     .-center {
@@ -121,8 +163,8 @@ const TableStyles = createGlobalStyle`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-top: 1px solid var(--border-color);;
-      box-shadow: 0 0 50px rgba(0,0,0,0.15);
+      border-top: 1px solid var(--border-color);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
     }
 
     .-previous,
@@ -135,8 +177,8 @@ const TableStyles = createGlobalStyle`
         opacity: 0.7;
       }
 
-      &:before{
-        content: "";
+      &:before {
+        content: '';
         position: absolute;
         z-index: 10;
         bottom: 0;
@@ -150,14 +192,14 @@ const TableStyles = createGlobalStyle`
     }
 
     .-previous {
-      &:before{
+      &:before {
         transform: rotate(225deg);
         left: 19px;
       }
     }
 
     .-next {
-      &:before{
+      &:before {
         transform: rotate(405deg);
         right: 19px;
       }
@@ -170,6 +212,11 @@ const TableStyles = createGlobalStyle`
       overflow: hidden;
       position: relative;
       display: flex;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
 
     .rt-resizable-header-content {
@@ -185,7 +232,7 @@ const TableStyles = createGlobalStyle`
       flex-direction: column;
       overflow-y: auto;
 
-      >div {
+      > div {
         &:only-child {
           .rt-td {
             min-height: 140px;
@@ -206,7 +253,7 @@ const TableStyles = createGlobalStyle`
       margin-right: -16px;
       display: flex;
       border-bottom: solid 1px var(--border-color);
-      box-shadow: 0 0 50px rgba(0,0,0,0.15);
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
 
       &-item {
         padding: 0 16px;
@@ -230,14 +277,14 @@ const TableStyles = createGlobalStyle`
 
         .subtitle {
           font-size: 1rem;
-          color: var(--secondary-text)
+          color: var(--secondary-text);
         }
       }
 
       .rt-th {
         border-right: 1px solid transparent;
         &:nth-child(1) {
-          >div {
+          > div {
             width: 100%;
           }
         }
@@ -255,16 +302,13 @@ const TableStyles = createGlobalStyle`
         &:last-child {
           border-right: 0;
         }
-
-
-
       }
       .rt-header-pivot {
         &:after {
           left: 100%;
           top: 50%;
           border: solid transparent;
-          content: " ";
+          content: ' ';
           height: 0;
           width: 0;
           position: absolute;
@@ -274,7 +318,7 @@ const TableStyles = createGlobalStyle`
           left: 100%;
           top: 50%;
           border: solid transparent;
-          content: " ";
+          content: ' ';
           height: 0;
           width: 0;
           position: absolute;
@@ -282,20 +326,12 @@ const TableStyles = createGlobalStyle`
         }
       }
     }
-    .rt-table {
-      flex: auto 1;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
-      border-collapse: collapse;
-    }
 
     .rt-thead.-filters {
       .rt-th {
         border-right: 1px solid #ededed;
       }
-      input[type="text"] {
+      input[type='text'] {
         border: 0;
         background-color: var(--block-bg);
         padding: 6px 17px;
@@ -305,7 +341,6 @@ const TableStyles = createGlobalStyle`
         text-transform: uppercase;
       }
     }
-
 
     .-sort-asc {
       box-shadow: inset 0 -3px 0 0 var(--blue);
@@ -320,7 +355,7 @@ const TableStyles = createGlobalStyle`
       right: 0;
       top: 71px;
       bottom: 0;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255, 255, 255, 0.8);
       transition: all 0.3s ease;
       z-index: -1;
       opacity: 0;
@@ -329,7 +364,7 @@ const TableStyles = createGlobalStyle`
         position: relative;
         top: 28px;
       }
-      >div {
+      > div {
         position: absolute;
         display: block;
         text-align: center;
@@ -399,7 +434,7 @@ const TableStyles = createGlobalStyle`
         transform: translate(-50%, -50%) rotate(-90deg);
         border-left: 5.04px solid transparent;
         border-right: 5.04px solid transparent;
-        border-top: 7px solid rgba(0,0,0,0.8);
+        border-top: 7px solid rgba(0, 0, 0, 0.8);
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         cursor: pointer;
       }
@@ -430,9 +465,9 @@ const TableStyles = createGlobalStyle`
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      box-shadow: 0 0 15px 0 rgba(0,0,0,0.15);
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
       .rt-td {
-        border-right: 1px solid rgba(0,0,0,0.05);
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
         &:last-child {
           border-right: 0;
         }
@@ -465,7 +500,6 @@ const TableStyles = createGlobalStyle`
       }
     }
   }
-
 `;
 
 export { TableStyles };

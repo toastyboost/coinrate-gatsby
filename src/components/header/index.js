@@ -5,16 +5,18 @@ import {
   GlobalData,
   HeaderData,
   HeaderWrap,
+  NavigationWrap,
   Cap,
   Volume,
   DataTitle,
   DataValue,
   DataChange,
+  Burger,
 } from './styles';
 
 import { withGlobalStats } from 'store/hocs';
 
-import { Logo, Value } from 'components';
+import { Logo, Value, MarketSearch, MobileMenu } from 'components';
 import Menu from './Menu';
 
 const Block = ({ getGlobalStats, GlobalStats }) => {
@@ -24,9 +26,7 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
     getGlobalStats();
   }, []);
 
-  if (isLoading) {
-    return false;
-  }
+  if (isLoading) return false;
 
   const { CAP, CHANGECAP24H, VOLUME24HOUR, CHANGEVOLUME24HOUR24H } = data;
 
@@ -44,7 +44,7 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
             </DataChange>
           </Cap>
           <Volume>
-            <DataTitle>Todays Volume</DataTitle>
+            <DataTitle>Global Volume</DataTitle>
             <DataValue>
               <Value value={VOLUME24HOUR} />
             </DataValue>
@@ -52,14 +52,17 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
               <Value value={CHANGEVOLUME24HOUR24H} suffix="%" />
             </DataChange>
           </Volume>
+          <Burger />
         </HeaderWrap>
       </GlobalData>
       <HeaderData>
-        <HeaderWrap>
+        <NavigationWrap>
           <Logo />
           <Menu />
-        </HeaderWrap>
+          <MarketSearch />
+        </NavigationWrap>
       </HeaderData>
+      <MobileMenu />
     </HeaderContainer>
   );
 };

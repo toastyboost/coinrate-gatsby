@@ -1,9 +1,17 @@
 import styled from 'styled-components';
+import { MEDIA } from 'styles/common';
 
 const MenuContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 24px;
+  ${MEDIA.PHONE`
+    display: none;
+    padding: 0;
+  `};
+
+  ${MEDIA.DESKTOP`
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 24px;
+ `};
 `;
 
 const MenuLink = styled.a`
@@ -16,30 +24,17 @@ const MenuLink = styled.a`
   bottom: -2px;
   position: relative;
 
-  &:nth-child(2) {
-    padding-right: 36px;
-
-    &:after {
-      content: '';
-      height: 100%;
-      width: 1px;
-      border-left: 1px solid #e5e5e5;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      height: 16px;
-    }
-  }
-
-  &:nth-child(3) {
-    padding-left: 36px;
-  }
-
   &:hover {
     box-shadow: inset 0 -3px 0 0 #2184fb;
   }
 `;
 
-export { MenuContainer, MenuLink };
+const Separator = styled.div`
+  height: 100%;
+  width: 1px;
+  background-color: #e5e5e5;
+  height: 16px;
+  margin: auto 20px;
+`;
+
+export { MenuContainer, MenuLink, Separator };

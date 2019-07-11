@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { Wrap } from '../Layout/styles';
+import { Wrap } from 'styles/common';
 
 const FooterContainer = styled.footer`
   background-color: #252525;
   box-shadow: 0 -10px 125px rgba(0, 0, 0, 0.1), inset 0 4px 0 transparent;
   border-top: 1px solid rgba(0, 0, 0, 1);
   padding: 36px 0 36px 0;
+  margin-top: 12px;
 `;
 
 const FooterWrap = styled(Wrap)`

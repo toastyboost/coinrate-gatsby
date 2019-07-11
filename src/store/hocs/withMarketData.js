@@ -7,9 +7,14 @@ import { getMarketData, selectMarketData } from 'store/ducks/cryptos/market';
 const withMarketData = WrappedComponent => {
   const Wrapper = props => <WrappedComponent {...props} />;
 
-  const mapStateToProps = state => ({
-    data: selectMarketData(state),
-  });
+  const mapStateToProps = state => {
+    const objectData = selectMarketData(state);
+    const arrayData = Object.keys(objectData).map(name => objectData[name]);
+
+    return {
+      data: arrayData,
+    };
+  };
 
   const mapDispatchToProps = dispatch => {
     return bindActionCreators(

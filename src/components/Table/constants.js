@@ -2,6 +2,7 @@ const tableOptions = {
   getProps: () => ({
     id: 'react-table',
   }),
+  minRows: 1,
   resizable: false,
   showPageJump: false,
   showPageSizeOptions: false,
@@ -10,8 +11,8 @@ const tableOptions = {
   className: '-striped',
   defaultSorted: [
     {
-      id: 'CAP',
-      desc: true,
+      id: 'RANK',
+      desc: false,
     },
   ],
   defaultPageSize: 15,

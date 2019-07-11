@@ -1,15 +1,19 @@
 import React from 'react';
 
+import { MenuContainer, MenuLink, Separator } from './styles';
 import { menuItems } from './data';
-import { MenuContainer, MenuLink } from './styles';
 
 const Menu = () => (
   <MenuContainer>
-    {menuItems.map(({ name, slug }, key) => (
-      <MenuLink key={key} href={`/${slug}`}>
-        {name}
-      </MenuLink>
-    ))}
+    {menuItems.map(({ name, slug }, key) =>
+      name === 'separator' ? (
+        <Separator key={key} />
+      ) : (
+        <MenuLink key={key} href={`/${slug}`}>
+          {name}
+        </MenuLink>
+      )
+    )}
   </MenuContainer>
 );
 

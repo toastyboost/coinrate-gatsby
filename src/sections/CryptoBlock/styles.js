@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { BlockStyles } from 'styles/common';
+import { BlockStyles, MEDIA } from 'styles/common';
+import { RangeSelector } from 'components';
 
 const BlockContainer = styled.div`
   ${BlockStyles}
@@ -7,10 +8,18 @@ const BlockContainer = styled.div`
 
 const BlockHeader = styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  padding: 16px 18px 12px 18px;
   border-bottom: 1px solid #e5e5e5;
+
+  ${MEDIA.PHONE`
+    padding: 0;
+    flex-wrap: wrap;
+  `}
+
+  ${MEDIA.DESKTOP`
+    flex-wrap: nowrap;
+    padding: 2px 16px 0 16px;
+  `};
 `;
 
 const BlockFooter = styled.div`
@@ -18,19 +27,54 @@ const BlockFooter = styled.div`
   border-top: 1px solid #e5e5e5;
   border-radius: 0 0 3px 3px;
   display: flex;
-  flex-wrap: wrap;
+
   align-items: center;
-  justify-content: center;
-  text-align: center;
   text-transform: uppercase;
   line-height: 1em;
+
+  ${MEDIA.PHONE`
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+  `}
+
+  ${MEDIA.TABLET`
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+  `}
+`;
+
+const CryptoStats = styled.a`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  ${MEDIA.PHONE`
+    border-bottom: 1px solid #e5e5e5;
+    justify-content: center;
+    padding: 16px 0 12px 0;
+    width: 100%;
+  `}
+
+  ${MEDIA.DESKTOP`
+    width: auto;
+    padding: 0;
+    border-bottom: 0;
+    justify-content: flex-start;
+  `};
 `;
 
 const CryptoIcon = styled.div`
   width: 32px;
   height: 32px;
-  background-image: url(${({ ticker, id }) =>
-    `https://coinrate.com/static/crypto/${ticker.toLowerCase()}-${id.toLowerCase()}.svg?v=1`});
+  background-image: ${({ ticker, id }) =>
+    `url(https://coinrate.com/static/crypto/${ticker.toLowerCase()}-${id.toLowerCase()}.svg?v=1)`};
   background-size: cover;
   background-position: 50%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -39,7 +83,7 @@ const CryptoIcon = styled.div`
   margin-top: -3px;
 `;
 
-const CryptoLink = styled.a`
+const CryptoLink = styled.div`
   margin-left: 18px;
 `;
 
@@ -71,27 +115,61 @@ const CryptoChange = styled.div`
 `;
 
 const CryptoItem = styled.div`
-  padding: 0 36px;
+
+  ${MEDIA.PHONE`
+    width: 50%;
+    padding: 0 12px;
+    margin-bottom: 16px;
+  `}
+
+  ${MEDIA.SMARTPHONE`
+    width: 33%;
+  `}
+
+  ${MEDIA.TABLET`
+    width: 15%;
+    padding: 0;
+    margin-bottom: 0;
+  `}
+
+  ${MEDIA.DESKTOP`
+    width: auto;
+    padding: 0 36px;
+  `};
 `;
 
 const CryptoTitle = styled.div`
   color: #8e8e90;
   letter-spacing: 0.5px;
   font-size: 1rem;
-  margin-bottom: 12px;
+  line-height: 1em;
+  margin-bottom: 6px;
 `;
 
 const CryptoValue = styled.div`
   color: ${p => p.color};
   font-size: 1.6rem;
-  font-weight: 800;
+  line-height: 1em;
+  font-weight: 700;
   letter-spacing: 0.5px;
+`;
+
+const CryptoRangeSelector = styled(RangeSelector)`
+  ${MEDIA.PHONE`
+    margin-right: auto;
+    margin-left: auto;
+  `}
+
+  ${MEDIA.DESKTOP`
+    margin-right: 0;
+  `};
 `;
 
 export {
   BlockContainer,
   BlockHeader,
   BlockFooter,
+  CryptoStats,
   CryptoIcon,
   CryptoName,
   CryptoLink,
@@ -101,4 +179,5 @@ export {
   CryptoItem,
   CryptoTitle,
   CryptoValue,
+  CryptoRangeSelector,
 };

@@ -24,7 +24,7 @@ module.exports = {
           pages: 'src/pages',
           static: 'src/static',
           styles: 'src/styles',
-          utils: 'src/utils',
+          helpers: 'src/helpers',
           store: 'src/store',
         },
         extensions: ['*'],

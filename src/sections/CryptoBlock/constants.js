@@ -1,12 +1,12 @@
 const dataItems = [
   {
-    title: 'TODAYS HIGH',
+    title: '24h high',
     value: 'HIGH24HOUR',
     color: 'var(--green)',
     prefix: '$',
   },
   {
-    title: 'TODAYS LOW',
+    title: '24h low',
     value: 'LOW24HOUR',
     color: 'var(--red)',
     prefix: '$',
@@ -14,6 +14,12 @@ const dataItems = [
   {
     title: 'CAP',
     value: 'CAP',
+    color: null,
+    prefix: '$',
+  },
+  {
+    title: '24h VOLUME',
+    value: 'VOLUME24HOUR',
     color: null,
     prefix: '$',
   },

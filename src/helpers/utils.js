@@ -7,6 +7,18 @@ const defaultFraction = {
   maximumFractionDigits: 2,
 };
 
+const CountryNames = {
+  us: 'United States',
+  uk: 'United Kingdom',
+  ru: 'Russian Federation',
+  cn: 'China',
+  hk: 'Hong Kong',
+  kr: 'Korea',
+  jp: 'Japan',
+  es: 'Spain',
+  nz: 'New Zealand',
+};
+
 const colors = {
   green: '#157efb',
   red: '#157efb',
@@ -55,4 +67,18 @@ const getStaticPath = (type, ticker, id) => {
   );
 };
 
-export { colors, getStaticPath, numbersToSymbol };
+export const convertTimestamp = timestamp => {
+  var d = new Date(timestamp),
+    yyyy = ('' + d.getFullYear() + '').slice(2),
+    mm = ('0' + (d.getMonth() + 1)).slice(-2),
+    dd = ('0' + d.getDate()).slice(-2),
+    HH = ('0' + d.getHours()).slice(-2),
+    MM = ('0' + d.getMinutes()).slice(-2),
+    time;
+
+  time = dd + '.' + mm + '.' + yyyy + ' | ' + HH + ':' + MM;
+
+  return time;
+};
+
+export { colors, getStaticPath, numbersToSymbol, CountryNames };

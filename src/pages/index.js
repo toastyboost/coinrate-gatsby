@@ -1,20 +1,29 @@
 import React from 'react';
 
-import { Layout, Table } from 'components';
-import { PageHeader, CryptoBlock } from 'sections';
-import { withMarketData } from 'store/hocs';
+import { Layout, Seo } from 'components';
+import { PageHeader, CryptoBlock, MarketTable } from 'sections';
 
-import { GlobalStyles, FontsStyles, TableStyles } from 'styles';
+import { GlobalStyles } from 'styles';
 
-const MarketTable = withMarketData(Table);
+const seoData = {
+  title:
+    'Cryptocurrency Prices, Charts, Exchange Rates in real time | Coinrate.com',
+  desc: `
+    Cryptocurrency market explorer: find coins prices charts, exchange rates, news, bitcoin ATM map.
+    Compare cryptocoins to make best trading decisions`,
+  slug: '/',
+};
 
-const Index = () => (
+const IndexPage = () => (
   <>
+    <Seo {...seoData} />
     <GlobalStyles />
-    <FontsStyles />
-    <TableStyles />
     <Layout>
-      <PageHeader title="Cryptocurrency prices in real time" type="market" />
+      <PageHeader
+        title="Cryptocurrency prices in real time"
+        type="market"
+        tag="h1"
+      />
       <CryptoBlock symbol="bitcoin" />
       <PageHeader title="Crypto market" type="currency" />
       <MarketTable start="0" limit="30" />
@@ -22,4 +31,4 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export default IndexPage;

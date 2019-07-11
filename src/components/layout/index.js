@@ -1,13 +1,13 @@
 import React from 'react';
-import { Main, Wrap } from './styles';
+import { Main, LayoutWrap } from './styles';
 
 import { Header, Footer } from 'components';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, page }) => (
   <>
     <Header />
     <Main>
-      <Wrap>{children}</Wrap>
+      <LayoutWrap page={page}>{children}</LayoutWrap>
     </Main>
     <Footer />
   </>

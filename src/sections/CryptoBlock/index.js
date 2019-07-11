@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
+import { compose } from 'redux';
 
 import {
   BlockContainer,
   BlockHeader,
   BlockFooter,
+  CryptoStats,
   CryptoIcon,
   CryptoName,
   CryptoLink,
@@ -13,46 +15,58 @@ import {
   CryptoItem,
   CryptoTitle,
   CryptoValue,
+  CryptoRangeSelector,
 } from './styles';
 
 import { withSymbol, withSymbolChart } from 'store/hocs';
 
-import { Value, Chart } from 'components';
+import { Value, HighChart } from 'components';
 import { dataItems } from './constants';
 
-const Block = ({ symbol, getSymbol, selectSymbol }) => {
+const Block = ({
+  symbol,
+  getSymbol,
+  getSymbolChart,
+  selectSymbol,
+  selectSymbolChart,
+}) => {
   useEffect(() => {
     getSymbol(symbol);
+    getSymbolChart(symbol);
   }, []);
 
-  const data = selectSymbol[symbol];
+  const symbolData = selectSymbol[symbol];
+  const chartData = selectSymbolChart[symbol];
 
-  if (!data) return false;
+  if (!symbolData || !chartData) return false;
 
-  const { ID, NAME, TICKER, PRICE, CHANGE24HOUR } = data;
+  const { ID, NAME, TICKER, PRICE, CHANGE24HOUR } = symbolData;
 
   return (
     <BlockContainer>
       <BlockHeader>
-        <CryptoIcon id={ID} ticker={TICKER} />
-        <CryptoLink>
-          <CriptoTicker>{TICKER}</CriptoTicker>
-          <CryptoName>{NAME}</CryptoName>
-        </CryptoLink>
-        <CryptoPrice>
-          <Value value={PRICE} prefix="$" />
-        </CryptoPrice>
-        <CryptoChange>
-          <Value value={CHANGE24HOUR} suffix="%" />
-        </CryptoChange>
+        <CryptoStats href={`/cryptocurrencies/${ID}`}>
+          <CryptoIcon id={ID} ticker={TICKER} />
+          <CryptoLink>
+            <CriptoTicker>{TICKER}</CriptoTicker>
+            <CryptoName>{NAME}</CryptoName>
+          </CryptoLink>
+          <CryptoPrice>
+            <Value value={PRICE} prefix="$" />
+          </CryptoPrice>
+          <CryptoChange>
+            <Value value={CHANGE24HOUR} suffix="%" />
+          </CryptoChange>
+        </CryptoStats>
+        <CryptoRangeSelector />
       </BlockHeader>
-      <CryptoChart symbol={symbol} />
+      <HighChart data={chartData} />
       <BlockFooter>
         {dataItems.map(({ title, value, color, prefix }, key) => (
           <CryptoItem key={key}>
             <CryptoTitle>{title}</CryptoTitle>
             <CryptoValue color={color}>
-              <Value value={data[value]} prefix={prefix} />
+              <Value value={symbolData[value]} prefix={prefix} />
             </CryptoValue>
           </CryptoItem>
         ))}
@@ -61,7 +75,9 @@ const Block = ({ symbol, getSymbol, selectSymbol }) => {
   );
 };
 
-const CryptoBlock = withSymbol(Block);
-const CryptoChart = withSymbolChart(Chart);
+const CryptoBlock = compose(
+  withSymbolChart,
+  withSymbol
+)(Block);
 
 export { CryptoBlock };
