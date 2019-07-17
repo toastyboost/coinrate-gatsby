@@ -35,7 +35,6 @@ const TableStyles = css`
 
       &-body {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         align-content: center;
         width: 100%;
@@ -46,6 +45,10 @@ const TableStyles = css`
         text-align: center;
         width: 100%;
         color: var(--secondary-text);
+      }
+
+      .exchange {
+        flex-wrap: wrap;
       }
 
       .exchange,
@@ -112,6 +115,13 @@ const TableStyles = css`
         position: relative;
         top: -2px;
       }
+
+      .chart {
+        position: relative;
+        display: flex;
+        bottom: -2px;
+        left: -2px;
+      }
     }
 
     .rt-tbody {
@@ -119,6 +129,10 @@ const TableStyles = css`
         position: relative;
 
         .rt-td:first-child {
+          padding: 0;
+        }
+
+        .rt-td:nth-child(8) {
           padding: 0;
         }
 
@@ -222,15 +236,17 @@ const TableStyles = css`
     .rt-resizable-header-content {
       margin: auto 0;
     }
+
     .rt-expandable {
       cursor: pointer;
     }
+
     .rt-tbody {
       margin-right: -16px;
       display: flex;
       flex: 99999 1 auto;
       flex-direction: column;
-      overflow-y: auto;
+      overflow-y: hidden;
 
       > div {
         &:only-child {

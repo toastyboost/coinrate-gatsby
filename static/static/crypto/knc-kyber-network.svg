@@ -1,0 +1,49 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    kcn-kybernetwork
+  </title>
+  <defs>
+    <ellipse id="a" cx="15.092105" cy="1.45749" rx="1.460526" ry="1.45749"/>
+    <ellipse id="b" cx="35.539474" cy="15.546559" rx="1.460526" ry="1.45749"/>
+    <ellipse id="c" cx="34.56579" cy="44.453441" rx="1.460526" ry="1.45749"/>
+    <ellipse id="d" cx="15.822368" cy="58.54251" rx="1.460526" ry="1.45749"/>
+    <ellipse id="e" cx="4.625" cy="44.210526" rx="1.460526" ry="1.45749"/>
+    <ellipse id="f" cx="1.460526" cy="15.789474" rx="1.460526" ry="1.45749"/>
+    <ellipse id="g" cx="15.335526" cy="24.777328" rx="1.460526" ry="1.45749"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path stroke="#FFF" stroke-width=".609162" fill="#EBF7EE" d="M37.11778 11.336032L57.70825 25.47729l-20.59047 9.419123z"/>
+    <path stroke="#FFF" stroke-width=".609162" fill="#B4DCCC" d="M57.504767 25.436962l-.75879 29.053486L37.082122 34.94101z"/>
+    <path stroke="#FFF" stroke-width=".609162" fill="#177466" d="M37.788613 68.638822L56.97799 54.608584l-19.83454-19.66283z"/>
+    <path stroke="#FFF" stroke-width=".609162" fill="#4CA888" d="M37.753906 68.591852l-11.125103-14.56114-3.12311-28.546305 13.673892-14.280744z"/>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#a"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="15.092105" cy="1.45749" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#b"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="35.539474" cy="15.546559" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#c"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="34.56579" cy="44.453441" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#d"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="15.822368" cy="58.54251" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#e"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="4.625" cy="44.210526" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#f"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="1.460526" cy="15.789474" rx="1.155945" ry="1.152909"/>
+    </g>
+    <g transform="translate(22 10)">
+      <use fill="#404041" xlink:href="#g"/>
+      <ellipse stroke="#FFF" stroke-width=".609162" cx="15.335526" cy="24.777328" rx="1.155945" ry="1.152909"/>
+    </g>
+  </g>
+</svg>

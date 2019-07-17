@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    via-viacoin
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#1086E8" cx="40" cy="40" r="40"/>
+    <path d="M61 18l-5.25 12.5H61v5.357143h-7.492188l-1.503906 3.571428H61v5.357145H49.76172L40 68l-9.76172-23.214286H19V39.42857h8.996094l-1.503906-3.571427H19V30.5h5.25L19 18h7l8.83203 21.42857h10.33594L54 18h7zM40 51.92857l2.953125-7.142856h-5.90625L40 51.92857z" fill-rule="nonzero" fill="#FFF"/>
+  </g>
+</svg>

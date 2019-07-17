@@ -1,0 +1,19 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Group 32
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#FFF" offset="0%"/>
+      <stop stop-color="#E3E0E7" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="url(#a)" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#1562A1" d="M39.795 14L14 59.818h12.86l19.588-34.16"/>
+      <path fill="#0C426C" d="M27.777 59.994L44.91 49.85l-6.585-8.288-10.548 18.432"/>
+      <path fill="#3C87C7" d="M51 33.95L38.65 40.8 54.12 59.983H66L51 33.95"/>
+    </g>
+  </g>
+</svg>

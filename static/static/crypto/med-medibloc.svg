@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>med-mediblock</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Coin-Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-320.000000, -616.000000)">
+        <g id="med-mediblock" transform="translate(320.000000, 616.000000)">
+            <circle id="1" fill="#FFFFFF" cx="40" cy="40" r="40"></circle>
+            <polygon id="Fill-1" fill="#3ED7D9" points="40.4869844 40.4669764 40.4869844 40.4874409 40.4920554 40.4891463 40.4869844 40.4908517 40.4869844 49.981265 56.8240365 40.4908517 56.8240365 59.43416 64.9866464 54.6881007 64.9917174 26.2305038"></polygon>
+            <polygon id="Fill-2" fill="#3ED7D9" points="40.4778567 60.4873997 33.7570994 56.6179033 26.5376944 60.8063049 40.4609533 68.905132 54.4366126 60.7994834 47.2188979 56.5752689"></polygon>
+            <polygon id="Fill-3" fill="#1DAEF6" points="15.9864773 54.6887828 24.1490872 59.4348421 24.1490872 40.4915338 40.4861393 49.9819471 40.4861393 40.4898284 40.4810683 40.4881231 40.4861393 40.4864177 40.4861393 40.4676586 15.979716 26.231186"></polygon>
+            <polygon id="Fill-4" fill="#1DAEF6" points="40.5006761 12.0003411 26.5267072 20.1059897 33.7444219 24.3319095 40.4854632 20.4197787 47.2062204 24.2858644 54.4256254 20.0974628"></polygon>
+        </g>
+    </g>
+</svg>

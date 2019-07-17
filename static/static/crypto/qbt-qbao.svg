@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    qbt-qbao
+  </title>
+  <defs>
+    <linearGradient x1="98.033327%" y1="50%" x2=".699964%" y2="50%" id="a">
+      <stop stop-color="#0AF" offset="0%"/>
+      <stop stop-color="#00F791" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="b">
+      <stop stop-color="#00D6FF" offset="0%"/>
+      <stop stop-color="#934DFF" offset="100%"/>
+    </linearGradient>
+    <ellipse id="c" cx="43.842105" cy="37.956204" rx="12.157895" ry="12.043796"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g transform="translate(12 14)">
+      <ellipse fill="url(#a)" cx="24.68421" cy="24.452555" rx="24.68421" ry="24.452555"/>
+      <use fill="url(#b)" xlink:href="#c"/>
+      <ellipse stroke="#FFF" stroke-width="2.578947" cx="43.842105" cy="37.956204" rx="13.447368" ry="13.333269"/>
+    </g>
+  </g>
+</svg>

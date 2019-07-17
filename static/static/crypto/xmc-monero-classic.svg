@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="140px" viewBox="0 0 140 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>monero_classic2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="70" cy="70" r="70"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="monero_classic2">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Mask" fill="#008DF2" xlink:href="#path-1"></use>
+            <polygon id="Path-10" fill="#3D3D3D" mask="url(#mask-2)" points="4.63671875 103.304688 27.140625 98.984375 35.1796875 55.9140625 68.6445312 88.5195312 107.451172 52.265625 115.84375 98.984375 142.144531 103.304688 128.701172 140.105469 64.4511719 148.947266 10.8691406 122.835938"></polygon>
+            <path d="M70,77.3535156 L114.150317,33 L121.324237,90.4972579 L145,90.4972579 L136.887916,105.87746 L106.955863,105.87746 L102.609525,66.2703504 L70,99.1936084 L37.3904749,66.2703504 L33.0441375,105.87746 L3.11208442,105.87746 L-5,90.4972579 L18.6757629,90.4972579 L25.8496827,33 L70,77.3535156 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

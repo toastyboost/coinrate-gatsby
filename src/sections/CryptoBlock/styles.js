@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BlockStyles, MEDIA } from 'styles/common';
-import { RangeSelector } from 'components';
+import { SymbolRangeSelector } from 'components';
 
 const BlockContainer = styled.div`
   ${BlockStyles}
@@ -154,7 +154,7 @@ const CryptoValue = styled.div`
   letter-spacing: 0.5px;
 `;
 
-const CryptoRangeSelector = styled(RangeSelector)`
+const CryptoRangeSelector = styled(SymbolRangeSelector)`
   ${MEDIA.PHONE`
     margin-right: auto;
     margin-left: auto;

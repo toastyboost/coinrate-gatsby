@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    bat-basicattentiontoken
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#414141" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#000" opacity=".4" d="M56.44 66.736l13.5-.394L39.494 13 15.398 56.094"/>
+      <path fill="#662D91" d="M64.46 56.618L39.33 42.255 14.287 56.618"/>
+      <path fill="#9E1F63" d="M39.414 13.197l-.007 28.778 25.164 14.3"/>
+      <path fill="#FF5000" d="M14 56.334l25.2-14.24.064-28.78"/>
+      <path stroke="#FF5000" stroke-width=".5" fill="#FFF" d="M39.355 30.654L29.25 47.874h20.44z"/>
+    </g>
+  </g>
+</svg>

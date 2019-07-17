@@ -17,11 +17,6 @@ const Table = ({ data = [], columns, pageSize = 15 }) => (
         .getElementById('react-table')
         .scrollIntoView({ behavior: 'smooth', block: 'start' });
     }}
-
-    // onSortedChange={ () => {
-    //     getChartsData(loadArray, '7d')
-    //     loadArray = []
-    // }}
   />
 );
 

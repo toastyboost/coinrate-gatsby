@@ -51,7 +51,7 @@ const numbersToSymbol = value => {
     : Math.abs(Number(value)) >= 1.0e3
     ? (Math.abs(Number(value)) / 1.0e3).toLocaleString('en', defaultFraction) +
       'K'
-    : value;
+    : value.toFixed(2);
 };
 
 const getStaticPath = (type, ticker, id) => {

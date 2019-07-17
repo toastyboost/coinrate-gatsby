@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    lke-lykke
+  </title>
+  <defs>
+    <linearGradient x1="-31452.952%" y1="-23.172%" x2="-31452.952%" y2="126.975%" id="a">
+      <stop stop-color="#FF0029" offset="0%"/>
+      <stop stop-color="#AB00FF" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="-25.639%" y1="7.406%" x2="100.683%" y2="143.5%" id="b">
+      <stop stop-color="#FF9100" offset="0%"/>
+      <stop stop-color="#FF0029" offset="52%"/>
+      <stop stop-color="#AB00FF" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="url(#a)" d="M13.636 57.273L30 40.636l16.364 16.637v-9.955L30 30.682 13.636 47.318" transform="translate(10 9)"/>
+      <path fill="#FF8F1C" d="M10 32.59h23.045L40 39.683H16.955"/>
+      <path fill="url(#b)" d="M60 23.59H36.955V7.09L30 0v30.682h23.182" transform="translate(10 9)"/>
+    </g>
+  </g>
+</svg>

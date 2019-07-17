@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const API = 'https://external-apis.iqoption.com/cryptoinfo/v1';
 
-const fetchMarket = () => axios.get(`${API}/symbol/infos?start=0&limit=30`);
+const fetchMarket = () => axios.get(`${API}/symbol/infos?start=0&limit=0`);
 const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 exports.createPages = async ({ actions: { createPage } }) => {

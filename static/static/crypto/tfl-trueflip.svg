@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    tfl-trueflip
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#0096CE" cx="40" cy="40" r="40"/>
+    <path fill="#FFF" d="M54.123535 27.433594H43.03955V58h-6.12793V27.433594H25.925294v-4.98047h28.198242"/>
+  </g>
+</svg>

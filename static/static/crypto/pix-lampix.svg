@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    pix-lampix
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path stroke="#7DC242" stroke-width="4.725" d="M54.831667 16.495L40.125 31.203333 25.413333 16.495"/>
+    <path stroke="#3EA795" stroke-width="4.725" d="M25.413333 63.798333l14.711667-14.705 14.706667 14.705"/>
+    <path stroke="#F0BB1B" stroke-width="4.725" d="M63.775 54.855l-14.708333-14.71L63.775 25.438333"/>
+    <path stroke="#F04A37" stroke-width="4.725" d="M16.471667 25.438333l14.71 14.706667-14.71 14.71"/>
+  </g>
+</svg>

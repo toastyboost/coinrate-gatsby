@@ -1,0 +1,16 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    cv-carvertical
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="a">
+      <stop stop-color="#FFBF00" offset="0%"/>
+      <stop stop-color="#FF7A2D" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path fill="#142746" d="M19 19h42v42H19z"/>
+    <path fill="url(#a)" d="M53.36231 19H61v42h-7.63769z"/>
+  </g>
+</svg>

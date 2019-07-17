@@ -1,0 +1,26 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    mth-monetha
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#63DD88" offset="0%"/>
+      <stop stop-color="#1E7CFB" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="0%" y1="5.643394%" y2="100%" id="b">
+      <stop stop-color="#1C52AA" offset="0%"/>
+      <stop stop-color="#1C69F2" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="88.434008%" y1="0%" x2="0%" y2="95.496989%" id="c">
+      <stop stop-color="#2170F6" offset="0%"/>
+      <stop stop-color="#1850A1" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path d="M0 1.867325V32.7536s.687285 11.215686 11.512028 11.215686v-21.5952s1.20275-18.091074-5.15464-19.298917L0 1.867323z" fill="url(#a)" transform="translate(15 18)"/>
+    <path d="M0 1.867325L14.43299 27.57713s3.264605 6.556862 10.309278 6.556862c7.044674 0 .17182-11.905882.17182-11.905882L15.63574 5.318306S9.10653-3.826792 0 1.867326" fill="url(#b)" transform="translate(15 18)"/>
+    <path d="M50 1.867325V32.7536s-.687285 11.215686-11.512028 11.215686v-21.5952s-1.20275-18.091074 5.15464-19.298917L50 1.867323z" fill="url(#a)" transform="translate(15 18)"/>
+    <path d="M50 1.867325L35.56701 27.57713s-3.264605 6.556862-10.309278 6.556862c-3.264605 0-6.013746-1.55294-6.013746-1.55294L25.08591 22.22811l9.27835-16.909804S40.89347-3.826792 50 1.867326" fill="url(#c)" transform="translate(15 18)"/>
+  </g>
+</svg>

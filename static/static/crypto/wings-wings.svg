@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    wings-wings
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#030819" d="M40.604 53.282l11.234-4.828L40.604 29.88 12.19 28.44l21.65 5.724 5.755 19.82 12.245-5.53"/>
+      <path fill="#93F2FF" d="M14.833 64.38l48.9-37.458 4.237 9.306-5.56-1.518-.193 9.656"/>
+      <path fill="#0DC9F7" d="M58.37 46L44.14 21.86 8.03 20.03l27.52 7.28 7.464 25.114"/>
+    </g>
+  </g>
+</svg>

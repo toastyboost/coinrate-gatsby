@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    tkn-tokencard
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#24DD7B" cx="40" cy="40" r="40"/>
+    <g transform="translate(15 11)" fill-rule="nonzero" fill="#FFF">
+      <path d="M16.49 5.26L28.41 0l-.098 13.894h15v9.627h-15.1v16.675c0 5.06 8.444 5.657 11.623 3.97l2.88 8.733c-7.052 4.168-26.324 3.174-26.324-12.604V5.26h.1z"/>
+      <ellipse cx="5.364" cy="19.551" rx="5.364" ry="6.55"/>
+    </g>
+  </g>
+</svg>

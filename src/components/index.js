@@ -6,11 +6,12 @@ import { Value } from './Value';
 import { HighChart } from './HighChart';
 import { Table } from './Table';
 import { Footer } from './Footer';
-import { RangeSelector } from './RangeSelector';
+import { SymbolRangeSelector } from './RangeSelector';
 import { Loader } from './Loader';
 import { MarketSearch } from './Search';
 import { MobileMenu } from './MobileMenu';
 import { Seo } from './Seo';
+import { SparkChart } from './SparkChart';
 
 export {
   MobileMenu,
@@ -21,8 +22,9 @@ export {
   HighChart,
   Table,
   Footer,
-  RangeSelector,
+  SymbolRangeSelector,
   Loader,
   MarketSearch,
   Seo,
+  SparkChart,
 };

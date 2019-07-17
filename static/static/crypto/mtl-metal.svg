@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    mtl
+  </title>
+  <g fill="none">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <path d="M21.842 21.517h2.694V58.53h-2.694M32.35 27.686h2.867V51.85H32.35m11.858-17.764h2.712v11.642h-2.712M55.46 21.47h2.698v37.013H55.46" fill="#FFF"/>
+  </g>
+</svg>

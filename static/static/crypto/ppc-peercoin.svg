@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    ppc-peercoin
+  </title>
+  <defs>
+    <path id="a" d="M0 0h80v80H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <g mask="url(#b)" fill-rule="nonzero">
+      <circle fill="#3CB054" cx="40" cy="40" r="40"/>
+      <path d="M23.393 18.777c29.72 1.065 41.18 18.345 35.426 33.765-1.63 4.292-3.36 6.64-7.006 9.087.15-.62.302-1.24.417-1.874 2.156-12.03-1.928-26.507-21.9-34.504 15.89 9.16 22.303 25.462 14.893 35.984-12.613 1.92-21.83-8.514-21.83-20.536V18.777" fill="#FFF"/>
+    </g>
+  </g>
+</svg>

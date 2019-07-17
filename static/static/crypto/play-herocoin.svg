@@ -1,0 +1,23 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    play-herocoin
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#57B7DB" offset="0%"/>
+      <stop stop-color="#81EAF3" offset="100%"/>
+    </linearGradient>
+    <path d="M0 14.529778l16.896 49.72419 8.862-26.07908c-4.062-1.730491-6.906-5.734666-6.906-10.397793 0-6.251143 5.106-11.309047 11.403-11.309047.951 0 1.881.112793 2.766.329476l.771-2.267746L16.896.077349 0 14.529778z" id="b"/>
+    <linearGradient x1="50%" y1="3.093112%" x2="50%" y2="100%" id="c">
+      <stop stop-color="#57B7DB" offset="0%"/>
+      <stop stop-color="#76D6DF" offset="100%"/>
+    </linearGradient>
+    <path id="d" d="M16.896 64.253968L0 14.529778 16.896.077349z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <use fill="url(#a)" xlink:href="#b" transform="translate(22 8.795667)"/>
+    <use fill="url(#c)" xlink:href="#d" transform="translate(22 8.795667)"/>
+    <path d="M52.2535 28.494065c4.5 0 8.145 3.618302 8.145 8.079587 0 4.461286-3.645 8.07662-8.145 8.07662s-8.145-3.615334-8.145-8.07662c0-4.461285 3.645-8.079587 8.145-8.079587" fill="#55C5E1"/>
+  </g>
+</svg>

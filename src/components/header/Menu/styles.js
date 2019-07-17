@@ -27,6 +27,8 @@ const MenuLink = styled.a`
   &:hover {
     box-shadow: inset 0 -3px 0 0 #2184fb;
   }
+
+  pointer-events: ${p => (p.isActive ? 'inherit' : 'none')};
 `;
 
 const Separator = styled.div`
@@ -37,4 +39,17 @@ const Separator = styled.div`
   margin: auto 20px;
 `;
 
-export { MenuContainer, MenuLink, Separator };
+const SoonBadge = styled.div`
+  background-color: var(--blue);
+  color: #fff;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  line-height: 1em;
+  padding: 5px 4px 3px 4px;
+  margin-left: 8px;
+  top: -2px;
+  position: relative;
+`;
+
+export { MenuContainer, MenuLink, Separator, SoonBadge };

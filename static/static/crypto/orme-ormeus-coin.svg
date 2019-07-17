@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    orme-ormeus-coin
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <circle stroke="#B27B4B" stroke-width="4" cx="40" cy="40" r="22"/>
+    <path fill="#B47B49" d="M33 11h4v58h-4zm10 0h4v58h-4z"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    seq-sequence
+  </title>
+  <defs>
+    <circle id="a" cx="40" cy="40" r="40"/>
+    <path id="c" d="M24 0l23.982242 13.75v27.5L24 55 .017758 41.25v-27.5z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="b" fill="#fff">
+      <use xlink:href="#a"/>
+    </mask>
+    <use fill="#C3C3C3" xlink:href="#a"/>
+    <path fill="#B8B8B8" mask="url(#b)" d="M16.65332 55.808594l18.88965 26.652344 36.949218-2.451172 12.865234-24.50586L65.966797 27.10547v27.177733L40.20703 69.623047"/>
+    <g transform="translate(16 12)">
+      <use fill="#D4D4D4" xlink:href="#c"/>
+      <path stroke="#9E9E9E" stroke-width="1.846154" d="M24 1.064032L.940835 14.284794v26.430412L24 53.935968l23.059165-13.220762V14.284794L24 1.064032z"/>
+    </g>
+    <path d="M40 65.572115v-25.90395m-22.735043-13.11902L39.957015 39.77974m22.5641-13.230595L39.82906 39.77974" stroke="#ACACAC" stroke-width="1.846154" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M40 13.064032L16.940835 26.284794v26.430412L40 65.935968l23.059165-13.220762V26.284794L40 13.064032z" stroke="#9E9E9E" stroke-width="1.846154"/>
+  </g>
+</svg>

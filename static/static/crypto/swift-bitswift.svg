@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    swift-bitswift
+  </title>
+  <defs>
+    <path id="a" d="M0 25.581625V.0002h46v51.16285H0z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#043E5F" cx="40" cy="40" r="40"/>
+    <g transform="translate(17 14)">
+      <mask id="b" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <path d="M0 15.9468v19.27c0 2.254 1.203 4.338 3.156 5.466l16.688 9.635c1.953 1.127 4.359 1.127 6.312 0l16.688-9.635c1.953-1.128 3.156-3.212 3.156-5.466v-19.27c0-2.255-1.203-4.339-3.156-5.466L26.156.8458c-1.953-1.128-4.359-1.128-6.312 0l-16.688 9.635C1.203 11.6078 0 13.6918 0 15.9468" fill="#76BF38" mask="url(#b)"/>
+    </g>
+  </g>
+</svg>

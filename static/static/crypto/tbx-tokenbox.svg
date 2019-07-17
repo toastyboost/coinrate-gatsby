@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    tbx-tokenbox
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#25268D" cx="40" cy="40" r="40"/>
+    <path d="M53.883139 16H26.023372L12 40l14.023372 24h27.953256L68 40 53.883139 16zm-3.178632 39.011583L39.953255 40 29.202003 55.011583 20.414023 40l9.722872-17.142857h19.539232L59.492487 40l-8.78798 15.011583z" fill="#EE3D49" fill-rule="nonzero"/>
+  </g>
+</svg>

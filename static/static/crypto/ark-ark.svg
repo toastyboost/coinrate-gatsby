@@ -1,0 +1,40 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    ark-ark
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="100%" y2="100%" id="a">
+      <stop stop-color="#AE0303" offset="0%"/>
+      <stop stop-color="#B70202" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="98.36%" y1="96.72%" x2="50%" y2="19.666%" id="b">
+      <stop stop-color="#B00303" offset="0%"/>
+      <stop stop-color="#CD0101" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="0%" y1="100%" y2="21.991%" id="c">
+      <stop stop-color="#CB0101" offset="0%"/>
+      <stop stop-color="#AE0303" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="0%" y1="100%" y2="100%" id="d">
+      <stop stop-color="#C30202" offset="0%"/>
+      <stop stop-color="#CD0101" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="50%" y1="50%" x2="87.243%" y2="50%" id="e">
+      <stop stop-color="#AE0303" offset="0%"/>
+      <stop stop-color="#C80101" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="100%" y1="50%" x2="16.374%" y2="50%" id="f">
+      <stop stop-color="#CD0101" offset="0%"/>
+      <stop stop-color="#AE0303" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FEFEFE" cx="40" cy="40" r="40"/>
+    <path fill="url(#a)" fill-rule="nonzero" d="M31.338 26.69h-8.556l4.4-4.728 4.156 4.768" transform="translate(13 15)"/>
+    <path fill="url(#b)" fill-rule="nonzero" d="M27.367 15.494L0 43.68 27.49 0 55 43.945" transform="translate(13 15)"/>
+    <path fill="url(#c)" fill-rule="nonzero" d="M27.367 15.494L0 43.68 27.49 0" transform="translate(13 15)"/>
+    <path fill="url(#d)" fill-rule="nonzero" d="M27.182 26.69h-4.4l4.4-4.728" transform="translate(13 15)"/>
+    <path fill="url(#e)" fill-rule="nonzero" d="M14.667 34.327h24.645l-4.994-4.994-14.8.063v.02l-4.85 4.85" transform="translate(13 15)"/>
+    <path fill="url(#f)" d="M14.667 34.33h12.695l.06-4.997-7.904.033v.02l-4.85 4.882" transform="translate(13 15)"/>
+  </g>
+</svg>

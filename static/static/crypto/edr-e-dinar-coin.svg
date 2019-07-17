@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    edr-edinarcoin
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#7152AC" cx="40" cy="40" r="40"/>
+    <g transform="translate(15 17)" fill="#FFF">
+      <ellipse cx="25" cy="6" rx="21" ry="6"/>
+      <ellipse cx="25" cy="40" rx="21" ry="6"/>
+      <ellipse cx="25" cy="23" rx="25" ry="7"/>
+    </g>
+  </g>
+</svg>

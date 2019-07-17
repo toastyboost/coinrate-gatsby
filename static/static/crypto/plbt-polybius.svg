@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    plbt-polybius
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#105B7F" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#069DD8" d="M37.371212 20h13.14394v13.219048H37.37121zm0 26.47619h13.14394v13.21905H37.37121z"/>
+      <path fill="#1F7995" d="M50.55303 33.219048h13.14394v13.219048H50.55303z"/>
+      <path fill="#A4BE39" d="M23.644562 49.183924l-9.29408-9.29408 9.34719-9.347188 9.29408 9.29408z"/>
+    </g>
+  </g>
+</svg>

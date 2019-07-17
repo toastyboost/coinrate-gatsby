@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="105px" height="105px" viewBox="0 0 105 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <circle id="Oval" fill="#0057FF" cx="52.5" cy="52.5" r="52.5"></circle>
+            <path d="M24.008,52.24 L33.692,65.2 L27.968,65.2 L18.968,53.392 L18.968,65.2 L14,65.2 L14,40 L18.968,40 L18.968,51.124 L27.608,40 L33.332,40 L24.008,52.24 Z M55.328,65.2 L49.964,65.2 L44.888,56.452 L41.108,56.452 L41.108,65.2 L36.14,65.2 L36.14,40 L46.22,40 C48.56,40 50.54,40.828 52.16,42.448 C53.78,44.068 54.608,46.048 54.608,48.352 C54.608,51.484 52.664,54.364 49.748,55.696 L55.328,65.2 Z M46.22,44.644 L41.108,44.644 L41.108,52.096 L46.22,52.096 C48.092,52.096 49.64,50.404 49.64,48.352 C49.64,46.3 48.092,44.644 46.22,44.644 Z M69.152,65.2 L63.5,65.2 L56.444,40 L61.664,40 L66.488,58.684 L71.744,40 L75.992,40 L81.284,58.684 L86.108,40 L91.328,40 L84.272,65.2 L78.62,65.2 L73.868,48.568 L69.152,65.2 Z" id="KRW" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

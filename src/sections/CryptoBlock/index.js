@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { compose } from 'redux';
 
 import {
@@ -18,9 +18,10 @@ import {
   CryptoRangeSelector,
 } from './styles';
 
-import { withSymbol, withSymbolChart } from 'store/hocs';
+import { withSymbol, withSymbolChart, useInterval } from 'store/hocs';
 
 import { Value, HighChart } from 'components';
+import { updateInterval } from 'helpers/constants';
 import { dataItems } from './constants';
 
 const Block = ({
@@ -30,10 +31,20 @@ const Block = ({
   selectSymbol,
   selectSymbolChart,
 }) => {
+  const [isReload, reloadTimer] = useState(false);
+
   useEffect(() => {
     getSymbol(symbol);
     getSymbolChart(symbol);
   }, []);
+
+  useInterval(() => {
+    getSymbol(symbol);
+    getSymbolChart(symbol);
+
+    reloadTimer(true);
+    reloadTimer(false);
+  }, updateInterval);
 
   const symbolData = selectSymbol[symbol];
   const chartData = selectSymbolChart[symbol];
@@ -58,9 +69,9 @@ const Block = ({
             <Value value={CHANGE24HOUR} suffix="%" />
           </CryptoChange>
         </CryptoStats>
-        <CryptoRangeSelector />
+        <CryptoRangeSelector symbol={ID} />
       </BlockHeader>
-      <HighChart data={chartData} />
+      <HighChart data={chartData} isReloaded={isReload} />
       <BlockFooter>
         {dataItems.map(({ title, value, color, prefix }, key) => (
           <CryptoItem key={key}>

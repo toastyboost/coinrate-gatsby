@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    yoc-yocoin
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#1999E2" cx="40" cy="40" r="40"/>
+    <path fill="#FFF" d="M39.975586 38.298828l8.17871-16.845703h6.835938L43.076172 43.914063V57H36.875V43.914062L24.936523 21.453125h6.860352"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    icn-iconomi
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#4F6F90" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#FFF" d="M52.6 17.67h6.524v43.645H52.6V17.67"/>
+      <path fill="#B5C2CE" d="M41.572 39.57h6.524v21.9h-6.524v-21.9M30.7 28.697h6.523V61.47H30.7V28.697m-11.028 21.9h6.524V61.47h-6.524V50.598"/>
+    </g>
+  </g>
+</svg>

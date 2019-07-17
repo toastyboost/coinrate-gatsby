@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+import { timeRanges } from 'helpers/constants';
+
 const baseURL = 'https://external-apis.iqoption.com/cryptoinfo/v1';
 
 const fetchGlobalStats = () => axios.get(`${baseURL}/global`);
@@ -7,7 +9,7 @@ const fetchGlobalStats = () => axios.get(`${baseURL}/global`);
 const fetchSymbol = symbol =>
   axios.get(`${baseURL}/symbol/infos?syms=${symbol}`);
 
-const fetchSymbolChart = (symbols, chartRange) =>
+const fetchSymbolChart = (symbols, chartRange = timeRanges[1]) =>
   axios.get(`${baseURL}/symbol/charts?syms=${symbols}&range=${chartRange}`);
 
 const fetchMarketData = (start = 0, limit = 0) =>

@@ -1,0 +1,59 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    theta-theta-token
+  </title>
+  <defs>
+    <path d="M2.83488.270313L.28416 2.76125v44.204063l2.55072 2.490624H29.1936l2.55104-2.490624V2.76125L29.1936.270313H2.83488zm2.5504 44.20375H26.6432V5.2525H5.38528v39.221563z" id="a"/>
+    <linearGradient x1="5.445262%" y1="4.607548%" x2="97.85163%" y2="98.750401%" id="b">
+      <stop stop-color="#29B3EB" offset="0%"/>
+      <stop stop-color="#21EDBA" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="4.54813%" y1="-117.989163%" x2="151.306566%" y2="424.41504%" id="d">
+      <stop stop-color="#29B3EB" offset="0%"/>
+      <stop stop-color="#21EDBA" offset="100%"/>
+    </linearGradient>
+    <path id="e" d="M.02336.01125h5.10176v7.845937H.02336z"/>
+    <linearGradient x1="-195.794882%" y1="-138.975941%" x2="252.194379%" y2="205.451916%" id="f">
+      <stop stop-color="#29B3EB" offset="0%"/>
+      <stop stop-color="#21EDBA" offset="100%"/>
+    </linearGradient>
+    <path id="h" d="M.02336.312188h5.10176v6.88625H.02336z"/>
+    <linearGradient x1="-47.736296%" y1="-35.619707%" x2="400.252965%" y2="356.808601%" id="i">
+      <stop stop-color="#29B3EB" offset="0%"/>
+      <stop stop-color="#21EDBA" offset="100%"/>
+    </linearGradient>
+    <path id="k" d="M.22752.261875h15.57344v4.982188H.22752z"/>
+    <linearGradient x1="-18.633867%" y1="-203.67542%" x2="128.124569%" y2="338.728783%" id="l">
+      <stop stop-color="#29B3EB" offset="0%"/>
+      <stop stop-color="#21EDBA" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#111622" cx="40" cy="40" r="40"/>
+    <g transform="translate(24 15.13125)">
+      <mask id="c" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <path d="M2.83488.270313L.28416 2.76125v44.204063l2.55072 2.490624H29.1936l2.55104-2.490624V2.76125L29.1936.270313H2.83488zm2.5504 44.20375H26.6432V5.2525H5.38528v39.221563z" fill="url(#b)" mask="url(#c)"/>
+    </g>
+    <path fill="url(#d)" d="M8.22752 23.03875h15.57344v-4.982188H8.22752z" transform="translate(24 15)"/>
+    <g transform="translate(37.44 44.50625)">
+      <mask id="g" fill="#fff">
+        <use xlink:href="#e"/>
+      </mask>
+      <path fill="url(#f)" mask="url(#g)" d="M.02336 7.857188h5.10176V.01125H.02336z"/>
+    </g>
+    <g transform="translate(37.44 27.63125)">
+      <mask id="j" fill="#fff">
+        <use xlink:href="#h"/>
+      </mask>
+      <path fill="url(#i)" mask="url(#j)" d="M.02336 7.198437h5.10176V.312187H.02336z"/>
+    </g>
+    <g transform="translate(32 42.00625)">
+      <mask id="m" fill="#fff">
+        <use xlink:href="#k"/>
+      </mask>
+      <path fill="url(#l)" mask="url(#m)" d="M.22752 5.244063h15.57344V.261875H.22752z"/>
+    </g>
+  </g>
+</svg>

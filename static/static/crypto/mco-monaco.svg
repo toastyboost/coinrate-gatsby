@@ -1,0 +1,21 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    mco-monaco
+  </title>
+  <defs>
+    <linearGradient x1="-74.372%" y1="120.489%" x2="99.714%" y2="4.349%" id="a">
+      <stop stop-color="#5E003F" offset="0%"/>
+      <stop stop-color="#C15866" offset="48%"/>
+      <stop stop-color="#EB8B69" offset="81%"/>
+      <stop stop-color="#FFA46A" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#0D2946" cx="40" cy="40" r="40"/>
+    <g transform="translate(13 9)" fill-rule="nonzero" fill="url(#a)">
+      <path d="M54 47.29v-31.5L26.96 0 0 15.79v31.5L26.96 63 54 47.29zM2.3 45.847V17.073L26.96 2.725l24.582 14.348v28.774L26.96 60.195 2.3 45.847z"/>
+      <path d="M37.48 14H16.363L14 25h26M20.342 32.93L14.026 29 7 34.264 16.632 51H20.5l4.5-4.32v-2.123l-4.658-4.478M39.895 29l-6.158 4.007v7.15L29 44.637v2.2L33.58 51h3.788L47 34.343"/>
+      <path d="M20 27l2.347 6.1-.73 6.9 10.765-.08-.648-6.82L34 27"/>
+    </g>
+  </g>
+</svg>

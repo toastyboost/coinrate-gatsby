@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    sphr-sphere
+  </title>
+  <defs>
+    <radialGradient cx="27.456054%" cy="14.995117%" fx="27.456054%" fy="14.995117%" r="60.254892%" id="a">
+      <stop stop-color="#7F8387" offset="0%"/>
+      <stop offset="100%"/>
+    </radialGradient>
+  </defs>
+  <circle cx="40" cy="40" r="40" fill="url(#a)" fill-rule="evenodd"/>
+</svg>

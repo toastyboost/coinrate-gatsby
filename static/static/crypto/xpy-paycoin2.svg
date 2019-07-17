@@ -1,0 +1,8 @@
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		              <g>
+		                  <circle fill="#048ca4" cx="30" cy="30" r="30"></circle>
+		                  <text font-family="Roboto, Roboto-Regular, sans-serif" font-size="36" font-weight="normal" fill="#e5e5e5" x="50%" y="55%" alignment-baseline="middle" text-anchor="middle">X</text>
+		              </g>
+		          </g>
+		      </svg>

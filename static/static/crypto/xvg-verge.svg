@@ -1,0 +1,18 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Group 18
+  </title>
+  <defs>
+    <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+      <stop stop-color="#FFF" offset="0%"/>
+      <stop stop-color="#E3E0E7" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="url(#a)" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#00CBFF" d="M39.875 69L22 26h36L40.125 69h-.25"/>
+      <path fill="#303533" opacity=".31" d="M39.875 60L22 17h36L40.125 60h-.25"/>
+    </g>
+  </g>
+</svg>

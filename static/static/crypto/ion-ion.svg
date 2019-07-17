@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    ion-ionomy
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <g transform="translate(6 10)">
+      <ellipse fill="#57BEEA" fill-rule="nonzero" cx="33.73" cy="29.163" rx="7.471" ry="7.419"/>
+      <ellipse stroke="#FFF" stroke-width="1.367" cx="33.73" cy="29.163" rx="26.27" ry="26.086"/>
+      <g fill-rule="nonzero" fill="#FFF">
+        <ellipse cx="46.904" cy="7.41" rx="7.462" ry="7.41"/>
+        <ellipse cx="46.638" cy="52.561" rx="7.462" ry="7.41"/>
+        <ellipse cx="7.462" cy="30.829" rx="7.462" ry="7.41"/>
+      </g>
+    </g>
+  </g>
+</svg>

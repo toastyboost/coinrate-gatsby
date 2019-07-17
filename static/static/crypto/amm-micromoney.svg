@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    amm-micromoney
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g fill="#FF6800" fill-rule="nonzero">
+      <path d="M10.02971 41.453457l15.199218-15.199218 15.139797 15.139797-15.199218 15.199218z"/>
+      <path d="M46.349515 17L22.815534 40.5l23.53398 23.441975h.058253L69.941747 40.5z"/>
+    </g>
+  </g>
+</svg>

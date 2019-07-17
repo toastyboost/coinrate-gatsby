@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    mod-modum
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path fill="#005281" d="M44.478723 40L20 65V15"/>
+    <path fill="#00A7E9" d="M42.367022 34.675106l17.63298 17.93249v-35.86498"/>
+  </g>
+</svg>

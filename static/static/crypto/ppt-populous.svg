@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    ppt-populous
+  </title>
+  <g fill-rule="nonzero" fill="none">
+    <circle fill="#303B59" cx="40" cy="40" r="40"/>
+    <ellipse fill="#C6B458" cx="40.122" cy="16.695" rx="5.956" ry="4.095"/>
+    <path d="M37.04 66.502c0 .49.432.938.923.938h4.17c.49 0 .867-.446.867-.938V48.8h7.32c.49 0 .84-.42.84-.91V23.62c0-.492-.347-.86-.84-.86H37.04v43.742z" fill="#FFF"/>
+    <path d="M34.8 48.8h-5.026c-.492 0-.934-.42-.934-.91V23.62c0-.492.442-.86.934-.86H34.8V48.8z" fill="#C6B458"/>
+  </g>
+</svg>

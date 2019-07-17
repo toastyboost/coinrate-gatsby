@@ -1,20 +1,27 @@
-const siteConfig = require('./site-config');
-
 module.exports = {
   siteMetadata: {
-    ...siteConfig,
+    siteUrl: 'https://coinrate.com',
+    themeColor: '#2c52da',
+    backgroundColor: '#2c52da',
+    pathPrefix: null,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
-    'gatsby-transformer-json',
-    'gatsby-transformer-remark',
     'gatsby-plugin-eslint',
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-webpack-size',
+    'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: 'tomato',
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
@@ -28,6 +35,41 @@ module.exports = {
           store: 'src/store',
         },
         extensions: ['*'],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: 'UA-107444053-1',
+      },
+    },
+
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/static/favicon.png',
+        appName: 'CoinRate',
+        appDescription: null,
+        developerName: null,
+        developerURL: null,
+        dir: 'auto',
+        lang: 'en',
+        background: '#2c52da',
+        theme_color: '#2c52da',
+        display: 'standalone',
+        orientation: 'any',
+        start_url: '/',
+        version: '1.0',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          yandex: false,
+          windows: false,
+        },
       },
     },
   ],

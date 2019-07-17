@@ -7,9 +7,7 @@ const setFormat = value => {
       : Math.abs(Number(value)) >= 1.0e6
       ? Math.abs(Number(value)) / 1.0e6
       : value < 1000000 && value > 100000
-      ? value
-      : value === 0 || value === 0.0
-      ? 0
+      ? Math.abs(Number(value)) / 1.0e3
       : value;
 
   return parseFloat(val.toString().replace('-', ''));
@@ -41,6 +39,8 @@ const setSuffix = (value, suffix) => {
 
 const setDecimals = (value, type, suffix) => {
   return type === 'simple'
+    ? 0
+    : value === 0 || value === 0.0
     ? 0
     : type === '$'
     ? 2

@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    aid-aidcoin
+  </title>
+  <defs>
+    <linearGradient x1="85.762153%" y1="15.30816%" x2="15.313368%" y2="85.320313%" id="a">
+      <stop stop-color="#1ABC9C" offset="0%"/>
+      <stop stop-color="#2C3E50" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none">
+    <circle fill="url(#a)" cx="40" cy="40" r="40"/>
+    <path fill="#FFF" d="M63.466667 65.066667l-21.764038-49.6h-3.33123l-21.838066 49.6h10.733965l12.80673-29.59762 12.658674 29.59762z"/>
+  </g>
+</svg>

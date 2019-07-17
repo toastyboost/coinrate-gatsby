@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    dlt-delta
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#2E283C" cx="40" cy="40" r="40"/>
+    <path stroke="#EFAC95" stroke-width="3.879313" stroke-linecap="round" stroke-linejoin="round" d="M61 58L39.529292 15 19 58h31.603525"/>
+  </g>
+</svg>

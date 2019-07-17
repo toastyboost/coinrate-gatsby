@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    nlg-gulden
+  </title>
+  <defs>
+    <linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="a">
+      <stop stop-color="#39ADFF" offset="0%"/>
+      <stop stop-color="#1B67DE" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="url(#a)" cx="40" cy="40" r="40"/>
+    <path d="M39.985 70C23.433 70 10 56.56 10 40c0-16.56 13.433-30 29.985-30 8.276 0 15.784 3.36 21.205 8.784l-4.99 4.992c-4.15-4.152-9.882-6.72-16.215-6.72-12.666 0-22.933 10.272-22.933 22.944 0 12.672 10.267 22.944 22.933 22.944 11.466 0 20.942-8.424 22.62-19.416h-22.62v-7.056h29.77c.144 1.17.216 2.35.215 3.528 0 16.56-13.433 30-29.985 30" fill-rule="nonzero" fill="#FFF"/>
+  </g>
+</svg>

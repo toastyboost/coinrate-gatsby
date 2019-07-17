@@ -1,0 +1,13 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    incnt-incent
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#032F5C" cx="40" cy="40" r="39"/>
+    <circle stroke="#F5931C" stroke-width="2.301606" cx="40" cy="40" r="38.849197"/>
+    <path fill="#F4941B" fill-rule="nonzero" d="M40 74.140494V15.449532l-19.180053 4.603213L40 74.140495"/>
+    <path fill="#F8B13F" fill-rule="nonzero" d="M40 74.140494V15.449532l19.180053 4.603213L40 74.140495"/>
+    <path fill="#8CC63E" fill-rule="nonzero" d="M27.187725 8.544714L40 5.475904v9.97363l-9.590026 2.301605-3.22225-9.206427"/>
+    <path fill="#D5E11E" fill-rule="nonzero" d="M52.812275 8.544714L40 5.475904v9.97363l9.590026 2.301605 3.22225-9.206427"/>
+  </g>
+</svg>

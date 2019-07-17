@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    Group 27
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#045947" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero" fill="#FFF">
+      <path d="M67.54 32.4v2.74L39.81 51.72l-20.897-9.97.04-1.536 20.777 9.95 26.412-15.78v-1.128l-24.933-11.7L13.397 38.29v7.482L39.73 58.445 67.22 42.04l.78 1.167L39.81 60 12 46.628v-9.096L41.13 20"/>
+      <path d="M67.28 44.843l.446-2.47L65 41.96l.18-.96 3.82.568L68.374 45"/>
+    </g>
+  </g>
+</svg>

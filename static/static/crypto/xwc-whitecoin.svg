@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    xwc-whitecoin
+  </title>
+  <defs>
+    <radialGradient fx="50%" fy="50%" id="a">
+      <stop stop-color="#FFF" offset="0%"/>
+      <stop stop-color="#FFF" offset="25.203284%"/>
+      <stop stop-color="#1C1C1C" offset="68.692203%"/>
+      <stop stop-color="#AEAEAE" offset="100%"/>
+    </radialGradient>
+  </defs>
+  <circle cx="40" cy="40" r="40" fill="url(#a)" fill-rule="evenodd"/>
+</svg>

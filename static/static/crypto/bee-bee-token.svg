@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    bee-bee-token
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#273237" cx="40" cy="40" r="40"/>
+    <g fill="#FFC107" fill-rule="nonzero">
+      <path d="M40 22.336585L18.066667 34.848781V53.2l-5.413334-3.15122V31.697561l21.933334-12.512195z"/>
+      <path d="M45.693333 43.839024l21.933334 12.419513v-18.35122L45.693333 25.395122 23.76 37.907317v18.35122L29.266667 53.2V41.058537l16.426666-9.360976z"/>
+    </g>
+  </g>
+</svg>

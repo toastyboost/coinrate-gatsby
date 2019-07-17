@@ -1,0 +1,16 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    eth-ethereum
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FEFEFE" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#343434" d="M40.495 9l-.404 1.367V50.04l.405.4L58.96 39.558"/>
+      <path fill="#8C8C8C" d="M40.495 9L22.03 39.557l18.465 10.885"/>
+      <path fill="#3C3C3B" d="M40.495 53.93l-.228.276V68.34l.228.66L58.97 43.05"/>
+      <path fill="#8C8C8C" d="M40.495 69V53.93L22.03 43.05"/>
+      <path fill="#141414" d="M40.495 50.442l18.463-10.885-18.463-8.37v19.255"/>
+      <path fill="#393939" d="M22.03 39.557l18.464 10.885V31.186"/>
+    </g>
+  </g>
+</svg>

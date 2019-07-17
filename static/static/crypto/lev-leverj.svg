@@ -1,0 +1,35 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    lev-leverj
+  </title>
+  <defs>
+    <linearGradient x1="15.849483%" y1="118.301175%" x2="84.150996%" y2="39.433474%" id="a">
+      <stop stop-color="#FFF" offset="0%"/>
+      <stop stop-color="#E6E6E6" offset="8.518%"/>
+      <stop stop-color="#A1A0A0" offset="33.554%"/>
+      <stop stop-color="#6B6869" offset="56.114%"/>
+      <stop stop-color="#444041" offset="75.403%"/>
+      <stop stop-color="#2C2829" offset="90.662%"/>
+      <stop stop-color="#231F20" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="4656.58501%" y1="8970.117%" x2="10001.2257%" y2="1843.947%" id="b">
+      <stop stop-color="#FFF" offset="0%"/>
+      <stop stop-color="#E6E6E6" offset="8.518%"/>
+      <stop stop-color="#A1A0A0" offset="33.554%"/>
+      <stop stop-color="#6B6869" offset="56.114%"/>
+      <stop stop-color="#444041" offset="75.403%"/>
+      <stop stop-color="#2C2829" offset="90.662%"/>
+      <stop stop-color="#231F20" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#E8810F" d="M35.831614 25.22019L16.095527 59.641524h39.472174z"/>
+      <path fill="url(#a)" opacity=".5" style="mix-blend-mode:soft-light" d="M19.831614 5.22019L.095527 39.641524h39.472174z" transform="translate(16 20)"/>
+      <path fill="#FD8900" d="M44.18125 54.793143L63.917335 20.37181H24.445163z"/>
+      <path fill="url(#b)" opacity=".5" style="mix-blend-mode:soft-light" d="M28.18125 34.793143L47.917335.37181H8.445163z" transform="translate(16 20)"/>
+      <path fill="#FFCD05" d="M44.18125 54.793143l4.303448-7.505524L35.831614 25.22019l-4.303448 7.505143z"/>
+    </g>
+  </g>
+</svg>

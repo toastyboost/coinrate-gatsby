@@ -1,0 +1,22 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    atm-atmchain
+  </title>
+  <defs>
+    <linearGradient x1="2.97154%" y1="50%" y2="50%" id="a">
+      <stop stop-color="#E42300" stop-opacity="0" offset="0%"/>
+      <stop stop-color="#E42300" offset="100%"/>
+    </linearGradient>
+    <linearGradient x1="100%" y1="50%" x2="0%" y2="50%" id="b">
+      <stop stop-color="#00319B" stop-opacity="0" offset="0%"/>
+      <stop stop-color="#00319B" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g transform="translate(19 5)">
+      <rect fill="url(#a)" transform="rotate(62 20.95 45.872)" y="33.840834" width="41.897436" height="24.0625" rx="12.03125"/>
+      <rect fill="url(#b)" transform="rotate(62 22.05 23.997)" x="1.102564" y="11.965834" width="41.897436" height="24.0625" rx="12.03125"/>
+    </g>
+  </g>
+</svg>

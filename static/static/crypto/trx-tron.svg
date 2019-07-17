@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    trx-tron
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#0C0E0F" cx="40" cy="40" r="40"/>
+    <g stroke="#FFF" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke-width="1.8" d="M19 16l39.224676 9.03723L67 30.853763 39.422536 70z"/>
+      <path d="M19.126374 16.125l22.747252 25.75M42.5 41.5l24.371134-10.37234m-27.73477 38.746214l2.727272-27.747748m.25944-.249314l15.753847-16.753624" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

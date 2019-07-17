@@ -1,0 +1,24 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>
+    ont-ontology
+  </title>
+  <defs>
+    <path id="a" d="M.000138.54436h36.769847v43.752515H.000138z"/>
+    <path id="c" d="M.586108.543516h36.769846V44.29596H.586108z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g transform="translate(18 18.15982)">
+      <mask id="b" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <path d="M6.308446 6.951234L.000138.54436v21.875625c0 5.598985 2.102539 11.197266 6.308308 15.46875 8.410846 8.544375 22.05 8.544375 30.461539 0L6.308446 6.951234z" fill="#32A4BE" mask="url(#b)"/>
+    </g>
+    <g transform="translate(25.615385 18.15982)">
+      <mask id="d" fill="#fff">
+        <use xlink:href="#c"/>
+      </mask>
+      <path d="M31.047646 37.889086l6.308308 6.406875V22.420336c0-5.598984-2.102539-11.197266-6.308308-15.46875-8.411538-8.544375-22.05-8.544375-30.461538 0l30.461538 30.9375z" fill="#32A4BE" mask="url(#d)"/>
+    </g>
+  </g>
+</svg>

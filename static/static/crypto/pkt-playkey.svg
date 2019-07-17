@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    pkt-playkey
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#F8B334" d="M15 44.942857L40.487143 70 41.25 59.134286 15 35z"/>
+      <path fill="#D8821D" d="M40 59.134286V70l24.921429-25.132857L65 35z"/>
+      <path fill="#FED63E" d="M40 10L15 35.622857 40 61.25l25-25.627143z"/>
+      <path d="M17.5 35.624286L40 58.75l22.5-23.125714L40 12.5 17.5 35.624286zm3.418571 0L40 16.011429l19.082857 19.614285L40 55.237143 20.918571 35.624286z" fill="#1D1D1B"/>
+      <path d="M40 47.5L52.5 35 40 22.5v25zm2.46-19.061429L49.022857 35 42.46 41.562857V28.438571z" fill="#1D1D1B"/>
+    </g>
+  </g>
+</svg>

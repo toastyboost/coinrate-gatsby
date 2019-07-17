@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    dtr-dynamic-trading-rights
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#121925" cx="40" cy="40" r="40"/>
+    <rect fill="#00AAB2" x="20" y="44" width="9" height="16" rx="4.5"/>
+    <rect fill="#00AAB2" x="37" y="17" width="9" height="43" rx="4.5"/>
+    <rect fill="#00AAB2" x="53" y="23" width="9" height="23" rx="4.5"/>
+  </g>
+</svg>

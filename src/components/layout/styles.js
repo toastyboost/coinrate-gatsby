@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Wrap, MEDIA } from 'styles/common';
 
 const LayoutWrap = styled(Wrap)`
+  min-height: calc(100vh - 206px);
   max-width: ${({ page }) => (page === 'crypto' ? '100%' : '1210px')};
 
   ${MEDIA.PHONE`

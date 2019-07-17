@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    gbyte-byteball
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#F1F1F1" cx="40" cy="40" r="40"/>
+    <g transform="translate(10 10)" fill-rule="nonzero">
+      <circle fill="#2C3E50" cx="30" cy="30" r="30"/>
+      <circle fill="#FFF" cx="29.985" cy="29.985" r="24.995"/>
+    </g>
+  </g>
+</svg>

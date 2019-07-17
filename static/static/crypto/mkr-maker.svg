@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    mkr-maker
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <g stroke-linecap="round" stroke-linejoin="round" stroke-width="1.882353">
+      <path stroke="#1ABC9C" d="M36.808616 55.885416V38.328232L16.115866 23v32.885417"/>
+      <path stroke="#546979" d="M43.175617 55.885416V38.328232L63.868367 23v32.885417"/>
+    </g>
+  </g>
+</svg>

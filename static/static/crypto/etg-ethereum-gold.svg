@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    etg-ethereumgold
+  </title>
+  <g fill="none">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <path fill="#937812" d="M40.495 9l-.404 1.367V50.04l.405.4L58.96 39.558"/>
+    <path fill="#DCBE54" d="M40.495 9L22.03 39.557l18.465 10.885"/>
+    <path fill="#967910" d="M40.495 53.93l-.228.276V68.34l.228.66L58.97 43.05"/>
+    <path fill="#DABD56" d="M40.495 69V53.93L22.03 43.05"/>
+    <path fill="#705B10" d="M40.495 50.442l18.463-10.885-18.463-8.37v19.255"/>
+    <path fill="#9D7F12" d="M22.03 39.557l18.464 10.885V31.186"/>
+  </g>
+</svg>

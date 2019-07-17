@@ -1,0 +1,11 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    iop-internetofpeople
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#40B7CF" cx="40" cy="40" r="40"/>
+    <path d="M68.194605 40L54.097303 15.582756H25.902697L11.805394 40l14.097303 24.417244H54.0973L68.194606 40z" stroke="#FFF" stroke-width="3.127036"/>
+    <path d="M61.557755 40L50.778878 21.330436H29.221122L18.442245 40l10.778877 18.669564h21.557756L61.557755 40z" stroke="#FFF" stroke-width="1.758958"/>
+    <path fill="#FFF" d="M52.557003 40l-6.2785 10.874684H33.721497L27.442997 40l6.2785-10.874684h12.557005"/>
+  </g>
+</svg>

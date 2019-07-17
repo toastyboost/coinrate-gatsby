@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    sky-skycoin
+  </title>
+  <defs>
+    <linearGradient x1="0%" y1="50%" y2="50%" id="a">
+      <stop stop-color="#A778D6" offset="0%"/>
+      <stop stop-color="#688DE1" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="url(#a)" cx="40" cy="40" r="40"/>
+    <path d="M27.895534 56c-6.40897 0-11.604466-5.223345-11.604466-11.666667s5.195496-11.666666 11.604466-11.666666C27.895534 26.223345 33.09103 21 39.5 21s11.604466 5.223345 11.604466 11.666667c6.40897 0 11.604466 5.223344 11.604466 11.666666C62.708932 50.776655 57.513436 56 51.104466 56H27.895534z" fill-rule="nonzero" fill="#FFF"/>
+  </g>
+</svg>

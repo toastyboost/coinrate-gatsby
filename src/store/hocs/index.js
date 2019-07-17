@@ -5,6 +5,8 @@ import { withMarketData } from './withMarketData';
 import { withSymbolMarkets } from './withSymbolMarkets';
 import { withExchanges } from './withExchanges';
 import { withExchangeMarkets } from './withExchangeMarkets';
+import { useInterval } from './useInterval';
+import { withSearchData } from './withSearchData';
 
 export {
   withGlobalStats,
@@ -14,4 +16,6 @@ export {
   withSymbolMarkets,
   withExchanges,
   withExchangeMarkets,
+  useInterval,
+  withSearchData,
 };

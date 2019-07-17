@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    rfr-refereum
+  </title>
+  <defs>
+    <linearGradient x1="50.000368%" y1="-3.974%" x2="50.000368%" y2="107.305%" id="a">
+      <stop stop-color="#EA2234" offset="0%"/>
+      <stop stop-color="#7B5CA8" offset="100%"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#FFF" cx="40" cy="40" r="40"/>
+    <path d="M40.07594 18.893982C40.075959 8.459202 31.698686.000103 21.364724 0H0v18.614521c4.432915-3.068888 9.705617-4.660462 15.079265-4.5517V10.12851l13.169074 8.765472-13.169074 8.765473V23.96853c-4.639536.503694-8.630027 3.540146-10.388273 7.904663C2.916467 36.274001 3.761488 42.767143 6.770376 46h33.185741l-5.500901-13.610871c3.599268-3.548902 5.62618-8.41544 5.620724-13.495146" transform="translate(21 16)" fill="url(#a)" fill-rule="nonzero"/>
+  </g>
+</svg>

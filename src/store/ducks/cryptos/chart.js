@@ -1,5 +1,6 @@
 import { createAction, handleActions } from 'redux-actions';
 import { fetchSymbolChart } from 'store/api';
+import { timeRanges } from 'helpers/constants';
 
 // SYNC ACTIONS
 
@@ -7,10 +8,13 @@ export const setSymbolChart = createAction('setSymbolChart');
 
 // ASYNC ACTIONS
 
-export const getSymbolChart = (symbol, range = '7d') => async dispatch => {
-  const res = await fetchSymbolChart(symbol, range);
+export const getSymbolChart = (
+  symbols,
+  range = timeRanges[1]
+) => async dispatch => {
+  const res = await fetchSymbolChart(symbols, range);
 
-  dispatch(setSymbolChart({ ...res, symbol }));
+  dispatch(setSymbolChart({ ...res }));
 };
 
 const initialState = {};
@@ -18,12 +22,12 @@ const initialState = {};
 export default handleActions(
   {
     [setSymbolChart]: (state, { payload }) => {
-      const { data, symbol } = payload;
+      const { data } = payload;
       const { result } = data;
 
       return {
         ...state,
-        [symbol]: result[symbol],
+        ...result,
       };
     },
   },

@@ -1,0 +1,9 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    r-revain
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#7D165A" cx="40" cy="40" r="40"/>
+    <path fill="#FFF" d="M25 18.131444L34.581527 13l23.955328 13.50721v10.824955l-11.80687 6.104388L61 53.71702V64L38.038696 48.267625v-10.93546l10.68639-5.724654-14.14356-8.084935V57.44907L25 62.85527"/>
+  </g>
+</svg>

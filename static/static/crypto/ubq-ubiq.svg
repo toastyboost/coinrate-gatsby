@@ -1,0 +1,14 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    ubiq-ubiq
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero">
+      <path fill="#333" d="M46.19 14.906l.79 25.273L68 26.873"/>
+      <path fill="#494949" d="M67.827 53.31V26.765L37.707 45.88v25.112h1.013"/>
+      <path fill="#0CA579" d="M33.81 64.328l-.79-25.274L12 52.36"/>
+      <path fill="#00EA90" d="M12.173 25.923V52.47l30.12-19.093V8.24H41.28"/>
+    </g>
+  </g>
+</svg>

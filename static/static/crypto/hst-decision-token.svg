@@ -1,0 +1,29 @@
+<svg width="86" height="86" viewBox="0 0 86 86" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    hst-decision-token
+  </title>
+  <defs>
+    <filter x="-30.1%" y="-30.2%" width="160.2%" height="160.4%" filterUnits="objectBoundingBox" id="a">
+      <feGaussianBlur stdDeviation="5.815452" in="SourceGraphic"/>
+    </filter>
+    <filter x="-35.9%" y="-36%" width="171.7%" height="172%" filterUnits="objectBoundingBox" id="b">
+      <feGaussianBlur stdDeviation="5.815452" in="SourceGraphic"/>
+    </filter>
+    <filter x="-10.7%" y="-10.8%" width="121.4%" height="121.5%" filterUnits="objectBoundingBox" id="c">
+      <feGaussianBlur stdDeviation="1.870968" in="SourceGraphic"/>
+    </filter>
+    <filter x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox" id="d">
+      <feGaussianBlur in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="translate(2 6)" fill="none" fill-rule="evenodd">
+    <circle fill="#000" cx="40" cy="40" r="40"/>
+    <g transform="translate(12 8)">
+      <ellipse fill="#005AFF" filter="url(#a)" cx="29" cy="28.878947" rx="29" ry="28.878947"/>
+      <ellipse fill="#AAF3B8" filter="url(#b)" cx="24.322581" cy="34.157895" rx="24.322581" ry="24.221053"/>
+      <ellipse fill="#FFF" filter="url(#c)" cx="28.688172" cy="32.294737" rx="26.193548" ry="26.084211"/>
+      <ellipse fill="#FFF" filter="url(#d)" cx="29" cy="33.226316" rx="25.258064" ry="25.152632"/>
+      <ellipse fill="#000" cx="28.064516" cy="34.157895" rx="24.946237" ry="24.842105"/>
+    </g>
+  </g>
+</svg>

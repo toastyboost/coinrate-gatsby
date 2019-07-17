@@ -1,0 +1,16 @@
+<svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#5698D8" cx="40" cy="40" r="40"/>
+    <g transform="translate(10 29)" fill="#FFF">
+      <ellipse cx="6.428571" cy="6.382979" rx="6.428571" ry="6.382979"/>
+      <ellipse cx="18.214286" cy="18.617021" rx="6.428571" ry="6.382979"/>
+      <ellipse cx="11.517857" cy="11.968085" rx="2.410714" ry="2.393617"/>
+      <ellipse cx="23.303571" cy="13.031915" rx="2.410714" ry="2.393617"/>
+      <ellipse cx="35.089286" cy="11.968085" rx="2.410714" ry="2.393617"/>
+      <ellipse cx="46.875" cy="13.031915" rx="2.410714" ry="2.393617"/>
+      <ellipse cx="41.785714" cy="18.617021" rx="6.428571" ry="6.382979"/>
+      <ellipse cx="30" cy="6.382979" rx="6.428571" ry="6.382979"/>
+      <ellipse cx="53.571429" cy="6.382979" rx="6.428571" ry="6.382979"/>
+    </g>
+  </g>
+</svg>

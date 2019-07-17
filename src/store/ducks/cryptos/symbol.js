@@ -7,9 +7,9 @@ export const setSymbol = createAction('setSymbol');
 
 // ASYNC ACTIONS
 
-export const getSymbol = crypto => async dispatch => {
-  const res = await fetchSymbol(crypto);
-  dispatch(setSymbol({ ...res, crypto }));
+export const getSymbol = symbol => async dispatch => {
+  const res = await fetchSymbol(symbol);
+  dispatch(setSymbol({ ...res, symbol }));
 };
 
 const initialState = {};
@@ -17,12 +17,12 @@ const initialState = {};
 export default handleActions(
   {
     [setSymbol]: (state, { payload }) => {
-      const { data, crypto } = payload;
+      const { data, symbol } = payload;
       const { result } = data;
 
       return {
         ...state,
-        [crypto]: result[0],
+        [symbol]: result[0],
       };
     },
   },

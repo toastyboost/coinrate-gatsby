@@ -1,0 +1,12 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <title>
+    emc-emercoin
+  </title>
+  <g fill="none" fill-rule="evenodd">
+    <circle fill="#F3F3F3" cx="40" cy="40" r="40"/>
+    <g fill-rule="nonzero" fill="#BEA9D2">
+      <path d="M54.546 14.03H25.003L10 39.87l15.003 25.843h29.78L70 39.778 54.546 14.03zm-3.024 46.106H28.275l-11.7-20.144 11.7-20.14h23.05L63.38 39.938 51.522 60.136z"/>
+      <path d="M28.82 33.643h8.467v3.976H28.82v4.767h13.234v-8.744h3.97v12.19H28.82v4.772h21.97v-22H28.82"/>
+    </g>
+  </g>
+</svg>

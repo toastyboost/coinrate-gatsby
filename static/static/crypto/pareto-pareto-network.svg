@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>pareto-pareto-network</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="41.1518916%" y1="107.974315%" x2="161.603614%" y2="-29.2096213%" id="linearGradient-1">
+            <stop stop-color="#59BF90" offset="0%"></stop>
+            <stop stop-color="#97CA47" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="6.34406113%" y1="55.6520148%" x2="77.0548738%" y2="-27.2559136%" id="linearGradient-2">
+            <stop stop-color="#0C6089" offset="0%"></stop>
+            <stop stop-color="#294C84" offset="37%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Coin-Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-1020.000000, -1616.000000)" id="pareto-pareto-network">
+            <g transform="translate(1020.000000, 1616.000000)">
+                <circle id="1" fill="#FFFFFF" cx="40" cy="40" r="40"></circle>
+                <g id="Group-43" transform="translate(16.000000, 21.000000)" fill-rule="nonzero">
+                    <g id="Group-41">
+                        <path d="M15.7054545,28.6171698 L45.8654545,28.6171698 C46.4064962,28.6171698 46.9253782,28.3997073 47.3079524,28.0126216 C47.6905266,27.6255359 47.9054545,27.1005351 47.9054545,26.5531132 L47.9054545,0.610754717 C47.9011746,0.374302228 47.7623649,0.161601361 47.5491289,0.0647498238 C47.3358929,-0.0321017132 47.0865606,0.00430554074 46.9090909,0.158207547 L15.7054545,28.6171698 Z" id="Shape" fill="url(#linearGradient-1)"></path>
+                        <path d="M1.00727273,38.6320755 L12,28.6171698 L15.7054545,25.2359434 L2.04,25.2359434 C0.91333911,25.2359434 1.37976165e-16,26.160053 0,27.3 L0,38.190566 C0.00483477981,38.4294322 0.146882177,38.6435142 0.363555631,38.7384869 C0.580229085,38.8334596 0.831740354,38.7918828 1.00727273,38.6320755 Z" id="_Path_" fill="url(#linearGradient-2)"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>bmc-blackmooncrypto</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Coin-Logos" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-820.000000, -1210.000000)" id="bmc-blackmooncrypto">
+            <g transform="translate(820.000000, 1210.000000)">
+                <circle id="2" fill="#000000" cx="40" cy="40" r="40"></circle>
+                <path d="M40,10 C56.5428571,10 70,23.4571429 70,40 C70,56.5428571 56.5428571,70 40,70 C23.4571429,70 10,56.5428571 10,40 C10,23.4571429 23.4571429,10 40,10 Z M38,64 C51.2857143,64 62,53.2857143 62,40 C62,26.7142857 51.2857143,16 38,16 C24.7142857,16 14,26.7142857 14,40 C14,53.2857143 24.7142857,64 38,64 Z" id="1" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>
