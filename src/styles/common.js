@@ -63,7 +63,7 @@ const Button = styled.a`
 
 const RoundButton = styled(Button)`
   background-color: var(--blue);
-  padding: 14px 36px 11px;
+  padding: 14px 28px 11px;
   color: #fff;
   border-radius: 50px;
   text-transform: uppercase;

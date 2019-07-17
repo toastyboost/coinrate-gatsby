@@ -133,7 +133,7 @@ const tableColumns = [
     accessor: 'CHART',
     Cell: row => (
       <div className="chart">
-        <SparkChart symbol={row.original.ID} />
+        <SparkChart symbol={row.original.ID} isRef />
       </div>
     ),
     width: 210,

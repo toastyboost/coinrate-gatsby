@@ -10534,6 +10534,16 @@ react-dom-core@0.0.4:
   dependencies:
     react "15"
 
+react-dom@^15.4.2:
+  version "15.6.2"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.6.2.tgz#41cfadf693b757faf2708443a1d1fd5a02bef730"
+  integrity sha1-Qc+t9pO3V/rycIRDodH9WgK+9zA=
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
+    prop-types "^15.5.10"
+
 react-dom@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.8.6.tgz#71d6303f631e8b0097f56165ef608f051ff6e10f"
@@ -10584,6 +10594,14 @@ react-hot-loader@^4.6.2:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
     source-map "^0.7.3"
+
+react-is-scrolling@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-is-scrolling/-/react-is-scrolling-1.0.1.tgz#7fc889455ef25e116579aa32643a8fdc864243ef"
+  integrity sha1-f8iJRV7yXhFleaoyZDqP3IZCQ+8=
+  dependencies:
+    react "^15.4.2"
+    react-dom "^15.4.2"
 
 react-is@^16.6.0:
   version "16.6.3"
@@ -10664,7 +10682,7 @@ react-themeable@^1.1.0:
   dependencies:
     object-assign "^3.0.0"
 
-react@15:
+react@15, react@^15.4.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.6.2.tgz#dba0434ab439cfe82f108f0f511663908179aa72"
   integrity sha1-26BDSrQ5z+gvEI8PURZjkIF5qnI=

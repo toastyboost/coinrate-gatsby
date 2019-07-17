@@ -19,11 +19,10 @@ import {
   StatsTitle,
   StatsValue,
   StatsChange,
-  BlockCTA,
+  SymbolCta,
 } from './styles';
 
 import { Value } from 'components';
-import { availiableAssets } from './constants';
 
 const Header = ({ data }) => {
   const {
@@ -41,10 +40,6 @@ const Header = ({ data }) => {
     SUPPLY,
   } = data;
 
-  const getParnerLink = id =>
-    // eslint-disable-next-line max-len
-    `https://iqoption.com/lp/buying-crypto/?aff=38838&afftrack=cryptoPage_${id}&active=${id}&retrack=coinrate&type=crypto`;
-
   return (
     <BlockContainer>
       <BlockWrap>
@@ -55,7 +50,7 @@ const Header = ({ data }) => {
             <CryptoDetails>
               <CriptoTicker>{TICKER}</CriptoTicker>
               <CryptoShare>
-                <Value value={SHARE * 100} /> %
+                <Value value={SHARE * 100} />% share
               </CryptoShare>
             </CryptoDetails>
           </CryptoNameWrap>
@@ -97,9 +92,7 @@ const Header = ({ data }) => {
             </StatsValue>
           </StatsItem>
         </CryptoStats>
-        <BlockCTA href={getParnerLink(TICKER)} target="_blank">
-          buy {availiableAssets.includes(ID) ? ID : 'crypto'}
-        </BlockCTA>
+        <SymbolCta id={ID} />
       </BlockWrap>
     </BlockContainer>
   );

@@ -1,4 +1,4 @@
-const setFormat = value => {
+const setFormat = (value, showSign) => {
   const val =
     value && Math.abs(Number(value)) >= 1.0e12
       ? Math.abs(Number(value)) / 1.0e12
@@ -10,7 +10,7 @@ const setFormat = value => {
       ? Math.abs(Number(value)) / 1.0e3
       : value;
 
-  return parseFloat(val.toString().replace('-', ''));
+  return parseFloat(val.toString().replace(showSign ? '' : '-', ''));
 };
 
 const setDirection = value => {

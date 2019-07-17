@@ -9,8 +9,8 @@ import {
   setDecimals,
 } from './helpers';
 
-const Value = ({ value, type, suffix, prefix }) => {
-  const formatedValue = setFormat(value, type);
+const Value = ({ value, type, suffix, prefix, showSign }) => {
+  const formatedValue = setFormat(value, showSign);
 
   return type === 'triangle' ? (
     <DirectionArrow className="direction" direction={setDirection(value)} />

@@ -10,10 +10,10 @@ const TableStyles = css`
     border: 1px solid var(--border-color);
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05), inset 0 4px 0 transparent;
     border-radius: 3px;
-    margin: 24px 0;
+    margin: 0 0 24px 0;
 
     .rt-table {
-      overflow: scroll;
+      overflow: visible;
       display: flex;
       flex-direction: column;
       align-items: stretch;

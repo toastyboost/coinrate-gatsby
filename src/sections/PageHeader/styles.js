@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { MEDIA } from 'styles/common';
 
 const PageHeaderWrap = styled.div`
-  margin: 24px 0 24px 0;
+  margin: 36px 0 24px 0;
   text-align: center;
   text-transform: uppercase;
 `;

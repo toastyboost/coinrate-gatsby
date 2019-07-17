@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 // rename to symbol
-import { MarketTableContainer, BlockWrap } from './styles';
+import { MarketTableContainer, BlockWrap, MarketCta } from './styles';
 
 import { withSymbolMarkets } from 'store/hocs';
 
@@ -19,7 +19,8 @@ const Block = ({ symbol, selectSymbolMarkets, getSymbolMarkets }) => {
   return (
     <MarketTableContainer>
       <BlockWrap>
-        <Table columns={tableColumns} data={data} pageSize={15} />
+        <Table columns={tableColumns} data={data} pageSize={10} />
+        <MarketCta id={symbol} />
       </BlockWrap>
     </MarketTableContainer>
   );

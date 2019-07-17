@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, Seo } from 'components';
+import { Layout, Seo, AD } from 'components';
 import { DetailedCrypto, CryptoMarkets, PageHeader } from 'sections';
 
 import { GlobalStyles } from '../styles';
@@ -13,6 +13,7 @@ const Crypto = ({ pageContext: { slug, ticker, name } }) => (
       slug={`/cryptocurrencies/${slug}`}
     />
     <GlobalStyles />
+    <AD symbol={slug} />
     <Layout page="crypto">
       <DetailedCrypto symbol={slug} />
       <PageHeader

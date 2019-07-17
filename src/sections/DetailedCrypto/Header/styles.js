@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Wrap, RoundButton, MEDIA } from 'styles/common';
+import { Wrap, MEDIA } from 'styles/common';
+import { Cta } from 'components';
 
 const BlockContainer = styled.div`
   position: relative;
@@ -144,7 +145,7 @@ const CryptoPrice = styled.div`
 
   ${MEDIA.DESKTOP`
     width: 100%;
-    max-width: 245px;
+    max-width: 220px;
   `};
 `;
 
@@ -239,12 +240,7 @@ const StatsChange = styled.div`
   line-height: 1em;
 `;
 
-const BlockCTA = styled(RoundButton)`
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-top: 20px;
-  margin-bottom: 16px;
-
+const SymbolCta = styled(Cta)`
   ${MEDIA.PHONE`
     width: 100%;
   `};
@@ -273,6 +269,6 @@ export {
   StatsTitle,
   StatsValue,
   StatsChange,
-  BlockCTA,
   CryptoNameWrap,
+  SymbolCta,
 };

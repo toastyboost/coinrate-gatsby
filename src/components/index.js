@@ -12,6 +12,8 @@ import { MarketSearch } from './Search';
 import { MobileMenu } from './MobileMenu';
 import { Seo } from './Seo';
 import { SparkChart } from './SparkChart';
+import { Cta } from './Cta';
+import { AD } from './AD';
 
 export {
   MobileMenu,
@@ -27,4 +29,6 @@ export {
   MarketSearch,
   Seo,
   SparkChart,
+  Cta,
+  AD,
 };
