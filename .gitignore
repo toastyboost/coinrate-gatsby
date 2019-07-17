@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
-.env
+
+deploy.js
 
 # Logs
 logs
@@ -12,3 +13,4 @@ yarn-error.log*
 .cache/
 public
 build
+

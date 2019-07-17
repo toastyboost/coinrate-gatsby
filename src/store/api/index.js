@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { timeRanges } from 'helpers/constants';
 
-const baseURL = 'https://external-apis.iqoption.com/cryptoinfo/v1';
+const baseURL = process.env.API_URL;
 
 const fetchGlobalStats = () => axios.get(`${baseURL}/global`);
 
