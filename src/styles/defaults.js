@@ -8,10 +8,6 @@ import { TableStyles } from './table';
 import { FontsStyles } from './fonts';
 
 const GlobalStyles = createGlobalStyle`
-
-  ${FontsStyles};
-  ${Normalize};
-
   :root {
     --main-font: 'Gilroy';
     --text-color: rgba(0,0,0,.85);
@@ -34,6 +30,9 @@ const GlobalStyles = createGlobalStyle`
     --purple: #5349a0;
     --box-shadow: 0 1px 25px rgba(0,0,0,.1)
   }
+
+  ${FontsStyles};
+  ${Normalize};
 
   * {
     margin: 0;

@@ -1,10 +1,12 @@
 import React from 'react';
+import IsScrolling from 'react-is-scrolling';
 import { compose } from 'redux';
+
 import { AdContainer, AdChange, AdChart, AdCta } from './styles';
 import { withSymbol } from 'store/hocs';
 import { SparkChart, Value } from 'components';
-import IsScrolling from 'react-is-scrolling';
 
+import { availiableAssets } from 'helpers/constants';
 const AdBlock = ({ symbol, selectSymbol }) => {
   const getParnerLink = () =>
     // eslint-disable-next-line max-len
@@ -29,7 +31,12 @@ const AdBlock = ({ symbol, selectSymbol }) => {
           <em>7 days</em>
         </span>
       </AdChange>
-      <AdCta>Trade it now</AdCta>
+      <AdCta>
+        Trade{' '}
+        {availiableAssets.includes(symbol.toLowerCase())
+          ? 'it x100 '
+          : 'crypto now '}
+      </AdCta>
     </AdContainer>
   );
 };

@@ -51,7 +51,7 @@ const AdChange = styled.div`
     bottom: -1px;
     background-image: linear-gradient(
       to right,
-      rgba(246, 246, 246, 0.9) 0%,
+      rgba(246, 246, 246, 1) 0%,
       rgba(246, 246, 246, 0) 100%
     );
   }
@@ -85,7 +85,7 @@ const AdChange = styled.div`
 
 const AdChart = styled.div`
   display: flex;
-  opacity: 0.45;
+  opacity: 0.35;
   position: relative;
   bottom: -2px;
 `;
@@ -100,12 +100,12 @@ const AdCta = styled.div`
     background-position: center;
     width: 20px;
     height: 20px;
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   }
 
   background-color: var(--blue);
   color: #fff;
-  padding: 0 24px;
+  padding: 0 12px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;

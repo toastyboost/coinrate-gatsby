@@ -252,7 +252,7 @@ const TableStyles = css`
         &:only-child {
           .rt-td {
             min-height: 140px;
-            max-height: auto;
+            max-height: 100%;
           }
         }
       }
@@ -388,7 +388,6 @@ const TableStyles = css`
         top: 50%;
         left: 0;
         font-size: 15px;
-        color: $color_2;
         transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         display: flex;
         justify-content: center;
@@ -411,10 +410,10 @@ const TableStyles = css`
       pointer-events: none;
       margin-top: 15px;
       padding: 16px 60px;
-      color: $color_3;
+
       border-radius: 2px;
       text-align: center;
-      box-shadow: $box-shadow;
+      box-shadow: var(--box-shadow);
       i {
         margin-top: 10px;
       }

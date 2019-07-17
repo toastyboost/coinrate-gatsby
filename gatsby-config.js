@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
     'gatsby-plugin-sharp',
     'gatsby-plugin-robots-txt',

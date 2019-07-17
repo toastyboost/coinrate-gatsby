@@ -6,7 +6,7 @@ const LayoutWrap = styled(Wrap)`
   max-width: ${({ page }) => (page === 'crypto' ? '100%' : '1210px')};
 
   ${MEDIA.PHONE`
-    padding: ${({ page }) => (page === 'crypto' ? '0' : 'padding: 0 24px')};;
+    padding: ${({ page }) => (page === 'crypto' ? '0' : '0 24px')};
   `}
 `;
 
