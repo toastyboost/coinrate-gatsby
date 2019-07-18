@@ -23,7 +23,7 @@ const tableColumns = [
     accessor: 'FSYM',
     Cell: row => (
       <a
-        href={`/cryptocurrencies/${row.original.FSYMID}`}
+        href={`/cryptocurrencies/${row.original.FSYMID}/`}
         className="rt-td-body"
       >
         <div className="crypto rt-tbody-item">
@@ -54,7 +54,7 @@ const tableColumns = [
     accessor: 'TSYM',
     Cell: row => (
       <a
-        href={`/cryptocurrencies/${row.original.TSYMID}`}
+        href={`/cryptocurrencies/${row.original.TSYMID}/`}
         className="rt-td-body"
       >
         <div className="crypto rt-tbody-item">

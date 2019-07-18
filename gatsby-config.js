@@ -14,7 +14,6 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
     {
@@ -32,12 +31,12 @@ module.exports = {
         extensions: ['*'],
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-google-tagmanager',
-    //   options: {
-    //     id: 'UA-107444053-1',
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        id: 'UA-107444053-1',
+      },
+    },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
@@ -64,6 +63,12 @@ module.exports = {
           yandex: false,
           windows: false,
         },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-helmet-canonical-urls',
+      options: {
+        siteUrl: 'https://www.coinrate.com',
       },
     },
   ],

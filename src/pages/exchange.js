@@ -10,7 +10,6 @@ const MarketPage = ({ pageContext: { slug, name } }) => (
     <Seo
       title={`${name} exchange listings | Coinrate.com`}
       desc={`View ${name} market listings, price changes volumes.`}
-      slug={`/exchanges/${slug}`}
     />
     <GlobalStyles />
     <Layout>

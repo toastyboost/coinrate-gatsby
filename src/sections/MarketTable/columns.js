@@ -22,7 +22,7 @@ const tableColumns = [
     ),
     accessor: 'PRICE',
     Cell: row => (
-      <a href={`/cryptocurrencies/${row.original.ID}`} className="rt-td-body">
+      <a href={`/cryptocurrencies/${row.original.ID}/`} className="rt-td-body">
         <div
           className="crypto__img"
           style={{

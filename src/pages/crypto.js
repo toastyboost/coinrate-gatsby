@@ -10,17 +10,12 @@ const Crypto = ({ pageContext: { slug, ticker, name } }) => (
     <Seo
       title={`${name} (${ticker}) realtime price chart (USD)`}
       desc={`Find out latest price of ${name} (${ticker}), its volume, market cap, supply, historical high's and low's`}
-      slug={`/cryptocurrencies/${slug}`}
     />
     <GlobalStyles />
     <AD symbol={slug} />
     <Layout page="crypto">
       <DetailedCrypto symbol={slug} />
-      <PageHeader
-        title={`${name} exchange rates`}
-        type="symbol-markets"
-        tag="h1"
-      />
+      <PageHeader title={`${name} exchange rates`} type="symbol-markets" />
       <CryptoMarkets symbol={slug} />
     </Layout>
   </>

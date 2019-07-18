@@ -12,7 +12,6 @@ const MarketPage = () => (
       desc={
         'Track latest cryptocurrency exchanges listings, price changes volumes.'
       }
-      slug={'/exchanges'}
     />
     <GlobalStyles />
     <Layout>

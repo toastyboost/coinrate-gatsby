@@ -1,4 +1,4 @@
-const setFormat = (value, showSign) => {
+const setFormat = (value, showSign, suffix) => {
   const val =
     value && Math.abs(Number(value)) >= 1.0e12
       ? Math.abs(Number(value)) / 1.0e12
@@ -6,8 +6,10 @@ const setFormat = (value, showSign) => {
       ? Math.abs(Number(value)) / 1.0e9
       : Math.abs(Number(value)) >= 1.0e6
       ? Math.abs(Number(value)) / 1.0e6
-      : value < 1000000 && value > 100000
+      : value < 1000000 && value > 30000
       ? Math.abs(Number(value)) / 1.0e3
+      : suffix === '%'
+      ? value.toFixed(2)
       : value;
 
   return parseFloat(val.toString().replace(showSign ? '' : '-', ''));
@@ -32,7 +34,7 @@ const setSuffix = (value, suffix) => {
     ? 'B'
     : Math.abs(Number(value)) >= 1.0e6
     ? 'M'
-    : value < 1000000 && value > 100000
+    : value < 1000000 && value > 30000
     ? 'K'
     : '';
 };

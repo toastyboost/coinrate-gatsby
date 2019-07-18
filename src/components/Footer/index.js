@@ -18,7 +18,7 @@ const Footer = () => (
     <FooterWrap>
       <FooterLinks>
         {menuItems.map(({ name, slug }, key) => (
-          <FooterLink key={key} href={`/${slug}`}>
+          <FooterLink key={key} href={`/${slug}/`}>
             {name}
           </FooterLink>
         ))}

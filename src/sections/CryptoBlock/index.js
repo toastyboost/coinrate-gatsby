@@ -56,7 +56,7 @@ const Block = ({
   return (
     <BlockContainer>
       <BlockHeader>
-        <CryptoStats href={`/cryptocurrencies/${ID}`}>
+        <CryptoStats href={`/cryptocurrencies/${ID}/`}>
           <CryptoIcon id={ID} ticker={TICKER} />
           <CryptoLink>
             <CriptoTicker>{TICKER}</CriptoTicker>

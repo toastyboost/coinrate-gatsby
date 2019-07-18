@@ -9,7 +9,6 @@ const seoData = {
   title: 'Crypto market in real time | Coinrate.com',
   desc:
     'View the full list of all cryptocurrencies. Compare cryptocurrencies to make best investing decisions',
-  slug: '/market',
 };
 
 const MarketPage = () => (

@@ -10,7 +10,7 @@ import {
 } from './helpers';
 
 const Value = ({ value, type, suffix, prefix, showSign }) => {
-  const formatedValue = setFormat(value, showSign);
+  const formatedValue = setFormat(value, showSign, suffix);
 
   return type === 'triangle' ? (
     <DirectionArrow className="direction" direction={setDirection(value)} />

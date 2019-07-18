@@ -6,12 +6,10 @@ import { PageHeader, CryptoBlock, MarketTable } from 'sections';
 import { GlobalStyles } from 'styles';
 
 const seoData = {
-  title:
-    'Cryptocurrency Prices, Charts, Exchange Rates in real time | Coinrate.com',
+  title: 'Cryptocurrency prices, charts and exchange rates | Coinrate.com',
   desc: `
-    Cryptocurrency market explorer: find coins prices charts, exchange rates, news, bitcoin ATM map.
-    Compare cryptocoins to make best trading decisions`,
-  slug: '/',
+    Cryptocurrency market explorer: find coins prices charts, exchange rates and news.
+    Compare crypto to make best trading decisions`,
 };
 
 const IndexPage = () => (

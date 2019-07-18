@@ -5,6 +5,7 @@ const ITEMS = process.env.CRYPTO_ITEMS;
 
 const fetchMarket = () =>
   axios.get(`${API}/symbol/infos?start=0&limit=${ITEMS}`);
+
 const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 exports.createPages = async ({ actions: { createPage } }) => {

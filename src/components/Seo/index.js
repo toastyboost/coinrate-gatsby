@@ -3,11 +3,12 @@ import { Helmet } from 'react-helmet';
 
 const site = 'https://coinrate.com';
 
-const Seo = ({ title, desc, slug }) => (
+const Seo = ({ title, desc }) => (
   <Helmet>
     <html lang="en" />
     <title>{title}</title>
     <meta name="description" content={desc} />
+    <meta name="keywords" content="cryptocurrency, market, exchanges, charts" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
     <meta
@@ -34,8 +35,6 @@ const Seo = ({ title, desc, slug }) => (
     <meta property="og:image" content="https://coinrate.com/static/og.jpg" />
     <meta property="og:image:height" content="600" />
     <meta property="og:image:width" content="315" />
-
-    <link rel="canonical" href={`${site}${slug}`} />
   </Helmet>
 );
 
