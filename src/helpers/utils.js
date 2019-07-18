@@ -1,3 +1,5 @@
+import { useCallback, useState, useEffect } from 'react';
+
 const path = {
   static: 'https://coinrate.com/static',
 };
@@ -81,4 +83,22 @@ export const convertTimestamp = timestamp => {
   return time;
 };
 
-export { colors, getStaticPath, numbersToSymbol, CountryNames };
+const isScrolled = () => {
+  const [hidden, setHidden] = useState(false);
+
+  const handleScroll = useCallback(() => {
+    const top = window.pageYOffset || document.documentElement.scrollTop;
+    setHidden(top !== 0);
+  }, [hidden, setHidden]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return hidden;
+};
+
+export { colors, getStaticPath, numbersToSymbol, CountryNames, isScrolled };

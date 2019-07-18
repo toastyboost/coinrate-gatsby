@@ -11,7 +11,7 @@ const tableColumns = [
     ),
     accessor: 'RANK',
     Cell: row => <div className="rank">{row.original.RANK}</div>,
-    width: 40,
+    width: 42,
   },
   {
     Header: () => (
@@ -41,7 +41,7 @@ const tableColumns = [
         </div>
       </a>
     ),
-    width: 325,
+    width: 305,
   },
   {
     Header: () => (
@@ -56,7 +56,7 @@ const tableColumns = [
         <Value value={row.value} prefix="$" />
       </div>
     ),
-    width: 130,
+    width: 135,
   },
   {
     Header: () => (
@@ -71,7 +71,7 @@ const tableColumns = [
         <Value value={row.value} prefix="$" />
       </div>
     ),
-    width: 130,
+    width: 135,
   },
   {
     Header: () => (
@@ -86,7 +86,7 @@ const tableColumns = [
         <Value value={row.original.SHARE * 100} suffix="%" />
       </div>
     ),
-    width: 130,
+    width: 135,
   },
   {
     Header: () => (

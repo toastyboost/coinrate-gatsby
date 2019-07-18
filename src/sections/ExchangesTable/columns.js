@@ -13,7 +13,7 @@ const tableColumns = [
     ),
     Cell: row => <div className="rank rt-tbody-item">{row.original.RANK}</div>,
     accessor: 'RANK',
-    width: 40,
+    width: 42,
   },
   {
     Header: () => (
@@ -23,6 +23,7 @@ const tableColumns = [
       </div>
     ),
     accessor: 'NAME',
+    width: 300,
     Cell: row => (
       <a href={`/exchanges/${row.original.NAME.toLowerCase()}`}>
         <div className="exchange rt-tbody-item">
@@ -50,6 +51,7 @@ const tableColumns = [
       </div>
     ),
     accessor: 'VOLUME24HOUR',
+    width: 300,
     Cell: row => (
       <div className="volume rt-tbody-item">
         <Value value={row.original.VOLUME24HOUR} prefix="$" />
@@ -64,6 +66,7 @@ const tableColumns = [
       </div>
     ),
     accessor: 'MARKETS',
+    width: 260,
     Cell: row => (
       <div className="rt-tbody-item">
         <Value value={row.original.MARKETS} type="simple" />
@@ -78,6 +81,7 @@ const tableColumns = [
       </div>
     ),
     accessor: 'SHARE',
+    width: 260,
     Cell: row => (
       <div className="rt-tbody-item">
         <Value value={row.original.VOLUME24HOURPCT * 10} suffix="%" />

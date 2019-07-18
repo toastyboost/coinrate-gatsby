@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Sparklines,
   SparklinesReferenceLine,
@@ -12,11 +13,11 @@ import { withSymbolChart } from 'store/hocs';
 import { SparkContainer } from './styles';
 
 const Chart = ({ selectSymbolChart, symbol, isRef }) => {
-  const data = selectSymbolChart[symbol];
+  const chartData = selectSymbolChart[symbol];
 
-  if (!data) return <Loader />;
+  if (!chartData) return <Loader />;
 
-  const sparkData = data
+  const sparkData = chartData
     .filter((item, i) => i % 4 === 0)
     .map(({ PRICE }) => PRICE);
 
@@ -28,8 +29,8 @@ const Chart = ({ selectSymbolChart, symbol, isRef }) => {
         <SparklinesReferenceLine
           type="avg"
           style={{
-            stroke: isRef ? 'red' : 'transparent',
-            strokeOpacity: 0.5,
+            stroke: !isRef ? 'transparent' : 'var(--green)',
+            strokeOpacity: 0.7,
             strokeDasharray: '2, 2',
           }}
         />

@@ -4,4 +4,5 @@
 ### todo
 
 - Rename Crypto to Symbol
-- make deploy env
+- Make deploy env
+- Concat all links for menus

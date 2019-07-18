@@ -1,12 +1,12 @@
 import React from 'react';
-import IsScrolling from 'react-is-scrolling';
-import { compose } from 'redux';
 
 import { AdContainer, AdChange, AdChart, AdCta } from './styles';
 import { withSymbol } from 'store/hocs';
 import { SparkChart, Value } from 'components';
 
 import { availiableAssets } from 'helpers/constants';
+import { isScrolled } from 'helpers/utils';
+
 const AdBlock = ({ symbol, selectSymbol }) => {
   const getParnerLink = () =>
     // eslint-disable-next-line max-len
@@ -17,10 +17,10 @@ const AdBlock = ({ symbol, selectSymbol }) => {
   if (!symbolData) return false;
 
   const { NAME, CHANGE7DAYS } = symbolData;
-  const isWindowTop = window.pageYOffset > 10 ? true : false;
+  const isMoving = isScrolled();
 
   return (
-    <AdContainer isVisible={isWindowTop} href={getParnerLink()} target="_blank">
+    <AdContainer isVisible={isMoving} href={getParnerLink()} target="_blank">
       <AdChart>
         <SparkChart symbol={symbol} />
       </AdChart>
@@ -41,9 +41,6 @@ const AdBlock = ({ symbol, selectSymbol }) => {
   );
 };
 
-const AD = compose(
-  withSymbol,
-  IsScrolling
-)(AdBlock);
+const AD = withSymbol(AdBlock);
 
 export { AD };

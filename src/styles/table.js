@@ -402,18 +402,15 @@ const TableStyles = css`
       position: absolute;
       left: 50%;
       top: 50%;
-
       transform: translate(-50%, -50%);
-
       transition: all 0.3s ease;
       z-index: 10;
       pointer-events: none;
       margin-top: 15px;
       padding: 16px 60px;
-
       border-radius: 2px;
       text-align: center;
-      box-shadow: var(--box-shadow);
+
       i {
         margin-top: 10px;
       }
@@ -436,7 +433,6 @@ const TableStyles = css`
       display: inline-block;
       position: relative;
       margin: 0;
-      color: $color_4;
       margin: 0 10px;
       &:after {
         content: '';

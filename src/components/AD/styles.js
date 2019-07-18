@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { MEDIA } from 'styles/common';
+
 import callIMG from 'static/images/call.svg';
 
 const AdContainer = styled.a`
@@ -6,8 +8,6 @@ const AdContainer = styled.a`
   border-radius: 3px;
   overflow: hidden;
   position: fixed;
-  bottom: 36px;
-  right: 36px;
   color: var(--text-color);
   background-color: #fff;
   box-shadow: 0 1px 25px rgba(0, 0, 0, 0.2), inset 0 4px 0 transparent;
@@ -24,7 +24,27 @@ const AdContainer = styled.a`
     max-width: 190px;
     width: 100%;
     height: 80px;
+    margin: 0 auto;
   }
+
+  ${MEDIA.PHONE`
+    bottom: 84px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    max-width: 290px
+  `};
+
+  ${MEDIA.SMARTPHONE`
+    margin: 0 0 0 auto;
+    right: 36px;
+    bottom: 84px;
+
+  `};
+
+  ${MEDIA.DESKTOP`
+    bottom: 36px;
+ `};
 `;
 
 const AdChange = styled.div`

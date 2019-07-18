@@ -8,7 +8,6 @@ const Seo = ({ title, desc, slug }) => (
     <html lang="en" />
     <title>{title}</title>
     <meta name="description" content={desc} />
-    <meta httpEquiv="cache-control" content="no-cache" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 
     <meta

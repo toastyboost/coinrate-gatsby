@@ -43,7 +43,7 @@ const GlobalStyles = createGlobalStyle`
 
   body,
   html {
-    font-family: var(--main-font);
+    font-family: 'Gilroy';
     color: var(--text-color);
     font-size: 62.5%;
     line-height: 1.4;
@@ -77,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
   h1 {
 
     ${MEDIA.PHONE`
-      font-size: 1.5rem;
+      font-size: 2rem;
     `};
 
     ${MEDIA.SMARTPHONE`

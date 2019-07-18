@@ -12,20 +12,11 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     'gatsby-plugin-eslint',
     'gatsby-plugin-sharp',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        // Setting a color is optional.
-        color: 'tomato',
-        // Disable the loading spinner.
-        showSpinner: false,
-      },
-    },
     {
       resolve: 'gatsby-plugin-alias-imports',
       options: {
@@ -41,13 +32,12 @@ module.exports = {
         extensions: ['*'],
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: 'UA-107444053-1',
-      },
-    },
-
+    // {
+    //   resolve: 'gatsby-plugin-google-tagmanager',
+    //   options: {
+    //     id: 'UA-107444053-1',
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
