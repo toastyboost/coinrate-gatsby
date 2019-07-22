@@ -14,6 +14,8 @@ import { Seo } from './Seo';
 import { SparkChart } from './SparkChart';
 import { Cta } from './Cta';
 import { AD } from './AD';
+import { SymbolIcon } from './SymbolIcon';
+import { SymbolCard } from './SymbolCard';
 
 export {
   MobileMenu,
@@ -31,4 +33,6 @@ export {
   SparkChart,
   Cta,
   AD,
+  SymbolIcon,
+  SymbolCard,
 };

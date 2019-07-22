@@ -2,20 +2,28 @@ import { createAction, handleActions } from 'redux-actions';
 import { fetchMarketData } from 'store/api';
 
 import { getSymbolChart } from './chart';
+
 // SYNC ACTIONS
 
 export const setMarketData = createAction('setMarketData');
 
 // ASYNC ACTIONS
 
-export const getMarketData = (start, limit) => async dispatch => {
+export const getMarketData = ({
+  start = 0,
+  limit = 0,
+  withCharts = false,
+}) => async dispatch => {
   const res = await fetchMarketData(start, limit);
 
-  const symbols = res.data.result
-    .filter((item, key) => key < 45)
-    .map(({ ID }) => ID);
+  if (withCharts) {
+    const symbols = res.data.result
+      .filter((_, key) => key < 45)
+      .map(({ ID }) => ID);
 
-  dispatch(getSymbolChart(symbols, '7d'));
+    dispatch(getSymbolChart(symbols, '7d'));
+  }
+
   dispatch(setMarketData({ ...res }));
 };
 

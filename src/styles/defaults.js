@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     --gray-dark: rgba(0,0,0,.3);
     --purple: #5349a0;
     --box-shadow: 0 1px 25px rgba(0,0,0,.1)
+    --box-shadow--hover: 0 1px 25px rgba(0,0,0,.3)
   }
 
   ${FontsStyles};

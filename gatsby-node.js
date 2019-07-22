@@ -1,4 +1,5 @@
 const axios = require('axios');
+const path = require('path');
 
 const API = process.env.API_URL;
 const ITEMS = process.env.CRYPTO_ITEMS;
@@ -9,6 +10,11 @@ const fetchMarket = () =>
 const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 exports.createPages = async ({ actions: { createPage } }) => {
+  createPage({
+    path: '/404.html',
+    component: path.join(process.cwd(), 'src/pages/404.js'),
+  });
+
   const allCrypto = await fetchMarket();
   const cryptoNames = allCrypto.data.result.map(({ ID, TICKER, NAME }) => ({
     ID,

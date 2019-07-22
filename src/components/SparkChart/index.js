@@ -25,12 +25,12 @@ const Chart = ({ selectSymbolChart, symbol, isRef }) => {
     <SparkContainer>
       <Sparklines data={sparkData}>
         <SparklinesCurve color="var(--blue)" />
-        <SparklinesBars style={{ fill: 'var(--blue)', fillOpacity: '.2' }} />
+        <SparklinesBars style={{ fill: 'var(--blue)', fillOpacity: '.1' }} />
         <SparklinesReferenceLine
           type="avg"
           style={{
             stroke: !isRef ? 'transparent' : 'var(--green)',
-            strokeOpacity: 0.7,
+            strokeOpacity: 0.5,
             strokeDasharray: '2, 2',
           }}
         />

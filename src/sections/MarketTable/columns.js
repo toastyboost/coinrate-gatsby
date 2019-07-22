@@ -41,7 +41,7 @@ const tableColumns = [
         </div>
       </a>
     ),
-    width: 305,
+    width: 285,
   },
   {
     Header: () => (

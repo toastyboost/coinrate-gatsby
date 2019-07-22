@@ -62,7 +62,7 @@ const Cap = styled.div`
   padding: 12px 0;
 
   ${MEDIA.PHONE`
-    margin-right: 0
+    margin-right: 0;
   `}
 
   ${MEDIA.SMARTPHONE`
@@ -78,7 +78,7 @@ const Volume = styled.div`
   padding: 12px 0;
 
   ${MEDIA.PHONE`
-    margin-right: 0
+    margin-right: 0;
     margin-left: auto;
   `}
 

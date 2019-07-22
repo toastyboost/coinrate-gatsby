@@ -15,7 +15,6 @@ const PageHeaderWrap = styled.div`
 `;
 
 const PageDescription = styled.div`
-
   font-weight: 400;
   color: var(--secondary-text);
   word-spacing: 2px;
@@ -48,10 +47,10 @@ const PageTitle = styled.div`
   line-height: 1;
   font-weight: 700;
   color: var(--text-color);
+  margin-bottom: 4px;
 
   ${MEDIA.PHONE`
     font-size: 2rem;
-    margin-bottom: 4px;
   `};
 
   ${MEDIA.TABLET`
@@ -60,8 +59,7 @@ const PageTitle = styled.div`
 
   ${MEDIA.DESKTOP`
     font-size: 3.4rem;
-    margin-bottom: 8px;
-   `};
+  `};
 
   em {
     display: block;
@@ -70,7 +68,6 @@ const PageTitle = styled.div`
     line-height: 1em;
     font-weight: 400;
     color: var(--secondary-text);
-
     font-style: normal;
   }
 `;

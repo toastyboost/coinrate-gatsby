@@ -1,25 +1,24 @@
+import React from 'react';
+import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { createLogger } from 'redux-logger';
-
 import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 
 import rootReducer from './ducks';
 
-const logger = createLogger({
-  collapsed: true,
-});
-
-const middleware = promiseMiddleware({
-  promiseTypeSuffixes: ['LOADING', 'SUCCESS', 'FAIL'],
-});
-
-const configureStore = initialState => {
-  return createStore(
+const initStore = () =>
+  createStore(
     rootReducer,
-    initialState,
-    applyMiddleware(thunk, middleware, logger)
+    applyMiddleware(
+      thunk,
+      promiseMiddleware({
+        promiseTypeSuffixes: ['LOADING', 'SUCCESS', 'FAIL'],
+      }),
+      createLogger({ collapsed: true })
+    )
   );
-};
 
-export { configureStore };
+const store = initStore();
+// eslint-disable-next-line react/display-name
+export default ({ element }) => <Provider store={store}>{element}</Provider>;

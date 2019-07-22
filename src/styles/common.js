@@ -29,7 +29,7 @@ const Wrap = styled.div`
   margin: 0 auto;
 
   ${MEDIA.PHONE`
-    padding: 0 12px;
+    padding: 0 6px;
   `}
 
   ${MEDIA.SMARTPHONE`

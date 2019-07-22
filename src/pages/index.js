@@ -18,7 +18,7 @@ const IndexPage = () => (
     <GlobalStyles />
     <Layout>
       <PageHeader
-        title="Cryptocurrency prices in real time"
+        title="Cryptocurrency prices in&nbsp;real&nbsp;time"
         type="market"
         tag="h1"
       />

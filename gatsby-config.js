@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
-    'gatsby-plugin-offline',
+    'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-eslint',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-styled-components',
@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-react-helmet-canonical-urls',
       options: {
-        siteUrl: 'https://www.coinrate.com',
+        siteUrl: 'https://coinrate.com',
       },
     },
   ],

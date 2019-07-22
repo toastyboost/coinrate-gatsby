@@ -13,7 +13,8 @@ const TableStyles = css`
     margin: 0 0 24px 0;
 
     .rt-table {
-      overflow: visible;
+      overflow-y: hidden;
+      overflow-x: scroll;
       display: flex;
       flex-direction: column;
       align-items: stretch;

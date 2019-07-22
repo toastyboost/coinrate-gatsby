@@ -9,8 +9,8 @@ import { tableColumns } from './columns';
 
 const Block = ({ getMarketData, start, limit, data }) => {
   useEffect(() => {
-    getMarketData(start, limit);
-    getMarketData();
+    getMarketData({ start, limit, withCharts: true });
+    getMarketData({});
   }, []);
 
   if (!data) return false;
