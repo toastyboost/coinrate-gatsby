@@ -16,8 +16,7 @@ const menuItems = [
   },
   {
     name: 'Mining profitability',
-    slug:
-      'cryptocurrency-mining-prices-and-profitability-by-country-in-realtime',
+    slug: '',
     isActive: false,
   },
 ];

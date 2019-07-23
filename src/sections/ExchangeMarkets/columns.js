@@ -1,5 +1,6 @@
 import React from 'react';
 import { Value } from 'components';
+import { availiableCurrenciesAssets } from 'helpers/constants';
 
 const tableColumns = [
   {
@@ -21,27 +22,32 @@ const tableColumns = [
       </div>
     ),
     accessor: 'FSYM',
-    Cell: row => (
-      <a
-        href={`/cryptocurrencies/${row.original.FSYMID}/`}
-        className="rt-td-body"
-      >
-        <div className="crypto rt-tbody-item">
-          <div
-            className="crypto__img"
-            style={{
-              backgroundImage: `url("https://coinrate.com/static/crypto/${
-                row.original.FSYM
-              }-${row.original.FSYMID}.svg?v=1")`,
-            }}
-          />
-          <div className="crypto__name">
-            <span className="ticker">{row.original.FSYMID}</span>
-            <span className="name">{row.original.FSYM}</span>
+    Cell: row => {
+      const cryptoUrl = availiableCurrenciesAssets.includes(
+        row.original.FSYMID.toUpperCase()
+      )
+        ? '/market/'
+        : `/cryptocurrencies/${row.original.FSYMID}/`;
+
+      return (
+        <a href={cryptoUrl} className="rt-td-body">
+          <div className="crypto rt-tbody-item">
+            <div
+              className="crypto__img"
+              style={{
+                backgroundImage: `url("https://coinrate.com/static/crypto/${
+                  row.original.FSYM
+                }-${row.original.FSYMID}.svg?v=1")`,
+              }}
+            />
+            <div className="crypto__name">
+              <span className="ticker">{row.original.FSYMID}</span>
+              <span className="name">{row.original.FSYM}</span>
+            </div>
           </div>
-        </div>
-      </a>
-    ),
+        </a>
+      );
+    },
     width: 180,
   },
   {
@@ -52,27 +58,33 @@ const tableColumns = [
       </div>
     ),
     accessor: 'TSYM',
-    Cell: row => (
-      <a
-        href={`/cryptocurrencies/${row.original.TSYMID}/`}
-        className="rt-td-body"
-      >
-        <div className="crypto rt-tbody-item">
-          <div
-            className="crypto__img"
-            style={{
-              backgroundImage: `url("https://coinrate.com/static/crypto/${
-                row.original.TSYM
-              }-${row.original.TSYMID}.svg?v=1")`,
-            }}
-          />
-          <div className="crypto__name">
-            <span className="ticker">{row.original.TSYMID}</span>
-            <span className="name">{row.original.TSYM}</span>
+    Cell: row => {
+      const cryptoUrl = availiableCurrenciesAssets.includes(
+        row.original.TSYMID.toUpperCase()
+      )
+        ? '/market/'
+        : `/cryptocurrencies/${row.original.TSYMID}/`;
+
+      return (
+        <a href={cryptoUrl} className="rt-td-body">
+          <div className="crypto rt-tbody-item">
+            <div
+              className="crypto__img"
+              style={{
+                backgroundImage: `url("https://coinrate.com/static/crypto/${
+                  row.original.TSYM
+                }-${row.original.TSYMID}.svg?v=1")`,
+              }}
+            />
+            <div className="crypto__name">
+              <span className="ticker">{row.original.TSYMID}</span>
+              <span className="name">{row.original.TSYM}</span>
+            </div>
           </div>
-        </div>
-      </a>
-    ),
+        </a>
+      );
+    },
+
     width: 240,
   },
   {

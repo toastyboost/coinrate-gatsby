@@ -1,5 +1,4 @@
 const axios = require('axios');
-const path = require('path');
 
 const API = process.env.API_URL;
 const ITEMS = process.env.CRYPTO_ITEMS;
@@ -10,12 +9,8 @@ const fetchMarket = () =>
 const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 exports.createPages = async ({ actions: { createPage } }) => {
-  createPage({
-    path: '/404.html',
-    component: path.join(process.cwd(), 'src/pages/404.js'),
-  });
-
   const allCrypto = await fetchMarket();
+
   const cryptoNames = allCrypto.data.result.map(({ ID, TICKER, NAME }) => ({
     ID,
     TICKER,
@@ -24,7 +19,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   cryptoNames.forEach(symbol => {
     createPage({
-      path: `/cryptocurrencies/${symbol.ID}`,
+      path: `/cryptocurrencies/${symbol.ID}/`,
       component: require.resolve('./src/pages/crypto.js'),
       context: { slug: symbol.ID, ticker: symbol.TICKER, name: symbol.NAME },
     });
@@ -38,9 +33,9 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   exchangesName.forEach(exchange => {
     createPage({
-      path: `/exchanges/${exchange.ID}`,
+      path: `/exchanges/${exchange.ID.replace('.', '-')}/`,
       component: require.resolve('./src/pages/exchange.js'),
-      context: { slug: exchange.ID, name: exchange.NAME },
+      context: { slug: exchange.ID.replace('.', '-'), name: exchange.NAME },
     });
   });
 };

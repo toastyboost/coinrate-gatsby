@@ -9,7 +9,12 @@ const Menu = () => (
       name === 'separator' ? (
         <Separator key={key} />
       ) : (
-        <MenuLink key={key} href={`/${slug}/`} isActive={isActive}>
+        <MenuLink
+          key={key}
+          href={`/${slug}/`}
+          isActive={isActive}
+          as={isActive ? 'a' : 'div'}
+        >
           {name}
           {!isActive && <SoonBadge>soon</SoonBadge>}
         </MenuLink>

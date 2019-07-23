@@ -14,7 +14,14 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-eslint',
-    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.coinrate.com',
+        sitemap: 'https://www.coinrate.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-alias-imports',

@@ -24,4 +24,31 @@ const availiableAssets = [
   'bitcoin-sv',
 ];
 
-export { timeRanges, updateInterval, updateIntervalSecs, availiableAssets };
+const availiableCurrenciesAssets = [
+  'AUD',
+  'CAD',
+  'CHF',
+  'EUR',
+  'GBP',
+  'HKD',
+  'IDR',
+  'JPY',
+  'KRW',
+  'MYR',
+  'NGN',
+  'NZD',
+  'PLN',
+  'RUB',
+  'SGD',
+  'UAH',
+  'USD',
+  'ZAR',
+];
+
+export {
+  timeRanges,
+  updateInterval,
+  updateIntervalSecs,
+  availiableAssets,
+  availiableCurrenciesAssets,
+};

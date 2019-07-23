@@ -25,7 +25,12 @@ const tableColumns = [
     accessor: 'NAME',
     width: 300,
     Cell: row => (
-      <a href={`/exchanges/${row.original.NAME.toLowerCase()}/`}>
+      <a
+        href={`/exchanges/${row.original.NAME.toLowerCase().replace(
+          '.',
+          '-'
+        )}/`}
+      >
         <div className="exchange rt-tbody-item">
           <div
             className="exchange__img"

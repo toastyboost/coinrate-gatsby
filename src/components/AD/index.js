@@ -10,7 +10,7 @@ import { isScrolled } from 'helpers/utils';
 const AdBlock = ({ symbol, selectSymbol }) => {
   const getParnerLink = () =>
     // eslint-disable-next-line max-len
-    `https://iqoption.com/lp/buying-crypto/?aff=38838&afftrack=cryptoPage_${symbol}&active=${symbol}&retrack=coinrate&type=crypto`;
+    `https://iqoption.com/lp/buying-crypto/en/?active=${symbol}&aff=38838&afftrack=cryptoPage_${symbol}&retrack=coinrate&type=crypto`;
 
   const symbolData = selectSymbol[symbol];
 
