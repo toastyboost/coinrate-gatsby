@@ -23,14 +23,14 @@ const tableColumns = [
     accessor: 'PRICE',
     Cell: row => (
       <a href={`/cryptocurrencies/${row.original.ID}/`} className="rt-td-body">
-        <div
+        {/* <div
           className="crypto__img"
           style={{
             backgroundImage: `url("https://coinrate.com/static/crypto/${row.original.TICKER.toLowerCase()}-${
               row.original.ID
             }.svg?v=1")`,
           }}
-        />
+        /> */}
         <div className="crypto__name">
           <span className="ticker">{row.original.TICKER}</span>
           <span className="name">{row.original.NAME}</span>

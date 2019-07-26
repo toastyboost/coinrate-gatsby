@@ -16,7 +16,7 @@ const Block = ({ getExchanges, data }) => {
 
   return (
     <ExchangesContainer>
-      <Table columns={tableColumns} data={data.data} />
+      <Table columns={tableColumns} tableData={data.data} />
     </ExchangesContainer>
   );
 };

@@ -17,10 +17,7 @@ export const getMarketData = ({
   const res = await fetchMarketData(start, limit);
 
   if (withCharts) {
-    const symbols = res.data.result
-      .filter((_, key) => key < 45)
-      .map(({ ID }) => ID);
-
+    const symbols = res.data.result.splice(start, limit).map(({ ID }) => ID);
     dispatch(getSymbolChart(symbols, '7d'));
   }
 

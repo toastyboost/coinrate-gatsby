@@ -15,7 +15,7 @@ const tableOptions = {
       desc: false,
     },
   ],
-  defaultPageSize: 15,
+  // defaultPageSize: 15,
 };
 
 export { tableOptions };

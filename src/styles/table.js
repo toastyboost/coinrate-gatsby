@@ -164,62 +164,6 @@ const TableStyles = css`
       color: var(--secondary-text);
     }
 
-    .-btn {
-      width: 40px;
-      height: 36px;
-      font-size: 0;
-      position: relative;
-      z-index: 100;
-      background-color: transparent;
-      cursor: pointer;
-    }
-
-    .-pagination {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid var(--border-color);
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-    }
-
-    .-previous,
-    .-next {
-      position: relative;
-      height: 36px;
-      transition: 0.3s;
-
-      &:hover {
-        opacity: 0.7;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        top: 0;
-        margin: auto;
-        width: 7.5px;
-        height: 7.5px;
-        border-right: 2.5px solid var(--blue);
-        border-top: 2.5px solid var(--blue);
-      }
-    }
-
-    .-previous {
-      &:before {
-        transform: rotate(225deg);
-        left: 19px;
-      }
-    }
-
-    .-next {
-      &:before {
-        transform: rotate(405deg);
-        right: 19px;
-      }
-    }
-
     .rt-th {
       flex: 1 0 0;
       white-space: nowrap;

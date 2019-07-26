@@ -16,7 +16,7 @@ const Block = ({ name, getExchangeMarkets, data }) => {
 
   return (
     <ExchangeMarketsContainer>
-      <Table columns={tableColumns} data={data.data} />
+      <Table columns={tableColumns} tableData={data.data} />
     </ExchangeMarketsContainer>
   );
 };

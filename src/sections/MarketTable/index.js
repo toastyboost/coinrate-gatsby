@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
-
-import { withMarketData } from 'store/hocs';
+import { compose } from 'redux';
+import { withMarketData, withSymbolChart } from 'store/hocs';
 
 import { Table } from 'components';
 
 import { MarketTableContainer } from './styles';
 import { tableColumns } from './columns';
 
-const Block = ({ getMarketData, start, limit, data }) => {
+const Block = ({ getMarketData, getSymbolChart, start, limit, data }) => {
   useEffect(() => {
     getMarketData({ start, limit, withCharts: true });
     getMarketData({});
@@ -17,11 +17,19 @@ const Block = ({ getMarketData, start, limit, data }) => {
 
   return (
     <MarketTableContainer>
-      <Table columns={tableColumns} data={data} pageSize={30} />
+      <Table
+        columns={tableColumns}
+        tableData={data}
+        pageSize={30}
+        fetchCharts={getSymbolChart}
+      />
     </MarketTableContainer>
   );
 };
 
-const MarketTable = withMarketData(Block);
+const MarketTable = compose(
+  withMarketData,
+  withSymbolChart
+)(Block);
 
 export { MarketTable };
