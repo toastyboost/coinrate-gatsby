@@ -12,7 +12,7 @@ const withMarketData = WrappedComponent => {
     const arrayData = Object.keys(objectData).map(name => objectData[name]);
 
     return {
-      data: arrayData,
+      marketData: arrayData,
     };
   };
 

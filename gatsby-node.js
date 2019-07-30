@@ -10,32 +10,39 @@ const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 exports.createPages = async ({ actions: { createPage } }) => {
   const allCrypto = await fetchMarket();
+  const allCryptoData = allCrypto.data.result;
 
-  const cryptoNames = allCrypto.data.result.map(({ ID, TICKER, NAME }) => ({
-    ID,
-    TICKER,
-    NAME,
-  }));
+  // const cryptoNames = allCryptoData.map(({ ID, TICKER, NAME }) => ({
+  //   ID,
+  //   TICKER,
+  //   NAME,
+  // }));
 
-  cryptoNames.forEach(symbol => {
-    createPage({
-      path: `/cryptocurrencies/${symbol.ID}/`,
-      component: require.resolve('./src/pages/crypto.js'),
-      context: { slug: symbol.ID, ticker: symbol.TICKER, name: symbol.NAME },
-    });
+  createPage({
+    path: '/market/',
+    component: require.resolve('./src/pages/templates/market.js'),
+    context: { SSR: allCryptoData },
   });
 
-  const allExchanges = await fetchExchanges();
-  const exchangesName = allExchanges.data.result.map(({ ID, NAME }) => ({
-    ID,
-    NAME,
-  }));
+  // cryptoNames.forEach(symbol => {
+  //   createPage({
+  //     path: `/cryptocurrencies/${symbol.ID}/`,
+  //     component: require.resolve('./src/pages/crypto.js'),
+  //     context: { slug: symbol.ID, ticker: symbol.TICKER, name: symbol.NAME },
+  //   });
+  // });
 
-  exchangesName.forEach(exchange => {
-    createPage({
-      path: `/exchanges/${exchange.ID.replace('.', '-')}/`,
-      component: require.resolve('./src/pages/exchange.js'),
-      context: { slug: exchange.ID.replace('.', '-'), name: exchange.NAME },
-    });
-  });
+  // const allExchanges = await fetchExchanges();
+  // const exchangesName = allExchanges.data.result.map(({ ID, NAME }) => ({
+  //   ID,
+  //   NAME,
+  // }));
+
+  // exchangesName.forEach(exchange => {
+  //   createPage({
+  //     path: `/exchanges/${exchange.ID.replace('.', '-')}/`,
+  //     component: require.resolve('./src/pages/exchange.js'),
+  //     context: { slug: exchange.ID.replace('.', '-'), name: exchange.NAME },
+  //   });
+  // });
 };

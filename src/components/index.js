@@ -5,6 +5,8 @@ import { Logo } from './Logo';
 import { Value } from './Value';
 import { HighChart } from './HighChart';
 import { Table } from './Table';
+import TableV7 from './TableV7';
+
 import { Footer } from './Footer';
 import { SymbolRangeSelector } from './RangeSelector';
 import { Loader } from './Loader';
@@ -35,4 +37,5 @@ export {
   AD,
   SymbolIcon,
   SymbolCard,
+  TableV7,
 };

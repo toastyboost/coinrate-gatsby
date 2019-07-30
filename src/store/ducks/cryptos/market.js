@@ -9,17 +9,13 @@ export const setMarketData = createAction('setMarketData');
 
 // ASYNC ACTIONS
 
-export const getMarketData = ({
-  start = 0,
-  limit = 0,
-  withCharts = false,
-}) => async dispatch => {
+export const getMarketData = ({ start = 0, limit = 0 }) => async dispatch => {
   const res = await fetchMarketData(start, limit);
 
-  if (withCharts) {
-    const symbols = res.data.result.splice(start, limit).map(({ ID }) => ID);
-    dispatch(getSymbolChart(symbols, '7d'));
-  }
+  // if (withCharts) {
+  //   const symbols = res.data.result.splice(start, limit).map(({ ID }) => ID);
+  //   dispatch(getSymbolChart(symbols, '7d'));
+  // }
 
   dispatch(setMarketData({ ...res }));
 };
@@ -32,10 +28,7 @@ export default handleActions(
       const { data } = payload;
       const { result } = data;
 
-      return {
-        ...state,
-        ...result,
-      };
+      return result;
     },
   },
   initialState

@@ -20,17 +20,18 @@ const getVisiblePages = (page, total) => {
   }
 };
 
-const Pagination = ({ pages, onPageChange, Button = NavButton }) => {
+const Pagination = ({ pages, page, onPageChange, Button = NavButton }) => {
+  console.log('pages', pages);
   const [visiblePages, setVisiblePages] = useState([]);
-  const [page, setPage] = useState(0);
+  const [currentPage, setPage] = useState(page);
 
   useEffect(() => {
-    setVisiblePages(getVisiblePages(page, pages));
-  }, [page, pages]);
+    setVisiblePages(getVisiblePages(currentPage, pages));
+  }, [currentPage, pages]);
 
   useEffect(() => {
-    setVisiblePages(getVisiblePages(page, pages));
-  }, [page]);
+    setVisiblePages(getVisiblePages(currentPage, pages));
+  }, [currentPage]);
 
   const prevPage = page => {
     if (page === 0) return;
@@ -46,8 +47,10 @@ const Pagination = ({ pages, onPageChange, Button = NavButton }) => {
 
   return (
     <PagesContainer>
-      <Button className="prev" onClick={() => prevPage(page)} />
+      <Button className="prev" onClick={() => prevPage(currentPage)} />
       <VisiblePages>
+        {pages}
+        {visiblePages}
         {visiblePages.map((item, key) => (
           <Button
             key={key}
@@ -55,13 +58,13 @@ const Pagination = ({ pages, onPageChange, Button = NavButton }) => {
               setPage(item);
               onPageChange(item);
             }}
-            className={`item ${item === page ? 'current' : ''}`}
+            className={`item ${item === currentPage ? 'current' : ''}`}
           >
             {item + 1}
           </Button>
         ))}
       </VisiblePages>
-      <Button className="next" onClick={() => nextPage(page)} />
+      <Button className="next" onClick={() => nextPage(currentPage)} />
     </PagesContainer>
   );
 };

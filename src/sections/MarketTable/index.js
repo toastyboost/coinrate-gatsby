@@ -1,35 +1,59 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { compose } from 'redux';
 import { withMarketData, withSymbolChart } from 'store/hocs';
 
-import { Table } from 'components';
+import { TableV7, Value } from 'components';
 
 import { MarketTableContainer } from './styles';
-import { tableColumns } from './columns';
+// import { columns } from './columns';
 
-const Block = ({ getMarketData, getSymbolChart, start, limit, data }) => {
-  useEffect(() => {
-    getMarketData({ start, limit, withCharts: true });
-    getMarketData({});
-  }, []);
+const columns = [
+  {
+    Header: '#',
+    accessor: 'RANK',
+  },
+];
 
-  if (!data) return false;
+const FD = [
+  {
+    RANK: 2,
+  },
+  {
+    RANK: 12,
+  },
+];
+
+const Block = ({ getMarketData, getSymbolChart, start, limit, marketData }) => {
+  // const [isLoading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  // getMarketData({ start, limit, withCharts: true });
+  // getMarketData({});
+  // }, []);
+
+  // useEffect(() => {
+  //   marketData.length < 1 && setLoading(false);
+  // }, [marketData]);
+
+  // const ids = new Set(SSR.map(d => d.ID));
+  // const merged = [...SSR, ...data.filter(d => !ids.has(d.ID))];
+  // if (isLoading) return false;
+  // console.log('marketData', FD);
 
   return (
     <MarketTableContainer>
-      <Table
-        columns={tableColumns}
-        tableData={data}
-        pageSize={30}
-        fetchCharts={getSymbolChart}
+      <TableV7
+        columns={columns}
+        data={FD}
+        // fetchCharts={getSymbolChart}
+        // fetchData={getMarketData}
       />
     </MarketTableContainer>
   );
 };
 
-const MarketTable = compose(
-  withMarketData,
-  withSymbolChart
-)(Block);
+const MarketTable = compose()(Block);
+// withMarketData,
+// withSymbolChart
 
 export { MarketTable };

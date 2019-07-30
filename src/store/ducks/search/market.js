@@ -30,4 +30,4 @@ export default handleActions(
   initialState
 );
 
-export const selectSearchData = state => state.cryptos.search;
+export const selectSearchData = state => state.search.market;

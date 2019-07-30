@@ -12,7 +12,7 @@ const seoData = {
     Compare crypto to make best trading decisions`,
 };
 
-const IndexPage = () => (
+const IndexPage = ({ pageContext: { SSR } }) => (
   <>
     <Seo {...seoData} />
     <GlobalStyles />
@@ -24,7 +24,7 @@ const IndexPage = () => (
       />
       <CryptoBlock symbol="bitcoin" />
       <PageHeader title="Crypto market" type="currency" />
-      <MarketTable start="0" limit="30" />
+      <MarketTable start="0" limit="30" SSR={SSR} />
     </Layout>
   </>
 );

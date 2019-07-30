@@ -17,7 +17,7 @@ import {
 import { Value } from 'components';
 import { withSearchData } from 'store/hocs';
 
-const Search = ({ getSearchData, data }) => {
+const Search = ({ getSearchData, searchData }) => {
   useEffect(() => {
     getSearchData();
   }, []);
@@ -29,7 +29,7 @@ const Search = ({ getSearchData, data }) => {
   const getSuggestions = value => {
     const sortResult =
       value.length >= 2
-        ? matchSorter(data, value, {
+        ? matchSorter(searchData, value, {
             keys: ['TICKER', 'NAME', 'ID'],
             threshold: matchSorter.rankings.CONTAINS,
           })

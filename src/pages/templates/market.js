@@ -11,7 +11,7 @@ const seoData = {
     'View the full list of all cryptocurrencies. Compare cryptocurrencies to make best investing decisions',
 };
 
-const MarketPage = () => (
+const MarketPage = ({ pageContext: { SSR } }) => (
   <>
     <Seo {...seoData} />
     <GlobalStyles />
