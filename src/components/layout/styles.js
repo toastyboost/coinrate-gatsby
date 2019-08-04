@@ -3,7 +3,7 @@ import { Wrap, MEDIA } from 'styles/common';
 
 const LayoutWrap = styled(Wrap)`
   min-height: calc(100vh - 206px);
-  max-width: ${({ page }) => (page === 'crypto' ? '100%' : '1210px')};
+  max-width: ${({ page }) => (page === 'crypto' ? '100%' : '1264px')};
 
   ${MEDIA.PHONE`
     padding: ${({ page }) => (page === 'crypto' ? '0' : '0 24px')};

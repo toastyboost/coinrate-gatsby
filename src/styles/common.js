@@ -24,7 +24,7 @@ const MEDIA = Object.keys(BREAKPOINTS).reduce((acc, label) => {
 }, {});
 
 const Wrap = styled.div`
-  max-width: 1210px;
+  max-width: 1264px;
   width: 100%;
   margin: 0 auto;
 

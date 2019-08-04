@@ -32,14 +32,14 @@ export default handleActions(
             market.map(item =>
               markets.push({
                 RANK: item.RANK,
-                PRICE: item.PRICE,
+                PRICECRYPTO: item.PRICE,
                 PRICEUSD: item.PRICEUSD,
-                VOLUME24HOUR: item.VOLUME24HOUR,
-                CHANGE24HOUR: item.CHANGE24HOUR,
-                FSYM: exchange.toLowerCase(),
-                TSYM: currency.toLowerCase(),
-                FSYMID: item.FSYMID.toLowerCase(),
-                TSYMID: item.TSYMID.toLowerCase(),
+                MARKETVOLUME24HOUR: item.VOLUME24HOUR,
+                // CHANGE24HOUR: item.CHANGE24HOUR,
+                FSYM: exchange.toLowerCase().replace('.', '-'),
+                TSYM: currency.toLowerCase().replace('.', '-'),
+                FSYMID: item.FSYMID.toLowerCase().replace('.', '-'),
+                TSYMID: item.TSYMID.toLowerCase().replace('.', '-'),
               })
             );
           }

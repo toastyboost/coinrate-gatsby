@@ -5,18 +5,23 @@ import { ExchangesContainer } from './styles';
 import { withExchanges } from 'store/hocs';
 
 import { Table } from 'components';
-import { tableColumns } from './columns';
+import { exchangesColumns } from './columns';
 
-const Block = ({ getExchanges, data }) => {
+const Block = ({ getExchanges, exchangesData = [], dispatch, SSR = {} }) => {
   useEffect(() => {
-    getExchanges();
+    dispatch(getExchanges());
   }, []);
 
-  if (!data) return false;
+  const { ssrData } = SSR;
+
+  const columns = React.useMemo(() => exchangesColumns, []);
+  const data = process.browser
+    ? React.useMemo(() => exchangesData, [exchangesData])
+    : ssrData;
 
   return (
     <ExchangesContainer>
-      <Table columns={tableColumns} tableData={data.data} />
+      {data && <Table columns={columns} data={data} SSR={SSR} pageSize={30} />}
     </ExchangesContainer>
   );
 };

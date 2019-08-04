@@ -58,7 +58,7 @@ const AdChange = styled.div`
   flex-wrap: wrap;
   align-items: center;
   align-content: center;
-  padding: 0 32px;
+  padding: 0 32px 0 24px;
   overflow: hidden;
 
   &:before {
@@ -82,7 +82,6 @@ const AdChange = styled.div`
     line-height: 1em;
     text-transform: uppercase;
     z-index: 100;
-    margin-left: -12px;
   }
 
   .title {

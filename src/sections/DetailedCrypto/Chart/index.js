@@ -21,7 +21,13 @@ const MomentOptions = {
   unix: true,
 };
 
-const Chart = ({ chartData, symbolData, isReloaded }) => {
+const Chart = ({
+  chartData,
+  symbolData,
+  isReloaded,
+  setRange,
+  activeRange,
+}) => {
   const { ID, NAME, TICKER } = symbolData;
 
   return (
@@ -30,7 +36,11 @@ const Chart = ({ chartData, symbolData, isReloaded }) => {
         <ChartTitle>
           {NAME} ({TICKER}/USD) price chart in real time
         </ChartTitle>
-        <SymbolRangeSelector symbol={ID} />
+        <SymbolRangeSelector
+          symbol={ID}
+          setRange={setRange}
+          activeRange={activeRange}
+        />
       </ChartControls>
       <ChartData>
         {dataItems.map(({ title, value, color, prefix, isMobile }, key) => (

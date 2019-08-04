@@ -1,15 +1,23 @@
-import { createGlobalStyle } from 'styled-components';
-import { Normalize } from 'styled-normalize';
+import { css } from 'styled-components';
+import { Normalize } from './normalize';
 import { MEDIA } from 'styles/common';
 
 import { AnimationStyles } from './animations';
-import { ChartStyles } from './chart';
-import { TableStyles } from './table';
 import { FontsStyles } from './fonts';
 
-const GlobalStyles = createGlobalStyle`
+const GlobalStyles = css`
+  ${Normalize}
+  ${FontsStyles}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+  }
+
   :root {
-    --main-font: 'Gilroy';
+    --main-font: 'Gilroy', Georgia, serif;
     --text-color: rgba(0,0,0,.85);
     --secondary-text: #8e8e90;
     --title-color: #333;
@@ -30,16 +38,6 @@ const GlobalStyles = createGlobalStyle`
     --purple: #5349a0;
     --box-shadow: 0 1px 25px rgba(0,0,0,.1)
     --box-shadow--hover: 0 1px 25px rgba(0,0,0,.3)
-  }
-
-  ${FontsStyles};
-  ${Normalize};
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: 0;
   }
 
   body,
@@ -79,19 +77,19 @@ const GlobalStyles = createGlobalStyle`
 
     ${MEDIA.PHONE`
       font-size: 2rem;
-    `};
+    `}
 
     ${MEDIA.SMARTPHONE`
       font-size: 2rem;
-    `};
+    `}
 
     ${MEDIA.TABLET`
       font-size: 2.8rem;
-    `};
+    `}
 
     ${MEDIA.DESKTOP`
       font-size: 3.4rem;
-    `};
+    `}
 
   }
 
@@ -108,26 +106,31 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
+    border: 0;
     transition: 0.2s;
     text-decoration: none;
     color: var(--black);
 
-    &:hover {
-      color: var(--gray-hover);
-    }
+  }
 
-    &:active {
-      color: var(--gray-active);
-    }
+  a:visited, a:focus, a:active, a:hover{
+    outline:0 none;
   }
 
   img {
     border: 0;
   }
 
-  ${ChartStyles}
+  menu, ol, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
   ${AnimationStyles}
-  ${TableStyles}
 `;
 
-export { GlobalStyles };
+export default GlobalStyles;

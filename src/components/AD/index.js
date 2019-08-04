@@ -7,16 +7,16 @@ import { SparkChart, Value } from 'components';
 import { availiableAssets } from 'helpers/constants';
 import { isScrolled } from 'helpers/utils';
 
-const AdBlock = ({ symbol, selectSymbol }) => {
+const AdBlock = ({ symbol, symbolData }) => {
   const getParnerLink = () =>
     // eslint-disable-next-line max-len
     `https://iqoption.com/lp/buying-crypto/en/?active=${symbol}&aff=38838&afftrack=cryptoPage_${symbol}&retrack=coinrate&type=crypto`;
 
-  const symbolData = selectSymbol[symbol];
+  const data = symbolData[symbol];
 
-  if (!symbolData) return false;
+  if (!data) return false;
 
-  const { NAME, CHANGE7DAYS } = symbolData;
+  const { NAME, CHANGE7DAYS } = data;
   const isMoving = isScrolled();
 
   return (

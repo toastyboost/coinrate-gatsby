@@ -19,9 +19,26 @@ export default handleActions(
     [setExchanges]: (state, { payload }) => {
       const { result } = payload.data;
 
+      // COUNTRY: "cn"
+      // ID: "binance"
+      // MARKETS: 461
+      // NAME: "Binance"
+      // RANK: 1
+      // VOLUME24HOUR: 996268287.81592
+      // VOLUME24HOURPCT: 1.84769051873394
+
+      const parcedResult = result.map(item => ({
+        RANK: item.RANK,
+        COUNTRY: item.COUNTRY,
+        ID: item.ID,
+        EXCHANGEMARKETS: item.MARKETS,
+        EXCHANGENAME: item.NAME.toLowerCase().replace('.', '-'),
+        EXCHANGEVOLUME: item.VOLUME24HOUR,
+        EXCHANGESHARE: item.VOLUME24HOURPCT * 10,
+      }));
+
       return {
-        ...state,
-        data: result,
+        result: parcedResult,
       };
     },
   },

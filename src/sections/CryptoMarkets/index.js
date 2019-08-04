@@ -5,21 +5,21 @@ import { MarketTableContainer, BlockWrap, MarketCta } from './styles';
 import { withSymbolMarkets } from 'store/hocs';
 
 import { Table } from 'components';
-import { tableColumns } from './columns';
+import { columns } from './columns';
 
-const Block = ({ symbol, selectSymbolMarkets, getSymbolMarkets }) => {
+const Block = ({ symbol, symbolMarkets, getSymbolMarkets, dispatch }) => {
   useEffect(() => {
-    getSymbolMarkets(symbol);
+    dispatch(getSymbolMarkets(symbol));
   }, []);
 
-  const data = selectSymbolMarkets[symbol];
+  const data = symbolMarkets[symbol];
 
   if (!data) return false;
 
   return (
     <MarketTableContainer>
       <BlockWrap>
-        <Table columns={tableColumns} tableData={data} pageSize={15} />
+        <Table columns={columns} data={data} pageSize={15} />
         <MarketCta id={symbol} />
       </BlockWrap>
     </MarketTableContainer>

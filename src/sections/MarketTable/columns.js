@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { Value, SparkChart } from 'components';
 
-const columns = [
+const marketColumns = [
   {
     Header: '#',
     accessor: 'RANK',
@@ -24,12 +24,12 @@ const columns = [
         target="_blank"
         rel="noopener noreferrer"
       >
-        {/* <div
+        <div
           className="crypto__img"
           style={{
             backgroundImage: `url("https://coinrate.com/static/crypto/${TICKER.toLowerCase()}-${ID}.svg?v=1")`,
           }}
-        /> */}
+        />
         <div className="crypto__name">
           <span className="ticker">{TICKER}</span>
           <span className="name">{NAME}</span>
@@ -89,8 +89,9 @@ const columns = [
         <span className="subtitle">chart</span>
       </>
     ),
-    // Cell: ({ row: { original: ID } }) => <SparkChart symbol={ID} isRef />,
-    Cell: 'chart',
+    Cell: ({ row }) => (
+      <SparkChart className="chart" symbol={row.original.ID} isRef />
+    ),
     accessor: 'CHART',
   },
   {
@@ -105,4 +106,4 @@ const columns = [
   },
 ];
 
-export { columns };
+export { marketColumns };

@@ -2,151 +2,124 @@ import React from 'react';
 import { Value } from 'components';
 import { availiableCurrenciesAssets } from 'helpers/constants';
 
-const tableColumns = [
+const ExchangeMarketsColumns = [
   {
-    Header: () => (
-      <div className="rt-thead-item">
-        <span />
-        <span className="subtitle">#</span>
-      </div>
-    ),
+    Header: '#',
     accessor: 'RANK',
-    Cell: row => <div className="rank">{row.original.RANK}</div>,
-    width: 40,
   },
   {
     Header: () => (
-      <div className="rt-thead-item">
+      <>
         <span className="title">From</span>
-        <span className="subtitle">symbol</span>
-      </div>
+        <span className="subtitle">currency</span>
+      </>
+    ),
+    Cell: ({
+      row: {
+        original: { FSYMID, FSYM },
+      },
+    }) => (
+      <a
+        href={`/cryptocurrencies/${FSYM}/`}
+        className="crypto"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          className="crypto__img"
+          style={{
+            backgroundImage: `url("https://coinrate.com/static/crypto/${FSYM}-${FSYMID}.svg?v=1")`,
+          }}
+        />
+        <div className="symbol">
+          <span className="title">{FSYM}</span>
+          <span className="subtitle">currency</span>
+        </div>
+      </a>
     ),
     accessor: 'FSYM',
-    Cell: row => {
-      const cryptoUrl = availiableCurrenciesAssets.includes(
-        row.original.FSYMID.toUpperCase()
-      )
-        ? '/market/'
-        : `/cryptocurrencies/${row.original.FSYMID}/`;
-
-      return (
-        <a href={cryptoUrl} className="rt-td-body">
-          <div className="crypto rt-tbody-item">
-            <div
-              className="crypto__img"
-              style={{
-                backgroundImage: `url("https://coinrate.com/static/crypto/${
-                  row.original.FSYM
-                }-${row.original.FSYMID}.svg?v=1")`,
-              }}
-            />
-            <div className="crypto__name">
-              <span className="ticker">{row.original.FSYMID}</span>
-              <span className="name">{row.original.FSYM}</span>
-            </div>
-          </div>
-        </a>
-      );
-    },
-    width: 180,
   },
   {
     Header: () => (
-      <div className="rt-thead-item">
+      <>
         <span className="title">To</span>
-        <span className="subtitle">symbol</span>
-      </div>
+        <span className="subtitle">currency</span>
+      </>
     ),
-    accessor: 'TSYM',
-    Cell: row => {
-      const cryptoUrl = availiableCurrenciesAssets.includes(
-        row.original.TSYMID.toUpperCase()
-      )
-        ? '/market/'
-        : `/cryptocurrencies/${row.original.TSYMID}/`;
+    Cell: ({
+      row: {
+        original: { TSYMID, TSYM },
+      },
+    }) => {
+      const isCrypto = availiableCurrenciesAssets.includes(
+        TSYMID.toUpperCase()
+      );
 
-      return (
-        <a href={cryptoUrl} className="rt-td-body">
-          <div className="crypto rt-tbody-item">
-            <div
-              className="crypto__img"
-              style={{
-                backgroundImage: `url("https://coinrate.com/static/crypto/${
-                  row.original.TSYM
-                }-${row.original.TSYMID}.svg?v=1")`,
-              }}
-            />
-            <div className="crypto__name">
-              <span className="ticker">{row.original.TSYMID}</span>
-              <span className="name">{row.original.TSYM}</span>
-            </div>
+      return !isCrypto ? (
+        <a
+          href={`/cryptocurrencies/${TSYMID}/`}
+          className="crypto"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            className="crypto__img"
+            style={{
+              backgroundImage: `url("https://coinrate.com/static/crypto/${TSYM}-${TSYMID}.svg?v=1")`,
+            }}
+          />
+          <div className="symbol">
+            <span className="title">{TSYMID}</span>
+            <span className="subtitle">crypto</span>
           </div>
         </a>
+      ) : (
+        <div className="crypto">
+          <div
+            className="crypto__img"
+            style={{
+              backgroundImage: `url("https://coinrate.com/static/crypto/${TSYM.toLowerCase()}-${TSYMID}.svg?v=1")`,
+            }}
+          />
+          <div className="symbol">
+            <span className="title">{TSYMID}</span>
+            <span className="subtitle">currency</span>
+          </div>
+        </div>
       );
     },
-
-    width: 240,
+    accessor: 'TSYMID',
   },
   {
     Header: () => (
-      <div className="rt-thead-item">
-        <span className="title">Currency</span>
-        <span className="subtitle">purchase price</span>
-      </div>
+      <>
+        <span className="title">Cap</span>
+        <span className="subtitle">market</span>
+      </>
     ),
-    Cell: row => (
-      <div className="price rt-tbody-item">
-        <Value value={row.original.PRICEUSD} prefix="$" />
-      </div>
-    ),
+    Cell: ({ value }) => <Value value={value} prefix="$" />,
     accessor: 'PRICEUSD',
-    width: 180,
   },
   {
     Header: () => (
-      <div className="rt-thead-item">
-        <span className="title">Crypto</span>
-        <span className="subtitle">purchase price</span>
-      </div>
+      <>
+        <span className="title">purchase</span>
+        <span className="subtitle">price</span>
+      </>
     ),
-    accessor: 'PRICE',
-    Cell: row => (
-      <div className="price rt-tbody-item">
-        <Value value={row.original.PRICE} prefix={row.original.TSYM} />
-      </div>
-    ),
-    width: 220,
+    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    accessor: 'PRICECRYPTO',
   },
   {
     Header: () => (
-      <div className="rt-thead-item">
-        <span className="title">24h</span>
-        <span className="subtitle">Change</span>
-      </div>
-    ),
-    accessor: 'CHANGE24HOUR',
-    Cell: row => (
-      <div className="change rt-tbody-item">
-        <div className="change__pct">
-          <Value value={row.original.CHANGE24HOUR} suffix="%" />
-        </div>
-      </div>
-    ),
-  },
-  {
-    Header: () => (
-      <div className="rt-thead-item">
+      <>
         <span className="title">Volume</span>
         <span className="subtitle">for 24 hours</span>
-      </div>
+      </>
     ),
-    accessor: 'VOLUME24HOUR',
-    Cell: row => (
-      <div className="volume rt-tbody-item">
-        <Value value={row.original.VOLUME24HOUR} prefix="$" />
-      </div>
-    ),
+    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    accessor: 'MARKETVOLUME24HOUR',
   },
 ];
 
-export { tableColumns };
+export { ExchangeMarketsColumns };

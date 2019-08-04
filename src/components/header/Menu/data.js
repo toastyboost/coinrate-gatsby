@@ -1,10 +1,5 @@
 const menuItems = [
   {
-    name: 'market',
-    slug: 'market',
-    isActive: true,
-  },
-  {
     name: 'exchanges',
     slug: 'exchanges',
     isActive: true,

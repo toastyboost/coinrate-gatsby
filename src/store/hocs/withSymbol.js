@@ -1,29 +1,19 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { getSymbol, selectSymbol } from 'store/ducks/cryptos/symbol';
 
-const withSymbol = WrappedComponent => {
-  const Wrapper = props => <WrappedComponent {...props} />;
+const withSymbol = ChildComponent => {
+  return props => {
+    const dispatch = useDispatch();
 
-  const mapStateToProps = state => ({
-    selectSymbol: selectSymbol(state),
-  });
-
-  const mapDispatchToProps = dispatch => {
-    return bindActionCreators(
-      {
-        getSymbol,
-      },
-      dispatch
-    );
+    const connectRedux = {
+      dispatch,
+      getSymbol,
+      symbolData: useSelector(selectSymbol),
+    };
+    return <ChildComponent {...connectRedux} {...props} />;
   };
-
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Wrapper);
 };
 
 export { withSymbol };

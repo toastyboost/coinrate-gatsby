@@ -29,14 +29,14 @@ export default handleActions(
             market.map(item =>
               markets.push({
                 RANK: item.RANK,
-                PRICE: item.PRICE,
+                PRICECRYPTO: item.PRICE,
                 PRICEUSD: item.PRICEUSD,
-                VOLUME24HOUR: item.VOLUME24HOUR,
+                MARKETVOLUME24HOUR: item.VOLUME24HOUR,
                 CHANGE24HOUR: item.CHANGE24HOUR,
-                FSYM: crypto.toLocaleLowerCase(),
-                TSYM: currency.toLocaleLowerCase(),
-                FSYMID: item.FSYMID.toLocaleLowerCase(),
-                TSYMID: item.TSYMID.toLocaleLowerCase(),
+                FSYM: crypto.toLocaleLowerCase().replace('.', '-'),
+                TSYM: currency.toLocaleLowerCase().replace('.', '-'),
+                FSYMID: item.FSYMID.toLocaleLowerCase().replace('.', '-'),
+                TSYMID: item.TSYMID.toLocaleLowerCase().replace('.', '-'),
               })
             );
           }
@@ -44,8 +44,7 @@ export default handleActions(
       }
 
       return {
-        ...state,
-        data: markets,
+        result: markets,
       };
     },
   },

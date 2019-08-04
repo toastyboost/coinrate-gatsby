@@ -14,6 +14,7 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-plugin-no-sourcemaps',
     'gatsby-plugin-eslint',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

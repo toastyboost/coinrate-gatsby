@@ -1,48 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { compose } from 'redux';
+
 import { withSymbol, withSymbolChart, useInterval } from 'store/hocs';
 import { updateInterval } from 'helpers/constants';
 
 import { Header } from './Header';
 import { Chart } from './Chart';
-
 import { BlockWrap } from './styles';
 
 const Block = ({
   symbol,
   getSymbol,
   getSymbolChart,
-  selectSymbol,
-  selectSymbolChart,
+  symbolChart = [],
+  symbolData = [],
+  dispatch,
 }) => {
   const [isReload, reloadTimer] = useState(false);
+  const [activeRange, setRange] = useState('7d');
 
   useEffect(() => {
-    getSymbol(symbol);
-    getSymbolChart(symbol);
+    dispatch(getSymbol(symbol));
+    dispatch(getSymbolChart(symbol, activeRange));
   }, []);
 
   useInterval(() => {
-    getSymbol(symbol);
-    getSymbolChart(symbol);
+    dispatch(getSymbol(symbol));
+    dispatch(getSymbolChart(symbol, activeRange));
 
-    reloadTimer(true);
     reloadTimer(false);
   }, updateInterval);
 
-  const symbolData = selectSymbol[symbol];
-  const chartData = selectSymbolChart[symbol];
+  const chartData = symbolChart[symbol];
+  const blockData = symbolData[symbol];
 
-  if (!symbolData) return false;
+  if (!chartData) return false;
 
   return (
     <>
-      <Header data={symbolData} />
+      <Header data={blockData} />
       <BlockWrap>
         <Chart
           chartData={chartData}
-          symbolData={symbolData}
+          symbolData={blockData}
           isReloaded={isReload}
+          setRange={setRange}
+          activeRange={activeRange}
         />
       </BlockWrap>
     </>

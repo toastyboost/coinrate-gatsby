@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import { RangeContainer, RangeItem } from './styles';
 import { timeRanges } from 'helpers/constants';
 
 import { withSymbolChart } from 'store/hocs';
 
-const RangeSelector = ({ className, getSymbolChart, symbol }) => {
-  const [activeRange, setRange] = useState(timeRanges[1]);
-
+const RangeSelector = ({
+  className,
+  dispatch,
+  getSymbolChart,
+  symbol,
+  activeRange,
+  setRange,
+}) => {
   useEffect(() => {
-    getSymbolChart(symbol, activeRange);
+    dispatch(getSymbolChart(symbol, activeRange));
   }, [activeRange]);
 
   return (

@@ -1,32 +1,23 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
+import { useSelector, useDispatch } from 'react-redux';
 import {
   getSymbolMarkets,
   selectSymbolMarkets,
 } from 'store/ducks/cryptos/symbolMarkets';
 
-const withSymbolMarkets = WrappedComponent => {
-  const Wrapper = props => <WrappedComponent {...props} />;
+const withSymbolMarkets = ChildComponent => {
+  return props => {
+    const dispatch = useDispatch();
 
-  const mapStateToProps = state => ({
-    selectSymbolMarkets: selectSymbolMarkets(state),
-  });
+    const connectRedux = {
+      dispatch,
+      getSymbolMarkets,
+      symbolMarkets: useSelector(selectSymbolMarkets),
+    };
 
-  const mapDispatchToProps = dispatch => {
-    return bindActionCreators(
-      {
-        getSymbolMarkets,
-      },
-      dispatch
-    );
+    return <ChildComponent {...connectRedux} {...props} />;
   };
-
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Wrapper);
 };
 
 export { withSymbolMarkets };

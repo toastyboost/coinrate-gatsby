@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-import { withMarketData } from 'store/hocs';
+
+import { compose } from 'redux';
+
+import { withMarketData, withSymbolChart } from 'store/hocs';
 
 import {
   NotFoundWrap,
@@ -11,10 +14,18 @@ import {
 
 import { SymbolCard } from 'components';
 
-const Page = ({ getMarketData, data }) => {
+const Page = ({ getMarketData, marketData, getSymbolChart, dispatch }) => {
   useEffect(() => {
     getMarketData({ start: 0, limit: 8, withCharts: true });
   }, []);
+
+  useEffect(() => {
+    if (marketData.length) {
+      const symbols = marketData.map(item => item.original.ID);
+
+      dispatch(getSymbolChart(symbols, '7d'));
+    }
+  }, [marketData]);
 
   return (
     <NotFoundWrap>
@@ -24,15 +35,17 @@ const Page = ({ getMarketData, data }) => {
         exist
       </NotFoundDesc>
       <NotFoundRelevant>
-        {data.map((item, key) => (
-          <SymbolCard data={item} key={key} />
-        ))}
+        {marketData &&
+          marketData.map((item, key) => <SymbolCard data={item} key={key} />)}
       </NotFoundRelevant>
       <NotFoundCta id="bitcoin" />
     </NotFoundWrap>
   );
 };
 
-const NotFound = withMarketData(Page);
+const NotFound = compose(
+  withMarketData,
+  withSymbolChart
+)(Page);
 
 export { NotFound };

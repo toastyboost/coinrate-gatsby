@@ -21,4 +21,4 @@ const initStore = () =>
 
 const store = initStore();
 // eslint-disable-next-line react/display-name
-export default ({ element }) => <Provider store={store}>{element}</Provider>;
+export default ({ element }) => <Provider store={store}> {element}</Provider>;

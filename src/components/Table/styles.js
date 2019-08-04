@@ -1,152 +1,23 @@
 import styled, { css } from 'styled-components';
 
-const arrow = `
-  position: relative;
-  width: 36px;
-  height: 36px;
-  cursor: pointer;
-  transition: 0.3s;
-
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
-const arrowBefore = `
-  content: '';
-  position: absolute;
-  z-index: 10;
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  width: 7.5px;
-  height: 7.5px;
-  border-right: 2.5px solid var(--blue);
-  border-top: 2.5px solid var(--blue);
-`;
-
-const TableContainer = styled.div`
-  margin-top: 24px;
-
-  .prev {
-    ${arrow}
-    &:before {
-      ${arrowBefore}
-      transform: rotate(225deg);
-      left: 19px;
-    }
-  }
-
-  .next {
-    ${arrow}
-
-    &:before {
-      ${arrowBefore}
-      transform: rotate(405deg);
-      right: 19px;
-    }
-  }
-`;
-
-const PagesContainer = styled.div`
-  border-top: 1px solid var(--border-color);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-  display: flex;
-  align-content: center;
-  align-items: center;
-  width: 100%;
-  font-size: 1rem;
-  line-height: 1em;
-`;
-
-const VisiblePages = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 0;
-
-  .item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 8px;
-    color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 24px;
-    padding: 5px 8px 4px 8px;
-    min-width: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &.current {
-      color: #fff;
-      background-color: var(--blue);
-    }
-
-    &:hover {
-      color: #fff;
-      background-color: var(--blue);
-    }
-  }
-`;
 const dWidth = 'min-width: 140px;';
 const cWidth = 'min-width: 110px;';
-
+const qWidth = 'min-width: calc(20% - 9px)';
+const eWidth = 'min-width: calc(25% - 9px)';
 const dPad = 'padding: 0 20px;';
+
+// хуйня
 
 const Cells = {
   RANK: css`
-    min-width: 40px;
+    min-width: 46px;
     font-size: 1.2rem;
-    width: 100%;
     color: var(--secondary-text);
     justify-content: center;
   `,
   PRICE: css`
-    min-width: 300px;
+    min-width: 320px;
     ${dPad}
-
-    .crypto {
-      width: 100%;
-      display: flex;
-      align-items: center;
-
-      &__img {
-        float: left;
-        background-repeat: no-repeat;
-        background-position: 50%;
-        background-size: contain;
-        position: relative;
-        width: 28px;
-        min-width: 28px;
-        height: 28px;
-        margin-right: 16px;
-        border: 1px solid var(--border-color-light);
-        border-radius: 50%;
-      }
-
-      &__name {
-        display: flex;
-        flex-wrap: wrap;
-        line-height: 1em;
-        position: relative;
-        bottom: -1px;
-
-        .name {
-          width: 100%;
-        }
-      }
-
-      &__price {
-        margin-left: auto;
-        display: flex;
-        position: relative;
-        bottom: -1px;
-      }
-    }
 
     .direction {
       margin-left: 16px;
@@ -154,13 +25,6 @@ const Cells = {
       margin-bottom: auto;
       position: relative;
       top: -2px;
-    }
-
-    .chart {
-      position: relative;
-      display: flex;
-      bottom: -2px;
-      left: -2px;
     }
   `,
   CAP: css`
@@ -180,48 +44,94 @@ const Cells = {
     ${dPad}
   `,
   CHART: css`
-    min-width: 210px;
+    max-width: 260px;
+    min-width: 220px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    .chart svg {
+      position: absolute;
+      width: 102%;
+      height: 80%;
+      bottom: -2px;
+      left: -2px;
+    }
   `,
   SHARE: css`
     ${cWidth};
     ${dPad}
   `,
+  FSYM: css`
+    ${qWidth};
+    ${dPad}
+  `,
+  TSYMID: css`
+    ${qWidth};
+    ${dPad}
+  `,
+  PRICEUSD: css`
+    ${qWidth};
+    ${dPad}
+  `,
+  PRICECRYPTO: css`
+    ${qWidth};
+    ${dPad}
+  `,
+  MARKETVOLUME24HOUR: css`
+    ${qWidth};
+    ${dPad}
+  `,
+  EXCHANGENAME: css`
+    ${eWidth};
+    ${dPad}
+  `,
+  EXCHANGEMARKETS: css`
+    ${eWidth};
+    ${dPad}
+  `,
+  EXCHANGEVOLUME: css`
+    ${eWidth};
+    ${dPad}
+  `,
+  EXCHANGESHARE: css`
+    ${eWidth};
+    ${dPad}
+  `,
 };
 
-const Cell = styled.div`
+// хуйня
+
+const Head = styled.div`
+  display: flex;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 50px;
+`;
+
+const Cointainer = styled.div`
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  align-content: center;
-  text-transform: uppercase;
-  height: 63px;
-  border-right: 1px solid var(--border-color);
-  position: relative;
-  z-index: 100;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05), inset 0 4px 0 transparent;
+  border-radius: 3px;
+  margin: 0 0 24px 0;
+`;
 
-  .name {
-    font-size: 1.1rem;
-    color: var(--secondary-text);
-    line-height: 1em;
-    width: 100%;
-    margin: 2px 0;
+const Body = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 100px;
+  overflow-y: scroll;
+
+  & > div {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
+    }
   }
-
-  .ticker,
-  .value {
-    font-size: 1.7rem;
-    line-height: 1em;
-    font-weight: 700;
-  }
-
-  ${({ id }) => Cells[id]}
-
-  ${({ isHead, isSorted, isDesc }) =>
-    isHead && isSorted
-      ? isDesc === 'asc'
-        ? 'box-shadow: inset 0 -3px 0 0 var(--blue);'
-        : 'box-shadow: inset 0 3px 0 0 var(--blue);'
-      : ''}
 `;
 
 const Row = styled.div`
@@ -229,14 +139,14 @@ const Row = styled.div`
   width: 100%;
   position: relative;
 
-  div {
+  & > div {
     &:last-child {
       border: 0;
     }
   }
 
   &:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: rgba(0, 0, 0, 0.03);
   }
 
   &:before {
@@ -250,32 +160,113 @@ const Row = styled.div`
   }
 `;
 
-const Body = styled.div`
+const TD = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  align-items: center;
+  align-content: center;
+  text-transform: uppercase;
+  height: 69px;
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  z-index: 100;
 
-  & > div {
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
-    }
+  .ticker,
+  .value {
+    font-size: 1.6rem;
+    line-height: 1em;
+    font-weight: 700;
   }
-`;
 
-const Head = styled.div`
-  display: flex;
-  width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 50px;
+  .value {
+    position: relative;
+    bottom: -2px;
+  }
 
-  div {
-    height: 73px;
-    border: 0;
-    cursor: pointer;
+  .name {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    line-height: 1em;
+    width: 100%;
+    margin: 2px 0;
+  }
+
+  .exchange,
+  .symbol {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   .title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+    line-height: 1em;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1em;
+    color: var(--secondary-text);
+    width: 100%;
+  }
+
+  .crypto,
+  .exchange {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__img {
+      float: left;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: contain;
+      position: relative;
+      width: 28px;
+      min-width: 28px;
+      height: 28px;
+      margin-right: 16px;
+      border: 1px solid var(--border-color-light);
+      border-radius: 50%;
+    }
+
+    &__name {
+      display: flex;
+      flex-wrap: wrap;
+      line-height: 1em;
+      position: relative;
+      bottom: -3px;
+      transition: 0.3s;
+
+      .name {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    &__price {
+      margin-left: auto;
+      display: flex;
+      position: relative;
+      bottom: -1px;
+    }
+  }
+  ${({ cellID }) => Cells[cellID]}
+`;
+
+const TH = styled(TD)`
+  height: 69px;
+  border: 0;
+  /* cursor: pointer; */
+
+  .title {
+    font-size: 1.3rem;
     margin-bottom: 2px;
     line-height: 1em;
     font-weight: 700;
@@ -287,25 +278,13 @@ const Head = styled.div`
     line-height: 1em;
     color: var(--secondary-text);
   }
+
+  box-shadow: ${({ isDesc }) =>
+    isDesc == null
+      ? 'none'
+      : isDesc
+      ? 'inset 0 -3px 0 0 var(--blue)'
+      : 'inset 0 3px 0 0 var(--blue)'};
 `;
 
-const Cointainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.05), inset 0 4px 0 transparent;
-  border-radius: 3px;
-  margin: 0 0 24px 0;
-`;
-
-export {
-  TableContainer,
-  PagesContainer,
-  VisiblePages,
-  Cell,
-  Row,
-  Body,
-  Cointainer,
-  Head,
-};
+export { TD, Row, Body, Cointainer, Head, TH };

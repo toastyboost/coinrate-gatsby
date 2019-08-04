@@ -1,29 +1,18 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { getExchanges, selectExchanges } from 'store/ducks/exchange/exchanges';
 
-const withExchanges = WrappedComponent => {
-  const Wrapper = props => <WrappedComponent {...props} />;
+const withExchanges = ChildComponent => props => {
+  const dispatch = useDispatch();
+  const store = useSelector(selectExchanges);
 
-  const mapStateToProps = state => ({
-    data: selectExchanges(state),
-  });
-
-  const mapDispatchToProps = dispatch => {
-    return bindActionCreators(
-      {
-        getExchanges,
-      },
-      dispatch
-    );
+  const connectRedux = {
+    dispatch,
+    getExchanges,
+    exchangesData: store.result,
   };
-
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Wrapper);
+  return <ChildComponent {...connectRedux} {...props} />;
 };
 
 export { withExchanges };

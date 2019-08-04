@@ -5,18 +5,31 @@ import { ExchangeMarketsContainer } from './styles';
 import { withExchangeMarkets } from 'store/hocs';
 
 import { Table } from 'components';
-import { tableColumns } from './columns';
+import { ExchangeMarketsColumns } from './columns';
 
-const Block = ({ name, getExchangeMarkets, data }) => {
+const Block = ({
+  name,
+  dispatch,
+  getExchangeMarkets,
+  exchangeMarketsData,
+  SSR = {},
+}) => {
   useEffect(() => {
-    getExchangeMarkets(name);
+    dispatch(getExchangeMarkets(name));
   }, []);
 
-  if (!data) return false;
+  const { ssrData } = SSR;
+
+  const columns = React.useMemo(() => ExchangeMarketsColumns, []);
+  const data = process.browser
+    ? React.useMemo(() => exchangeMarketsData, [exchangeMarketsData])
+    : ssrData;
 
   return (
     <ExchangeMarketsContainer>
-      <Table columns={tableColumns} tableData={data.data} />
+      {exchangeMarketsData && (
+        <Table columns={columns} data={data} pageSize={30} SSR={SSR} />
+      )}
     </ExchangeMarketsContainer>
   );
 };

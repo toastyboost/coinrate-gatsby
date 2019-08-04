@@ -1,34 +1,19 @@
 import React from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 
+import { useSelector, useDispatch } from 'react-redux';
 import { getMarketData, selectMarketData } from 'store/ducks/cryptos/market';
 
-const withMarketData = WrappedComponent => {
-  const Wrapper = props => <WrappedComponent {...props} />;
+const withMarketData = ChildComponent => props => {
+  const dispatch = useDispatch();
+  const store = useSelector(selectMarketData);
 
-  const mapStateToProps = state => {
-    const objectData = selectMarketData(state);
-    const arrayData = Object.keys(objectData).map(name => objectData[name]);
-
-    return {
-      marketData: arrayData,
-    };
+  const connectRedux = {
+    dispatch,
+    getMarketData,
+    marketData: store.result,
   };
 
-  const mapDispatchToProps = dispatch => {
-    return bindActionCreators(
-      {
-        getMarketData,
-      },
-      dispatch
-    );
-  };
-
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Wrapper);
+  return <ChildComponent {...connectRedux} {...props} />;
 };
 
 export { withMarketData };

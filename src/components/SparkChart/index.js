@@ -12,8 +12,8 @@ import { withSymbolChart } from 'store/hocs';
 
 import { SparkContainer } from './styles';
 
-const Chart = ({ selectSymbolChart, symbol, isRef }) => {
-  const chartData = selectSymbolChart[symbol];
+const Chart = ({ symbolChart, symbol, isRef, className }) => {
+  const chartData = symbolChart[symbol];
 
   if (!chartData) return <Loader />;
 
@@ -22,7 +22,7 @@ const Chart = ({ selectSymbolChart, symbol, isRef }) => {
     .map(({ PRICE }) => PRICE);
 
   return (
-    <SparkContainer>
+    <SparkContainer className={className}>
       <Sparklines data={sparkData}>
         <SparklinesCurve color="var(--blue)" />
         <SparklinesBars style={{ fill: 'var(--blue)', fillOpacity: '.1' }} />
