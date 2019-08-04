@@ -19,7 +19,7 @@ const Block = ({ symbol, symbolMarkets, getSymbolMarkets, dispatch }) => {
   return (
     <MarketTableContainer>
       <BlockWrap>
-        <Table columns={columns} data={data} pageSize={15} />
+        <Table columns={columns} data={data} pageSize={15} noPageLinks />
         <MarketCta id={symbol} />
       </BlockWrap>
     </MarketTableContainer>

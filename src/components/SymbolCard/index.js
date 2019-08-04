@@ -16,6 +16,7 @@ import {
 
 const SymbolCard = ({ data }) => {
   if (!data) return false;
+
   const { ID, TICKER, NAME, CHANGE7DAYS } = data;
 
   return (

@@ -73,26 +73,6 @@ const GlobalStyles = css`
     color: var(--text-color);
   }
 
-  h1 {
-
-    ${MEDIA.PHONE`
-      font-size: 2rem;
-    `}
-
-    ${MEDIA.SMARTPHONE`
-      font-size: 2rem;
-    `}
-
-    ${MEDIA.TABLET`
-      font-size: 2.8rem;
-    `}
-
-    ${MEDIA.DESKTOP`
-      font-size: 3.4rem;
-    `}
-
-  }
-
   p {
     font-family: var(--text-font);
   }

@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 
 const dWidth = 'min-width: 140px;';
 const cWidth = 'min-width: 110px;';
-const qWidth = 'min-width: calc(20% - 9px)';
-const eWidth = 'min-width: calc(25% - 9px)';
+const qWidth = 'min-width: 230px; width: calc(20% - 9px);';
+const eWidth = 'min-width: 230px; width: calc(25% - 9px);';
 const dPad = 'padding: 0 20px;';
 
 // хуйня

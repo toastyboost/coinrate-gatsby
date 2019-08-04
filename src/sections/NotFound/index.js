@@ -16,13 +16,12 @@ import { SymbolCard } from 'components';
 
 const Page = ({ getMarketData, marketData, getSymbolChart, dispatch }) => {
   useEffect(() => {
-    getMarketData({ start: 0, limit: 8, withCharts: true });
+    dispatch(getMarketData({ start: 0, limit: 8 }));
   }, []);
 
   useEffect(() => {
-    if (marketData.length) {
-      const symbols = marketData.map(item => item.original.ID);
-
+    if (marketData) {
+      const symbols = marketData.map(item => item.ID);
       dispatch(getSymbolChart(symbols, '7d'));
     }
   }, [marketData]);

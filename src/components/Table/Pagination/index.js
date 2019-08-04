@@ -16,7 +16,11 @@ const getVisiblePages = (page, total) => {
   }
 };
 
-const Pagination = ({ instance, SSR: { ssrPage, ssrTotal, ssrHref } }) => {
+const Pagination = ({
+  instance,
+  SSR: { ssrPage, ssrTotal, ssrHref },
+  noPageLinks,
+}) => {
   const { gotoPage, nextPage, previousPage, pageCount, pageIndex } = instance;
 
   const [visiblePages, setVisiblePages] = useState(
@@ -35,11 +39,12 @@ const Pagination = ({ instance, SSR: { ssrPage, ssrTotal, ssrHref } }) => {
           <PageItem
             key={key}
             isActive={item === pageIndex}
-            href={`${ssrHref}/${item + 1}/`}
+            href={noPageLinks ? '' : `${ssrHref}/${item + 1}/`}
             onClick={e => {
               e.preventDefault();
               gotoPage(item);
             }}
+            as={noPageLinks ? 'div' : 'a'}
           >
             {item + 1}
           </PageItem>

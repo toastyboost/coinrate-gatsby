@@ -44,7 +44,7 @@ const NextPage = styled(Button)`
   }
 `;
 
-const PageItem = styled.a`
+const PageItem = styled.div`
   position: relative;
   display: flex;
   justify-content: center;

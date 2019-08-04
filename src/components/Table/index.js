@@ -23,6 +23,7 @@ const Table = ({
     ssrTotal: Math.ceil(data.length / pageSize),
   },
   fetchData,
+  noPageLinks = false,
 }) => {
   const dispatch = useDispatch();
   const state = useTableState({
@@ -91,7 +92,7 @@ const Table = ({
           <Loader />
         )}
       </Body>
-      <Pagination instance={instance} SSR={SSR} />
+      <Pagination instance={instance} SSR={SSR} noPageLinks={noPageLinks} />
     </Cointainer>
   );
 };

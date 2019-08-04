@@ -19,6 +19,21 @@ const NotFoundTitle = styled.h1`
   text-transform: uppercase;
   width: 100%;
   text-align: center;
+  ${MEDIA.PHONE`
+    font-size: 2rem;
+  `}
+
+  ${MEDIA.SMARTPHONE`
+    font-size: 2rem;
+  `}
+
+  ${MEDIA.TABLET`
+    font-size: 2.8rem;
+  `}
+
+  ${MEDIA.DESKTOP`
+    font-size: 3.4rem;
+  `}
 `;
 
 const NotFoundDesc = styled.div`
