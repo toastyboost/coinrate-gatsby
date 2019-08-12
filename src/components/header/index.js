@@ -26,10 +26,6 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
     getGlobalStats();
   }, []);
 
-  if (isLoading) return false;
-
-  const { CAP, CHANGECAP24H, VOLUME24HOUR, CHANGEVOLUME24HOUR24H } = data;
-
   return (
     <HeaderContainer>
       <GlobalData>
@@ -37,19 +33,21 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
           <Cap>
             <DataTitle>Market Cap</DataTitle>
             <DataValue>
-              <Value value={CAP} />
+              <Value value={!isLoading && data.CAP} />
             </DataValue>
             <DataChange>
-              <Value value={CHANGECAP24H} suffix="%" />
+              {!isLoading && <Value value={data.CHANGECAP24H} suffix="%" />}
             </DataChange>
           </Cap>
           <Volume>
             <DataTitle>Global Volume</DataTitle>
             <DataValue>
-              <Value value={VOLUME24HOUR} />
+              {!isLoading && <Value value={data.VOLUME24HOUR} />}
             </DataValue>
             <DataChange>
-              <Value value={CHANGEVOLUME24HOUR24H} suffix="%" />
+              {!isLoading && (
+                <Value value={data.CHANGEVOLUME24HOUR24H} suffix="%" />
+              )}
             </DataChange>
           </Volume>
           <Burger />

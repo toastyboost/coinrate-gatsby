@@ -8,23 +8,20 @@ import { Value } from 'components';
 const BlockDescription = ({ GlobalStats, type }) => {
   const { isLoading, data } = GlobalStats;
 
-  if (isLoading) return false;
-
-  const { CURRENCIES, EXCHANGES, MARKETS, CAP } = data;
-
   const MarketData = () => (
     <span>
-      We are tracking <b>{CURRENCIES}</b> crypto <b>{MARKETS}</b> markets and{' '}
-      <b>{EXCHANGES}</b> exchanges
+      We are tracking <b>{!isLoading && data.CURRENCIES}</b> crypto{' '}
+      <b>{!isLoading && data.MARKETS}</b> markets and{' '}
+      <b>{!isLoading && data.EXCHANGES}</b> exchanges
     </span>
   );
 
   const CurrencyData = () => (
     <span>
-      We have <b>{CURRENCIES}</b> cryptocurrencies with
+      We have <b>{!isLoading && data.CURRENCIES}</b> cryptocurrencies with
       <b>
         &nbsp;
-        <Value value={CAP} />
+        {!isLoading && <Value value={data.CAP} />}
         &nbsp;
       </b>
       total capitalization
@@ -33,7 +30,8 @@ const BlockDescription = ({ GlobalStats, type }) => {
 
   const SymbolMarketsData = () => (
     <span>
-      We are tracking <b>{MARKETS}</b> markets in <b>{EXCHANGES}</b> exchanges
+      We are tracking <b>{!isLoading && data.MARKETS}</b> markets in{' '}
+      <b>{!isLoading && data.EXCHANGES}</b> exchanges
     </span>
   );
 
@@ -48,15 +46,28 @@ const BlockDescription = ({ GlobalStats, type }) => {
 
 const Description = withGlobalStats(BlockDescription);
 
-const PageHeader = ({ title, sub = '', type, tag }) => (
-  <PageHeaderWrap>
-    <PageTitle as={tag === 'h1' ? 'h1' : 'div'}>
-      {title} {sub ? <em>{sub}</em> : ''}
-    </PageTitle>
-    <PageDescription>
-      <Description type={type} />
-    </PageDescription>
-  </PageHeaderWrap>
-);
+const PageHeader = ({ title, sub = '', type, tag, SSR }) => {
+  const { ssrPage } = SSR;
+
+  return (
+    <PageHeaderWrap>
+      <PageTitle as={tag === 'h1' ? 'h1' : 'div'}>
+        {title}{' '}
+        {sub ? (
+          <em>
+            {sub}
+            {!ssrPage || type !== 'exchanges' ? '' : ` (Page ${ssrPage})`}
+          </em>
+        ) : (
+          ''
+        )}{' '}
+        {!ssrPage || type === 'exchanges' ? '' : `(Page ${ssrPage})`}
+      </PageTitle>
+      <PageDescription>
+        <Description type={type} />
+      </PageDescription>
+    </PageHeaderWrap>
+  );
+};
 
 export { PageHeader };

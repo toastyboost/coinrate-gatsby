@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const API = process.env.API_URL;
 const pageSize = parseInt(process.env.CRYPTO_BY_PAGE);
-const pages = parseInt(process.env.PAGES);
+const aboutData = require('./src/data/symbol-about.json');
 
 const fetchMarket = () => axios.get(`${API}/symbol/infos?start=0&limit=0`);
 
@@ -63,10 +63,19 @@ exports.createPages = async ({ actions: { createPage } }) => {
   }));
 
   cryptoNames.forEach(symbol => {
+    const textObj = aboutData.filter(item => item.id === symbol.ID);
+
     createPage({
       path: `/cryptocurrencies/${symbol.ID}/`,
       component: require.resolve('./src/pages/templates/_crypto.js'),
-      context: { slug: symbol.ID, ticker: symbol.TICKER, name: symbol.NAME },
+      context: {
+        SSR: {
+          slug: symbol.ID,
+          ticker: symbol.TICKER,
+          name: symbol.NAME,
+          about: textObj[0] ? textObj[0].about : '',
+        },
+      },
     });
   });
 
@@ -191,7 +200,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
     const marketsPages = exchangeMarkets
       .filter((_, i) => (i % pageSize ? false : true))
       .map((_, key) => key);
-    console.log('marketsPages', marketsPages, pageSize);
+
     marketsPages.forEach(page => {
       createPage({
         path: `/exchanges/${ID}/${page + 1}/`,

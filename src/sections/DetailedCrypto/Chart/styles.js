@@ -207,6 +207,12 @@ const ChartRange = styled.div`
   }
 `;
 
+const ChartAbout = styled.div`
+  margin-top: 24px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+`;
+
 export {
   ChartContainer,
   ChartData,
@@ -216,4 +222,5 @@ export {
   CryptoValue,
   ChartRange,
   ChartControls,
+  ChartAbout,
 };

@@ -12,6 +12,7 @@ import {
   CryptoTitle,
   CryptoValue,
   ChartRange,
+  ChartAbout,
 } from './styles';
 
 import { dataItems } from '../constants';
@@ -22,39 +23,40 @@ const MomentOptions = {
 };
 
 const Chart = ({
+  SSR,
   chartData,
   symbolData,
   isReloaded,
   setRange,
   activeRange,
 }) => {
-  const { ID, NAME, TICKER } = symbolData;
-
+  const { name, ticker, slug, about } = SSR;
   return (
     <ChartContainer>
       <ChartControls>
         <ChartTitle>
-          {NAME} ({TICKER}/USD) price chart in real time
+          {name} ({ticker}/USD) price chart in real time
         </ChartTitle>
         <SymbolRangeSelector
-          symbol={ID}
+          symbol={slug}
           setRange={setRange}
           activeRange={activeRange}
         />
       </ChartControls>
       <ChartData>
-        {dataItems.map(({ title, value, color, prefix, isMobile }, key) => (
-          <CryptoItem key={key} isMobile={isMobile}>
-            <CryptoTitle>{title}</CryptoTitle>
-            <CryptoValue color={color}>
-              <Value
-                value={symbolData[value]}
-                prefix={prefix}
-                isReloaded={isReloaded}
-              />
-            </CryptoValue>
-          </CryptoItem>
-        ))}
+        {symbolData &&
+          dataItems.map(({ title, value, color, prefix, isMobile }, key) => (
+            <CryptoItem key={key} isMobile={isMobile}>
+              <CryptoTitle>{title}</CryptoTitle>
+              <CryptoValue color={color}>
+                <Value
+                  value={symbolData[value]}
+                  prefix={prefix}
+                  isReloaded={isReloaded}
+                />
+              </CryptoValue>
+            </CryptoItem>
+          ))}
         {chartData && (
           <ChartRange>
             from
@@ -67,6 +69,9 @@ const Chart = ({
         )}
       </ChartData>
       {chartData && <HighChart data={chartData} />}
+      <ChartAbout>
+        What is {name}? {about}
+      </ChartAbout>
     </ChartContainer>
   );
 };

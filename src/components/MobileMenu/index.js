@@ -4,7 +4,9 @@ import { MenuContainer, MenuLink } from './styles';
 import { menuItems } from './data';
 
 const MobileMenu = () => {
-  const route = window.location.pathname.replace(/\//g, '');
+  const route =
+    typeof window !== 'undefined' &&
+    window.location.pathname.replace(/\//g, '');
 
   return (
     <MenuContainer>

@@ -11,7 +11,13 @@ const MarketPage = ({ pageContext: { slug, name, SSR } }) => (
     />
 
     <Layout>
-      <PageHeader title={name} sub="exchange" type="exchanges" tag="h1" />
+      <PageHeader
+        title={name}
+        sub="exchange"
+        type="exchanges"
+        tag="h1"
+        SSR={SSR}
+      />
       <ExchangeMarkets name={slug} SSR={SSR} />
     </Layout>
   </>

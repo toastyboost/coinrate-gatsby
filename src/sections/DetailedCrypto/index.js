@@ -9,7 +9,7 @@ import { Chart } from './Chart';
 import { BlockWrap } from './styles';
 
 const Block = ({
-  symbol,
+  SSR,
   getSymbol,
   getSymbolChart,
   symbolChart = [],
@@ -19,28 +19,29 @@ const Block = ({
   const [isReload, reloadTimer] = useState(false);
   const [activeRange, setRange] = useState('7d');
 
+  const { slug } = SSR;
+
   useEffect(() => {
-    dispatch(getSymbol(symbol));
-    dispatch(getSymbolChart(symbol, activeRange));
+    dispatch(getSymbol(slug));
+    dispatch(getSymbolChart(slug, activeRange));
   }, []);
 
   useInterval(() => {
-    dispatch(getSymbol(symbol));
-    dispatch(getSymbolChart(symbol, activeRange));
+    dispatch(getSymbol(slug));
+    dispatch(getSymbolChart(slug, activeRange));
 
     reloadTimer(false);
   }, updateInterval);
 
-  const chartData = symbolChart[symbol];
-  const blockData = symbolData[symbol];
-
-  if (!chartData) return false;
+  const chartData = symbolChart[slug];
+  const blockData = symbolData[slug];
 
   return (
     <>
-      <Header data={blockData} />
+      {blockData && <Header data={blockData} />}
       <BlockWrap>
         <Chart
+          SSR={SSR}
           chartData={chartData}
           symbolData={blockData}
           isReloaded={isReload}

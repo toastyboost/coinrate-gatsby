@@ -12,7 +12,12 @@ const MarketPage = ({ pageContext: { SSR } }) => (
       }
     />
     <Layout>
-      <PageHeader title="Cryptocurrency exchanges" type="exchanges" tag="h1" />
+      <PageHeader
+        title="Cryptocurrency exchanges"
+        type="exchanges"
+        tag="h1"
+        SSR={SSR}
+      />
       <ExchangesTable SSR={SSR} />
     </Layout>
   </>

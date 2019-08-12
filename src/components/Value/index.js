@@ -8,7 +8,7 @@ import {
   // setDecimals,
 } from './helpers';
 
-const Value = ({ value, type, suffix, prefix }) => {
+const Value = ({ value = 0, type, suffix, prefix }) => {
   const val = useMemo(() => setFormat(value, suffix, type), [
     value,
     suffix,
@@ -28,22 +28,6 @@ const Value = ({ value, type, suffix, prefix }) => {
       {suffix}
     </ValueCounter>
   );
-
-  // type === 'triangle' ? (
-  //   <DirectionArrow className="direction" direction={setDirection(value)} />
-  // ) : (
-
-  // className="value"
-  // direction={setDirection(value)}
-  // start={formatedValue - (formatedValue / 100) * 10}
-  // end={formatedValue}
-  // duration={0.5}
-  // separator=","
-  // useEasing={true}
-  // useGrouping={true}
-  // prefix={setPrefix(prefix)}
-  // suffix={setSuffix(value, suffix)}
-  // decimals={setDecimals(value, type, suffix)}
 };
 
 export { Value };

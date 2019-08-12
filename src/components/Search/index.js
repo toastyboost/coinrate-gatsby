@@ -57,7 +57,7 @@ const Search = ({ getSearchData, searchData }) => {
 
     if (method === 'click' || method === 'enter') {
       const { ID } = newValue;
-      window.open(`/cryptocurrencies/${ID}`, '_blank');
+      window.open(`/cryptocurrencies/${ID}/`, '_blank');
     }
   };
 
