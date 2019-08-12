@@ -4,10 +4,6 @@ import { availiableCurrenciesAssets } from 'helpers/constants';
 
 const ExchangeMarketsColumns = [
   {
-    Header: '#',
-    accessor: 'RANK',
-  },
-  {
     Header: () => (
       <>
         <span className="title">From</span>
@@ -20,7 +16,7 @@ const ExchangeMarketsColumns = [
       },
     }) => (
       <a
-        href={`/cryptocurrencies/${FSYM}/`}
+        href={`/cryptocurrencies/${FSYMID}/`}
         className="crypto"
         target="_blank"
         rel="noopener noreferrer"

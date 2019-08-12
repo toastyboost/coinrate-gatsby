@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import CountUp from 'react-countup';
+// import CountUp from 'react-countup';
 
-const ValueCounter = styled(CountUp)`
+const ValueCounter = styled.span`
   color: ${({ direction, suffix }) =>
     suffix === '%' && direction === 'up'
       ? 'var(--green)'

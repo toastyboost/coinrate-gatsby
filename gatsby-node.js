@@ -1,19 +1,20 @@
 const axios = require('axios');
 
 const API = process.env.API_URL;
-const pageSize = parseInt(process.env.CRYPTO_ITEMS);
+const pageSize = parseInt(process.env.CRYPTO_BY_PAGE);
 const pages = parseInt(process.env.PAGES);
 
-const fetchMarket = (start, limit) =>
-  axios.get(`${API}/symbol/infos?start=${start}&limit=${limit}`);
+const fetchMarket = () => axios.get(`${API}/symbol/infos?start=0&limit=0`);
 
 const fetchExchanges = () => axios.get(`${API}/exchange/infos`);
 
 const fetchExchangeMarkets = name =>
   axios.get(`${API}/market/infos?&e=${name}&limit=0`);
 
+// Переписать этот треш
+
 exports.createPages = async ({ actions: { createPage } }) => {
-  const allCrypto = await fetchMarket(0, 0);
+  const allCrypto = await fetchMarket();
   const allCryptoData = allCrypto.data.result;
 
   // Create main and table pages
@@ -24,13 +25,13 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   createPage({
     path: '/',
-    component: require.resolve('./src/pages/_templates/index.js'),
+    component: require.resolve('./src/pages/templates/_index.js'),
     context: {
       SSR: {
         ssrData: allCryptoData.slice(0, pageSize),
         ssrTotal: marketPages.length,
-        ssrPage: 1,
-        ssrHref: '',
+        ssrPage: null,
+        ssrPath: '/',
       },
     },
   });
@@ -38,7 +39,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
   marketPages.forEach(item => {
     createPage({
       path: `/${item + 1}/`,
-      component: require.resolve('./src/pages/_templates/index.js'),
+      component: require.resolve('./src/pages/templates/_index.js'),
       context: {
         SSR: {
           ssrData: allCryptoData.slice(
@@ -47,7 +48,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
           ),
           ssrTotal: marketPages.length,
           ssrPage: item + 1,
-          ssrHref: '/',
+          ssrPath: '/',
         },
       },
     });
@@ -55,18 +56,16 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   // Create crypto pages
 
-  const cryptoNames = allCryptoData
-    .filter((_, key) => key < pages)
-    .map(({ ID, TICKER, NAME }) => ({
-      ID,
-      TICKER,
-      NAME,
-    }));
+  const cryptoNames = allCryptoData.map(({ ID, TICKER, NAME }) => ({
+    ID,
+    TICKER,
+    NAME,
+  }));
 
   cryptoNames.forEach(symbol => {
     createPage({
       path: `/cryptocurrencies/${symbol.ID}/`,
-      component: require.resolve('./src/pages/_templates/crypto.js'),
+      component: require.resolve('./src/pages/templates/_crypto.js'),
       context: { slug: symbol.ID, ticker: symbol.TICKER, name: symbol.NAME },
     });
   });
@@ -90,13 +89,13 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   createPage({
     path: '/exchanges',
-    component: require.resolve('./src/pages/_templates/exchanges.js'),
+    component: require.resolve('./src/pages/templates/_exchanges.js'),
     context: {
       SSR: {
         ssrData: parcedAllExchangesData,
         ssrTotal: 1,
-        ssrPage: 1,
-        ssrHref: 'exchanges',
+        ssrPage: null,
+        ssrPath: '/exchanges',
       },
     },
   });
@@ -143,15 +142,15 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
     createPage({
       path: `/exchanges/${exchange.ID}/`,
-      component: require.resolve('./src/pages/_templates/exchange.js'),
+      component: require.resolve('./src/pages/templates/_exchange.js'),
       context: {
         slug: exchange.ID,
         name: exchange.NAME,
         SSR: {
           ssrData: exchangeMarkets.slice(0, pageSize),
           ssrTotal: marketsPages.length,
-          ssrPage: 1,
-          ssrHref: `/exchanges/${exchange.ID}`,
+          ssrPage: null,
+          ssrPath: `/exchanges/${exchange.ID}/`,
         },
       },
     });
@@ -192,11 +191,11 @@ exports.createPages = async ({ actions: { createPage } }) => {
     const marketsPages = exchangeMarkets
       .filter((_, i) => (i % pageSize ? false : true))
       .map((_, key) => key);
-
+    console.log('marketsPages', marketsPages, pageSize);
     marketsPages.forEach(page => {
       createPage({
         path: `/exchanges/${ID}/${page + 1}/`,
-        component: require.resolve('./src/pages/_templates/exchange.js'),
+        component: require.resolve('./src/pages/templates/_exchange.js'),
         context: {
           slug: ID,
           name: NAME,
@@ -207,7 +206,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
             ),
             ssrTotal: marketsPages.length,
             ssrPage: page + 1,
-            ssrHref: `/exchanges/${ID}`,
+            ssrPath: `/exchanges/${ID}/`,
           },
         },
       });

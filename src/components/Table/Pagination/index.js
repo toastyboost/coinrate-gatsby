@@ -18,7 +18,7 @@ const getVisiblePages = (page, total) => {
 
 const Pagination = ({
   instance,
-  SSR: { ssrPage, ssrTotal, ssrHref },
+  SSR: { ssrPage, ssrTotal, ssrPath },
   noPageLinks,
 }) => {
   const { gotoPage, nextPage, previousPage, pageCount, pageIndex } = instance;
@@ -39,7 +39,11 @@ const Pagination = ({
           <PageItem
             key={key}
             isActive={item === pageIndex}
-            href={noPageLinks ? '' : `${ssrHref}/${item + 1}/`}
+            href={
+              noPageLinks
+                ? ''
+                : `${item === 0 ? '' : ssrPath + parseFloat(item + 1) + '/'}`
+            }
             onClick={e => {
               e.preventDefault();
               gotoPage(item);

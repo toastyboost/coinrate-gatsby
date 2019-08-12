@@ -11,7 +11,7 @@ const Menu = () => (
       ) : (
         <MenuLink
           key={key}
-          href={`/${slug}/`}
+          href={`/${slug}${slug === '' ? '' : '/'}`}
           isActive={isActive}
           as={isActive ? 'a' : 'div'}
         >

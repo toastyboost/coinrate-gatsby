@@ -27,9 +27,7 @@ const Block = ({
 
   return (
     <ExchangeMarketsContainer>
-      {exchangeMarketsData && (
-        <Table columns={columns} data={data} pageSize={30} SSR={SSR} />
-      )}
+      {data && <Table columns={columns} data={data} pageSize={30} SSR={SSR} />}
     </ExchangeMarketsContainer>
   );
 };
