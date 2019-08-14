@@ -35,7 +35,7 @@ const Chart = ({
     <ChartContainer>
       <ChartControls>
         <ChartTitle>
-          {name} ({ticker}/USD) price chart in real time
+          {name} ({ticker})
         </ChartTitle>
         <SymbolRangeSelector
           symbol={slug}
@@ -70,7 +70,7 @@ const Chart = ({
       </ChartData>
       {chartData && <HighChart data={chartData} />}
       <ChartAbout>
-        What is {name}? {about}
+        <h2>About {name}</h2> {about}
       </ChartAbout>
     </ChartContainer>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Value, SparkChart } from 'components';
+import { Value, SparkChart, SymbolIcon } from 'components';
 
 const marketColumns = [
   {
@@ -24,11 +24,11 @@ const marketColumns = [
         target="_blank"
         rel="noopener noreferrer"
       >
-        <div
+        <SymbolIcon
           className="crypto__img"
-          style={{
-            backgroundImage: `url("https://coinrate.com/static/crypto/${TICKER.toLowerCase()}-${ID}.svg?v=1")`,
-          }}
+          ticker={TICKER}
+          id={ID}
+          name={NAME}
         />
         <div className="crypto__name">
           <span className="ticker">{TICKER}</span>

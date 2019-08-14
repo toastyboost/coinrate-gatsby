@@ -229,7 +229,7 @@ const TD = styled.div`
       min-width: 28px;
       height: 28px;
       margin-right: 16px;
-      border: 1px solid var(--border-color-light);
+      /* border: 1px solid var(--border-color-light); */
       border-radius: 50%;
     }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Value } from 'components';
+import { Value, SymbolIcon } from 'components';
 import { availiableCurrenciesAssets } from 'helpers/constants';
 
 const columns = [
@@ -54,11 +54,11 @@ const columns = [
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div
+          <SymbolIcon
             className="crypto__img"
-            style={{
-              backgroundImage: `url("https://coinrate.com/static/crypto/${TSYM}-${TSYMID}.svg?v=1")`,
-            }}
+            ticker={TSYM}
+            id={TSYMID}
+            name={TSYMID}
           />
           <div className="symbol">
             <span className="title">{TSYMID}</span>
@@ -67,11 +67,11 @@ const columns = [
         </a>
       ) : (
         <div className="crypto">
-          <div
+          <SymbolIcon
             className="crypto__img"
-            style={{
-              backgroundImage: `url("https://coinrate.com/static/crypto/${TSYM.toLowerCase()}-${TSYMID}.svg?v=1")`,
-            }}
+            ticker={TSYM}
+            id={TSYMID}
+            name={TSYMID}
           />
           <div className="symbol">
             <span className="title">{TSYMID}</span>

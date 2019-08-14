@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Wrap, MEDIA } from 'styles/common';
-import { Cta } from 'components';
+import { Cta, SymbolIcon } from 'components';
 
 const BlockContainer = styled.div`
   position: relative;
@@ -66,13 +66,8 @@ const BlockWrap = styled(Wrap)`
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
 `;
 
-const CryptoIcon = styled.div`
+const CryptoIcon = styled(SymbolIcon)`
   float: left;
-  background-image: ${({ ticker, id }) =>
-    `url(https://coinrate.com/static/crypto/${ticker.toLowerCase()}-${id.toLowerCase()}.svg?v=1)`};
-  background-size: cover;
-  background-position: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
   width: 48px;
   height: 48px;

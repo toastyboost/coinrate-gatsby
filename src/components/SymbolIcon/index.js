@@ -1,9 +1,15 @@
 import React from 'react';
 
-import { IconWrap } from './styles';
+import { Icon } from './styles';
 
-const SymbolIcon = ({ className, ticker, id }) => (
-  <IconWrap className={className} ticker={ticker} id={id} />
+const SymbolIcon = ({ className, ticker, id, name }) => (
+  <Icon
+    onError={i => (i.target.style.opacity = '0')}
+    className={className}
+    src={`/static/crypto/${ticker.toLowerCase()}-${id.toLowerCase()}.svg?v=1)`}
+    alt={`${name} (${ticker})`}
+    title={`${name} logo`}
+  />
 );
 
 export { SymbolIcon };

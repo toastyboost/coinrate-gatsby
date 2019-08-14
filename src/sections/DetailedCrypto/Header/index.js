@@ -44,7 +44,7 @@ const Header = ({ data }) => {
     <BlockContainer>
       <BlockWrap>
         <CryptoInfo>
-          <CryptoIcon id={ID} ticker={TICKER} />
+          <CryptoIcon id={ID} ticker={TICKER} name={NAME} />
           <CryptoNameWrap>
             <CryptoName>{NAME}</CryptoName>
             <CryptoDetails>
