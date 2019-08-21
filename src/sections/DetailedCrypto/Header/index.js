@@ -66,7 +66,7 @@ const Header = ({ data }) => {
             <u>{TICKER}</u> ~ <Value value={PRICEBTC} /> BTC
           </CryptoBTC>
         </CryptoPrice>
-        <CryptoStats>
+        {/* <CryptoStats>
           <StatsItem>
             <StatsTitle>24H volume</StatsTitle>
             <StatsValue>
@@ -91,8 +91,8 @@ const Header = ({ data }) => {
               <Value value={SUPPLY} />
             </StatsValue>
           </StatsItem>
-        </CryptoStats>
-        <SymbolCta id={ID} />
+        </CryptoStats> */}
+        {/* <SymbolCta id={ID} /> */}
       </BlockWrap>
     </BlockContainer>
   );

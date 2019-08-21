@@ -6,7 +6,7 @@ import {
   useTable,
   usePagination,
   useTableState,
-  // useSortBy,
+  useSortBy,
 } from 'react-table';
 
 import { Pagination } from './Pagination';
@@ -36,7 +36,7 @@ const Table = ({
       columns,
       state,
     },
-    // useSortBy,
+    useSortBy,
     usePagination
   );
 
@@ -55,27 +55,34 @@ const Table = ({
       dispatch(getSymbolChart(symbols, '7d'));
     }
   }, [page]);
+
   return (
     <Cointainer>
       <Head>
         <Row>
-          {headers.map(({ render, id, sorted }, key) => {
-            // const { onClick } = getSortByToggleProps();
-            return (
-              <TH
-                key={key}
-                cellID={id}
-                isDesc={!sorted ? null : sorted.id === id && !sorted.desc}
-                // onClick={onClick}
-              >
-                {render('Header')}
-              </TH>
-            );
-          })}
+          {headers.map(
+            (
+              { render, id, isSorted, isSortedDesc, getSortByToggleProps },
+              key
+            ) => {
+              const { onClick } = getSortByToggleProps();
+              return (
+                <TH
+                  key={key}
+                  cellID={id}
+                  isSorted={isSorted}
+                  isDesc={isSortedDesc}
+                  onClick={onClick}
+                >
+                  {render('Header')}
+                </TH>
+              );
+            }
+          )}
         </Row>
       </Head>
       <Body>
-        {page ? (
+        {page.length !== 0 ? (
           page.map(
             (row, key) =>
               prepareRow(row) || (

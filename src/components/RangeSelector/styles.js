@@ -4,6 +4,7 @@ import { MEDIA } from 'styles/common';
 const RangeContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
 
   ${MEDIA.PHONE`
     width: 100%;

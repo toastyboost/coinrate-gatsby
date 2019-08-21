@@ -134,6 +134,29 @@ const Burger = styled.div`
  `};
 `;
 
+const Cta = styled.a`
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 1;
+  padding: 6px 9px 5px 9px;
+  border-radius: 50px;
+
+  span {
+    position: relative;
+    bottom: 0;
+    margin-right: 4px;
+  }
+
+  ${MEDIA.PHONE`
+    display: none;
+  `};
+
+  ${MEDIA.DESKTOP`
+    display: block;
+ `};
+`;
+
 export {
   HeaderContainer,
   GlobalData,
@@ -146,4 +169,5 @@ export {
   DataValue,
   DataChange,
   Burger,
+  Cta,
 };

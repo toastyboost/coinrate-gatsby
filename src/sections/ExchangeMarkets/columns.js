@@ -93,7 +93,7 @@ const ExchangeMarketsColumns = [
         <span className="subtitle">market</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'PRICEUSD',
   },
   {
@@ -103,7 +103,7 @@ const ExchangeMarketsColumns = [
         <span className="subtitle">price</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'PRICECRYPTO',
   },
   {
@@ -113,7 +113,7 @@ const ExchangeMarketsColumns = [
         <span className="subtitle">for 24 hours</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'MARKETVOLUME24HOUR',
   },
 ];

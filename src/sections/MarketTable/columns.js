@@ -49,7 +49,7 @@ const marketColumns = [
         <span className="subtitle">market</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'CAP',
   },
   {
@@ -59,7 +59,7 @@ const marketColumns = [
         <span className="subtitle">today&apos;s</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'VOLUME24HOUR',
   },
   {
@@ -69,7 +69,7 @@ const marketColumns = [
         <span className="subtitle">Change</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} suffix="%" />,
+    Cell: ({ cell: { value } }) => <Value value={value} suffix="%" />,
     accessor: 'CHANGE24HOUR',
   },
   {
@@ -79,7 +79,7 @@ const marketColumns = [
         <span className="subtitle">Change</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} suffix="%" />,
+    Cell: ({ cell: { value } }) => <Value value={value} suffix="%" />,
     accessor: 'CHANGE7DAYS',
   },
   {
@@ -101,7 +101,7 @@ const marketColumns = [
         <span className="subtitle">Market</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value * 100} suffix="%" />,
+    Cell: ({ cell: { value } }) => <Value value={value * 100} suffix="%" />,
     accessor: 'SHARE',
   },
 ];

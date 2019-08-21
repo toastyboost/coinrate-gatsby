@@ -47,7 +47,7 @@ const exchangesColumns = [
         <span className="subtitle">for 24 hour</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} prefix="$" />,
+    Cell: ({ cell: { value } }) => <Value value={value} prefix="$" />,
     accessor: 'EXCHANGEVOLUME',
   },
   {
@@ -57,7 +57,7 @@ const exchangesColumns = [
         <span className="subtitle">available</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} type="simple" />,
+    Cell: ({ cell: { value } }) => <Value value={value} type="simple" />,
     accessor: 'EXCHANGEMARKETS',
   },
   {
@@ -67,7 +67,7 @@ const exchangesColumns = [
         <span className="subtitle">in market</span>
       </>
     ),
-    Cell: ({ value }) => <Value value={value} suffix="%" />,
+    Cell: ({ cell: { value } }) => <Value value={value} suffix="%" />,
     accessor: 'EXCHANGESHARE',
   },
 ];

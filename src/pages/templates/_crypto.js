@@ -9,7 +9,7 @@ const Crypto = ({ pageContext: { SSR } }) => {
   return (
     <>
       <Seo
-        title={`${name} (${ticker}) charts and info | Coinrate`}
+        title={`${name} (${ticker}) price, charts and info | Coinrate`}
         desc={`Find out today's ${ticker} price in USD 📈 Follow the live price of ${name} (${ticker}),
         charts 📊, history, stocks, and other market data on Coinrate`}
       />

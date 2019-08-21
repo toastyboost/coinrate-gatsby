@@ -124,7 +124,7 @@ const Body = styled.div`
   flex-wrap: wrap;
   width: 100%;
   min-height: 100px;
-  overflow-y: scroll;
+  overflow-y: unset;
 
   & > div {
     &:hover {
@@ -263,7 +263,7 @@ const TD = styled.div`
 const TH = styled(TD)`
   height: 69px;
   border: 0;
-  /* cursor: pointer; */
+  cursor: pointer;
 
   .title {
     font-size: 1.3rem;
@@ -279,8 +279,8 @@ const TH = styled(TD)`
     color: var(--secondary-text);
   }
 
-  box-shadow: ${({ isDesc }) =>
-    isDesc == null
+  box-shadow: ${({ isDesc, isSorted }) =>
+    !isSorted
       ? 'none'
       : isDesc
       ? 'inset 0 -3px 0 0 var(--blue)'

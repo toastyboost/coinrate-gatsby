@@ -1,49 +1,27 @@
 import React from 'react';
-import Moment from 'react-moment';
 
-import { HighChart, Value, SymbolRangeSelector } from 'components';
+import { HighChart } from 'components';
 
-import {
-  ChartContainer,
-  ChartControls,
-  ChartTitle,
-  ChartData,
-  CryptoItem,
-  CryptoTitle,
-  CryptoValue,
-  ChartRange,
-  ChartAbout,
-} from './styles';
+import { ChartContainer, ChartAbout } from './styles';
 
-import { dataItems } from '../constants';
+// import { dataItems } from '../constants';
 
-const MomentOptions = {
-  format: 'MM-DD-YYYY',
-  unix: true,
-};
+// const MomentOptions = {
+//   format: 'MM-DD-YYYY',
+//   unix: true,
+// };
 
-const Chart = ({
-  SSR,
-  chartData,
-  symbolData,
-  isReloaded,
-  setRange,
-  activeRange,
-}) => {
-  const { name, ticker, slug, about } = SSR;
+const Chart = ({ SSR, chartData }) => {
+  const { name, about } = SSR;
   return (
     <ChartContainer>
-      <ChartControls>
+      {/* <ChartControls>
         <ChartTitle>
           {name} ({ticker})
         </ChartTitle>
-        <SymbolRangeSelector
-          symbol={slug}
-          setRange={setRange}
-          activeRange={activeRange}
-        />
-      </ChartControls>
-      <ChartData>
+
+      </ChartControls> */}
+      {/* <ChartData>
         {symbolData &&
           dataItems.map(({ title, value, color, prefix, isMobile }, key) => (
             <CryptoItem key={key} isMobile={isMobile}>
@@ -67,7 +45,7 @@ const Chart = ({
             </Moment>
           </ChartRange>
         )}
-      </ChartData>
+      </ChartData> */}
       {chartData && <HighChart data={chartData} />}
       <ChartAbout>
         <h2>About {name}</h2> {about}

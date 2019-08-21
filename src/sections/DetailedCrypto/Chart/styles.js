@@ -2,19 +2,6 @@ import styled from 'styled-components';
 import { MEDIA } from 'styles/common';
 
 const ChartContainer = styled.div`
-  box-shadow: 0 1px 25px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  margin-bottom: 12px;
-  border-radius: 2px;
-
-  ${MEDIA.PHONE`
-    padding: 24px 12px 12px 12px;
-  `};
-
-  ${MEDIA.DESKTOP`
-    padding: 0 24px 24px 24px;
-  `};
-
   .Chart {
     border: 1px solid var(--border-color);
     border-radius: 2px;
@@ -209,8 +196,20 @@ const ChartRange = styled.div`
 
 const ChartAbout = styled.div`
   margin-top: 24px;
+  padding-top: 12px;
   font-size: 1.4rem;
   line-height: 1.6;
+  position: relative;
+
+  &:before {
+    content: '';
+    width: calc(100% + 48px);
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    top: 0;
+    left: -24px;
+  }
 `;
 
 export {

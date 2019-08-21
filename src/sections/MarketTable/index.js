@@ -20,6 +20,7 @@ const TheTable = ({
 }) => {
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(getMarketData({ limit: 30, start: 0 }));
     dispatch(getMarketData({ limit, start }));
   }, []);
 

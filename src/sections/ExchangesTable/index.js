@@ -15,9 +15,7 @@ const Block = ({ getExchanges, exchangesData = [], dispatch, SSR = {} }) => {
   const { ssrData } = SSR;
 
   const columns = React.useMemo(() => exchangesColumns, []);
-  const data = process.browser
-    ? React.useMemo(() => exchangesData, [exchangesData])
-    : ssrData;
+  const data = process.browser ? exchangesData : ssrData;
 
   return (
     <ExchangesContainer>

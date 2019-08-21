@@ -25,7 +25,7 @@ const Value = ({ value = 0, type, suffix, prefix }) => {
     >
       {prefix}
       {val}
-      {suffix}
+      {setSuffix(value, suffix)}
     </ValueCounter>
   );
 };

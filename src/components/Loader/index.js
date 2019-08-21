@@ -3,7 +3,7 @@ import React from 'react';
 import { LoadContainer, Load, LoadCut, LoadShape } from './styles';
 
 const Loader = () => (
-  <LoadContainer>
+  <LoadContainer className="Loader">
     <Load>
       <LoadCut>
         <LoadShape />

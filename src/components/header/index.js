@@ -12,6 +12,7 @@ import {
   DataValue,
   DataChange,
   Burger,
+  Cta,
 } from './styles';
 
 import { withGlobalStats } from 'store/hocs';
@@ -50,6 +51,16 @@ const Block = ({ getGlobalStats, GlobalStats }) => {
               )}
             </DataChange>
           </Volume>
+          <Cta
+            // eslint-disable-next-line max-len
+            href={`https://iqoption.com/lp/buying-crypto/en/?aff=38838&afftrack=headerCta&retrack=coinrate&type=crypto${''}`}
+            target="_blank"
+          >
+            <span role="img" aria-label="thumb">
+              ⭐
+            </span>
+            Best way to trade crypto
+          </Cta>
           <Burger />
         </HeaderWrap>
       </GlobalData>

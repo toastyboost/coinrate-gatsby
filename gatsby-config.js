@@ -16,6 +16,14 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-html-minifier',
+      options: {
+        caseSensitive: false,
+        collapseBooleanAttributes: false,
+        useShortDoctype: false,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://www.coinrate.com',

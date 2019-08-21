@@ -1,55 +1,81 @@
 import React, { useEffect, useState } from 'react';
 import { compose } from 'redux';
 
-import { withSymbol, withSymbolChart, useInterval } from 'store/hocs';
+import { withSymbolChart, useInterval, withSymbol } from 'store/hocs';
 import { updateInterval } from 'helpers/constants';
+import { SymbolRangeSelector, Value } from 'components';
 
-import { Header } from './Header';
 import { Chart } from './Chart';
-import { BlockWrap } from './styles';
+import {
+  BlockWrap,
+  ChartContainer,
+  Container,
+  CryptoIcon,
+  CryptoLink,
+  CryptoPrice,
+  CryptoChange,
+  BlockHeader,
+  CryptoStats,
+} from './styles';
+
+import { SymbolStats } from '../SymbolStats';
 
 const Block = ({
   SSR,
-  getSymbol,
   getSymbolChart,
   symbolChart = [],
   symbolData = [],
   dispatch,
 }) => {
-  const [isReload, reloadTimer] = useState(false);
   const [activeRange, setRange] = useState('7d');
 
-  const { slug } = SSR;
+  const { slug, name, ticker } = SSR;
 
   useEffect(() => {
-    dispatch(getSymbol(slug));
     dispatch(getSymbolChart(slug, activeRange));
   }, []);
 
   useInterval(() => {
-    dispatch(getSymbol(slug));
     dispatch(getSymbolChart(slug, activeRange));
-
-    reloadTimer(false);
   }, updateInterval);
 
   const chartData = symbolChart[slug];
-  const blockData = symbolData[slug];
+  const sData = symbolData[slug];
 
   return (
-    <>
-      {blockData && <Header data={blockData} />}
+    <Container>
       <BlockWrap>
-        <Chart
-          SSR={SSR}
-          chartData={chartData}
-          symbolData={blockData}
-          isReloaded={isReload}
-          setRange={setRange}
-          activeRange={activeRange}
-        />
+        <ChartContainer>
+          <BlockHeader>
+            <CryptoStats>
+              <CryptoIcon ticker={ticker} id={slug} name={name} />
+              <CryptoLink>
+                {name} <em>({ticker})</em>
+              </CryptoLink>
+              <CryptoPrice>
+                {sData && <Value value={sData.PRICE} prefix="$" />}
+              </CryptoPrice>
+              <CryptoChange>
+                {sData && <Value value={sData.CHANGE24HOUR} suffix="%" />}
+              </CryptoChange>
+            </CryptoStats>
+
+            <SymbolRangeSelector
+              symbol={slug}
+              setRange={setRange}
+              activeRange={activeRange}
+            />
+          </BlockHeader>
+          <Chart
+            SSR={SSR}
+            chartData={chartData}
+            setRange={setRange}
+            activeRange={activeRange}
+          />
+        </ChartContainer>
+        <SymbolStats symbol={slug} />
       </BlockWrap>
-    </>
+    </Container>
   );
 };
 

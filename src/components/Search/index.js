@@ -19,7 +19,9 @@ import { withSearchData } from 'store/hocs';
 
 const Search = ({ getSearchData, searchData }) => {
   useEffect(() => {
-    getSearchData();
+    setTimeout(() => {
+      getSearchData();
+    }, 5000);
   }, []);
 
   const [suggestValue, setInputValue] = useState('');

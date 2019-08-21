@@ -4,7 +4,8 @@ import { Icon } from './styles';
 
 const SymbolIcon = ({ className, ticker, id, name }) => (
   <Icon
-    onError={i => (i.target.style.opacity = '0')}
+    key={id}
+    onError={p => (p.target.style.opacity = '0')}
     className={className}
     src={`/static/crypto/${ticker.toLowerCase()}-${id.toLowerCase()}.svg?v=1)`}
     alt={`${name} (${ticker})`}

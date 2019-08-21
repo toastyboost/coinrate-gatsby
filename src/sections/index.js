@@ -6,6 +6,7 @@ import { CryptoMarkets } from './CryptoMarkets';
 import { ExchangesTable } from './ExchangesTable';
 import { ExchangeMarkets } from './ExchangeMarkets';
 import { NotFound } from './NotFound';
+import { SymbolStats } from './SymbolStats';
 
 export {
   PageHeader,
@@ -16,4 +17,5 @@ export {
   ExchangesTable,
   ExchangeMarkets,
   NotFound,
+  SymbolStats,
 };
